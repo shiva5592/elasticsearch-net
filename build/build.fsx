@@ -171,6 +171,15 @@ let getAssemblyVersion = (fun _ ->
 )
 
 
+Target "GitLink" (fun _ ->
+    let gitlink = @"build\tools\gitlink\lib\net45\gitlink.exe "
+    ExecProcess (fun p ->
+        p.WorkingDirectory <- "docs"  
+        p.FileName <- gitlink
+        p.Arguments <- sprintf "\"%s\" %s" wintersmith action
+    ) |> ignore
+)
+
     
 
 Target "Version" (fun _ ->
@@ -237,6 +246,7 @@ Target "Nightly" (fun _ ->
 
 "CreateKeysIfAbsent"
   ==> "Version"
+  ==> "GitLink"
   ==> "Release"
   ==> "Nightly"
 
