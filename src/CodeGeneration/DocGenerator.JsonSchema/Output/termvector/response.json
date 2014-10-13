@@ -3,11 +3,11 @@
   "title": "ITermVectorResponse",
   "type": "object",
   "properties": {
-    "Found": {
+    "found": {
       "required": true,
       "type": "boolean"
     },
-    "TermVectors": {
+    "term_vectors": {
       "required": true,
       "type": [
         "object",

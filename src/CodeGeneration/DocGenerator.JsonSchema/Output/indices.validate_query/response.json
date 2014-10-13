@@ -3,11 +3,11 @@
   "title": "IValidateResponse",
   "type": "object",
   "properties": {
-    "Valid": {
+    "valid": {
       "required": true,
       "type": "boolean"
     },
-    "Shards": {
+    "_shards": {
       "id": "Nest.ShardsMetaData",
       "required": true,
       "type": [
@@ -68,7 +68,7 @@
         }
       }
     },
-    "Explanations": {
+    "explanations": {
       "id": "System.Collections.Generic.IList`1[[Nest.ValidationExplanation, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
       "required": true,
       "type": [

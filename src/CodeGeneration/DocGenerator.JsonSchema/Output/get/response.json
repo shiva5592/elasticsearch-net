@@ -3,49 +3,40 @@
   "title": "IGetResponse`1",
   "type": "object",
   "properties": {
-    "Found": {
+    "found": {
       "required": true,
       "type": "boolean"
     },
-    "Index": {
+    "_index": {
       "required": true,
       "type": [
         "string",
         "null"
       ]
     },
-    "Type": {
+    "_type": {
       "required": true,
       "type": [
         "string",
         "null"
       ]
     },
-    "Id": {
+    "_id": {
       "required": true,
       "type": [
         "string",
         "null"
       ]
     },
-    "Version": {
+    "_version": {
       "required": true,
       "type": [
         "string",
         "null"
       ]
     },
-    "Source": {
+    "_source": {
       "id": "System.Object",
-      "required": true,
-      "type": [
-        "object",
-        "null"
-      ],
-      "properties": {}
-    },
-    "Fields": {
-      "id": "Nest.Domain.FieldSelection`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
       "required": true,
       "type": [
         "object",

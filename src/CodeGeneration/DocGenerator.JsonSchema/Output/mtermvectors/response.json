@@ -3,7 +3,7 @@
   "title": "IMultiTermVectorResponse",
   "type": "object",
   "properties": {
-    "Documents": {
+    "docs": {
       "id": "System.Collections.Generic.IEnumerable`1[[Nest.TermVectorResponse, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
       "required": true,
       "type": [

@@ -3,7 +3,7 @@
   "title": "IShardsOperationResponse",
   "type": "object",
   "properties": {
-    "Shards": {
+    "_shards": {
       "id": "Nest.ShardsMetaData",
       "required": true,
       "type": [

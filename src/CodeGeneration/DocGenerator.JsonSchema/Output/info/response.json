@@ -3,25 +3,25 @@
   "title": "IRootInfoResponse",
   "type": "object",
   "properties": {
-    "Status": {
+    "status": {
       "required": true,
       "type": "integer"
     },
-    "Name": {
+    "name": {
       "required": true,
       "type": [
         "string",
         "null"
       ]
     },
-    "Tagline": {
+    "tagline": {
       "required": true,
       "type": [
         "string",
         "null"
       ]
     },
-    "Version": {
+    "version": {
       "id": "Nest.ElasticsearchVersionInfo",
       "required": true,
       "type": [

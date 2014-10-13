@@ -3,7 +3,7 @@
   "title": "IGlobalStatsResponse",
   "type": "object",
   "properties": {
-    "Shards": {
+    "_shards": {
       "id": "Nest.ShardsMetaData",
       "required": true,
       "type": [
@@ -64,7 +64,7 @@
         }
       }
     },
-    "Stats": {
+    "_all": {
       "id": "Nest.Stats",
       "required": true,
       "type": [
@@ -458,7 +458,7 @@
         }
       }
     },
-    "Indices": {
+    "indices": {
       "required": true,
       "type": [
         "object",

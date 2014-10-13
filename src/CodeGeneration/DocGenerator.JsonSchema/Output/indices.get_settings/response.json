@@ -1,11 +1,4 @@
 {
-  "id": "Nest.IIndexSettingsResponse",
   "title": "IIndexSettingsResponse",
-  "type": "object",
-  "properties": {
-    "IndexSettings": {
-      "required": true,
-      "type": "any"
-    }
-  }
+  "type": "any"
 }

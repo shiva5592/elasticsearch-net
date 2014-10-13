@@ -2,5 +2,10 @@
   "id": "Nest.ICreateRepositoryRequest",
   "title": "ICreateRepositoryRequest",
   "type": "object",
-  "properties": {}
+  "properties": {
+    "repository": {
+      "required": true,
+      "type": "any"
+    }
+  }
 }

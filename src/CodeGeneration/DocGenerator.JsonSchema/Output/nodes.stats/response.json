@@ -3,14 +3,14 @@
   "title": "INodeStatsResponse",
   "type": "object",
   "properties": {
-    "ClusterName": {
+    "cluster_name": {
       "required": true,
       "type": [
         "string",
         "null"
       ]
     },
-    "Nodes": {
+    "nodes": {
       "required": true,
       "type": [
         "object",

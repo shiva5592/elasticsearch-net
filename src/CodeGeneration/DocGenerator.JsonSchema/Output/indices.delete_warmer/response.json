@@ -3,7 +3,7 @@
   "title": "IIndicesOperationResponse",
   "type": "object",
   "properties": {
-    "Acknowledged": {
+    "acknowledged": {
       "required": true,
       "type": "boolean"
     }

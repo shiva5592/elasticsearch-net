@@ -3,7 +3,7 @@
   "title": "ISuggestResponse",
   "type": "object",
   "properties": {
-    "Shards": {
+    "shards": {
       "id": "Nest.ShardsMetaData",
       "required": true,
       "type": [
@@ -64,7 +64,7 @@
         }
       }
     },
-    "Suggestions": {
+    "suggestions": {
       "required": true,
       "type": [
         "object",

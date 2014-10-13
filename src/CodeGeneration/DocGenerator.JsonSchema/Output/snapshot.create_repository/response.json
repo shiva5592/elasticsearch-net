@@ -2,5 +2,10 @@
   "id": "Nest.IAcknowledgedResponse",
   "title": "IAcknowledgedResponse",
   "type": "object",
-  "properties": {}
+  "properties": {
+    "acknowledged": {
+      "required": true,
+      "type": "boolean"
+    }
+  }
 }
