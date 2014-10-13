@@ -1,0 +1,11 @@
+{
+  "id": "Nest.IIndicesOperationResponse",
+  "title": "IIndicesOperationResponse",
+  "type": "object",
+  "properties": {
+    "Acknowledged": {
+      "required": true,
+      "type": "boolean"
+    }
+  }
+}

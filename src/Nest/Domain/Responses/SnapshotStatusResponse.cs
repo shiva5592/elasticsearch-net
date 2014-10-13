@@ -5,19 +5,16 @@ using Newtonsoft.Json;
 
 namespace Nest
 {
+	[JsonObject]
 	public interface ISnapshotStatusResponse : IResponse
 	{
 		[JsonProperty("snapshots")]
 		IEnumerable<SnapshotStatus> Snapshots { get; set; }
 	}
 
-	[JsonObject]
 	public class SnapshotStatusResponse : BaseResponse, ISnapshotStatusResponse
 	{
-
-		[JsonProperty("snapshots")]
 		public IEnumerable<SnapshotStatus> Snapshots { get; set; }
-
 	}
 
 	public class SnapshotStatus

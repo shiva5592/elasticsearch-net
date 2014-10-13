@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IGetWarmerRequest",
+  "title": "IGetWarmerRequest",
+  "type": "object",
+  "properties": {}
+}

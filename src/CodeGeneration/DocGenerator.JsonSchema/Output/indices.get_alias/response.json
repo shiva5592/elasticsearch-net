@@ -1,0 +1,62 @@
+{
+  "id": "Nest.IGetAliasesResponse",
+  "title": "IGetAliasesResponse",
+  "type": "object",
+  "properties": {
+    "Indices": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "id": "System.Collections.Generic.IList`1[[Nest.AliasDefinition, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+        "type": [
+          "array",
+          "null"
+        ],
+        "items": {
+          "id": "Nest.AliasDefinition",
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "Name": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "filter": {
+              "required": true,
+              "type": "any"
+            },
+            "routing": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "index_routing": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "search_routing": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

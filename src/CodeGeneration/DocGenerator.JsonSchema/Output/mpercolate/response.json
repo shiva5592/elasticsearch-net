@@ -1,0 +1,429 @@
+{
+  "id": "Nest.IMultiPercolateResponse",
+  "title": "IMultiPercolateResponse",
+  "type": "object",
+  "properties": {
+    "responses": {
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.PercolateResponse, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+      "required": true,
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "id": "Nest.PercolateResponse",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "matches": {
+            "id": "System.Collections.Generic.IEnumerable`1[[Nest.PercolatorMatch, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+            "required": true,
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "id": "Nest.PercolatorMatch",
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "_index": {
+                  "required": true,
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "_id": {
+                  "required": true,
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          "took": {
+            "required": true,
+            "type": "integer"
+          },
+          "total": {
+            "required": true,
+            "type": "integer"
+          },
+          "error": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ServerError": {
+            "id": "Elasticsearch.Net.ElasticsearchServerError",
+            "required": true,
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "Status": {
+                "required": true,
+                "type": "integer"
+              },
+              "Error": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "ExceptionType": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "IsValid": {
+            "required": true,
+            "type": "boolean"
+          },
+          "ConnectionStatus": {
+            "id": "Elasticsearch.Net.IElasticsearchResponse",
+            "required": true,
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "Success": {
+                "required": true,
+                "type": "boolean"
+              },
+              "Settings": {
+                "id": "Elasticsearch.Net.Connection.IConnectionConfigurationValues",
+                "required": true,
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "ConnectionPool": {
+                    "id": "Elasticsearch.Net.ConnectionPool.IConnectionPool",
+                    "required": true,
+                    "type": [
+                      "object",
+                      "null"
+                    ],
+                    "properties": {
+                      "MaxRetries": {
+                        "required": true,
+                        "type": "integer"
+                      },
+                      "AcceptsUpdates": {
+                        "required": true,
+                        "type": "boolean"
+                      }
+                    }
+                  },
+                  "MaximumAsyncConnections": {
+                    "required": true,
+                    "type": "integer"
+                  },
+                  "Timeout": {
+                    "required": true,
+                    "type": "integer"
+                  },
+                  "PingTimeout": {
+                    "required": true,
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "DeadTimeout": {
+                    "required": true,
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "MaxDeadTimeout": {
+                    "required": true,
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "MaxRetries": {
+                    "required": true,
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "DisablePings": {
+                    "required": true,
+                    "type": "boolean"
+                  },
+                  "EnableCompressedResponses": {
+                    "required": true,
+                    "type": "boolean"
+                  },
+                  "ProxyAddress": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "ProxyUsername": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "ProxyPassword": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "TraceEnabled": {
+                    "required": true,
+                    "type": "boolean"
+                  },
+                  "MetricsEnabled": {
+                    "required": true,
+                    "type": "boolean"
+                  },
+                  "UsesPrettyResponses": {
+                    "required": true,
+                    "type": "boolean"
+                  },
+                  "KeepRawResponse": {
+                    "required": true,
+                    "type": "boolean"
+                  },
+                  "DisableAutomaticProxyDetection": {
+                    "required": true,
+                    "type": "boolean"
+                  },
+                  "ThrowOnElasticsearchServerExceptions": {
+                    "required": true,
+                    "type": "boolean"
+                  },
+                  "SniffsOnStartup": {
+                    "required": true,
+                    "type": "boolean"
+                  },
+                  "SniffsOnConnectionFault": {
+                    "required": true,
+                    "type": "boolean"
+                  },
+                  "SniffInformationLifeSpan": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "QueryStringParameters": {
+                    "id": "System.Collections.Specialized.NameValueCollection",
+                    "required": true,
+                    "type": [
+                      "array",
+                      "null"
+                    ]
+                  },
+                  "ConnectionStatusHandler": {
+                    "id": "System.Action`1[[Elasticsearch.Net.IElasticsearchResponse, Elasticsearch.Net, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+                    "required": true,
+                    "type": [
+                      "object",
+                      "null"
+                    ]
+                  },
+                  "Serializer": {
+                    "id": "Elasticsearch.Net.Serialization.IElasticsearchSerializer",
+                    "required": true,
+                    "type": [
+                      "object",
+                      "null"
+                    ],
+                    "properties": {}
+                  }
+                }
+              },
+              "OriginalException": {
+                "id": "System.Exception",
+                "required": true,
+                "type": [
+                  "object",
+                  "null"
+                ]
+              },
+              "RequestMethod": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "RequestUrl": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "HttpStatusCode": {
+                "required": true,
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "NumberOfRetries": {
+                "required": true,
+                "type": "integer"
+              },
+              "Metrics": {
+                "id": "Elasticsearch.Net.CallMetrics",
+                "required": true,
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "Path": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "SerializationTime": {
+                    "required": true,
+                    "type": "integer"
+                  },
+                  "DeserializationTime": {
+                    "required": true,
+                    "type": "integer"
+                  },
+                  "StartedOn": {
+                    "required": true,
+                    "type": "string"
+                  },
+                  "CompletedOn": {
+                    "required": true,
+                    "type": "string"
+                  },
+                  "Requests": {
+                    "id": "System.Collections.Generic.List`1[[Elasticsearch.Net.RequestMetrics, Elasticsearch.Net, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+                    "required": true,
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "id": "Elasticsearch.Net.RequestMetrics",
+                      "type": [
+                        "object",
+                        "null"
+                      ],
+                      "properties": {
+                        "RequestType": {
+                          "required": true,
+                          "type": "integer",
+                          "enum": [
+                            0,
+                            1,
+                            2
+                          ]
+                        },
+                        "Node": {
+                          "required": true,
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "StartedOn": {
+                          "required": true,
+                          "type": "string"
+                        },
+                        "EllapsedMilliseconds": {
+                          "required": true,
+                          "type": "integer"
+                        },
+                        "Path": {
+                          "required": true,
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "HttpStatusCode": {
+                          "required": true,
+                          "type": [
+                            "integer",
+                            "null"
+                          ]
+                        },
+                        "Success": {
+                          "required": true,
+                          "type": "boolean"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "ResponseRaw": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "Request": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "Infer": {
+            "id": "Nest.ElasticInferrer",
+            "required": true,
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "DefaultIndex": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

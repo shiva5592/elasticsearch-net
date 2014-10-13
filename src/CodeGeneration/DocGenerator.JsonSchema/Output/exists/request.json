@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IDocumentExistsRequest",
+  "title": "IDocumentExistsRequest",
+  "type": "object",
+  "properties": {}
+}

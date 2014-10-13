@@ -1,0 +1,6 @@
+{
+  "id": "Nest.ICatHealthRequest",
+  "title": "ICatHealthRequest",
+  "type": "object",
+  "properties": {}
+}

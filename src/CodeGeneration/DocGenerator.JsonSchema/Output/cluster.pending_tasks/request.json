@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IClusterPendingTasksRequest",
+  "title": "IClusterPendingTasksRequest",
+  "type": "object",
+  "properties": {}
+}

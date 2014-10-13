@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IMultiPercolateRequest",
+  "title": "IMultiPercolateRequest",
+  "type": "object",
+  "properties": {}
+}

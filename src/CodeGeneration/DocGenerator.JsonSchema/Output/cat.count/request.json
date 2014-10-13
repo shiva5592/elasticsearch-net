@@ -1,0 +1,6 @@
+{
+  "id": "Nest.ICatCountRequest",
+  "title": "ICatCountRequest",
+  "type": "object",
+  "properties": {}
+}

@@ -5,22 +5,24 @@ using Newtonsoft.Json;
 
 namespace Nest
 {
-	public interface IIndexSettingsResponse : IResponse
-	{
-		IndexSettings IndexSettings { get; }
-	}
-
 	[JsonObject(MemberSerialization.OptIn)]
 	[JsonConverter(typeof(IndexSettingsResponseConverter))]
-	public class IndexSettingsResponse : BaseResponse, IIndexSettingsResponse
+	public interface IIndexSettingsResponse : IResponse
 	{
 		[JsonIgnore]
+		IndexSettings IndexSettings { get; }
+
+		[JsonIgnore]
+		Dictionary<string, IndexSettings> Nodes { get; set; }
+	}
+
+	public class IndexSettingsResponse : BaseResponse, IIndexSettingsResponse
+	{
 		public IndexSettings IndexSettings
 		{
 			get { return Nodes.HasAny() ? Nodes.First().Value : null; }
 		}
 
-		[JsonIgnore]
 		public Dictionary<string, IndexSettings> Nodes { get; set; }
 
 	}

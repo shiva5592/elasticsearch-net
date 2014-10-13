@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IClusterHealthRequest",
+  "title": "IClusterHealthRequest",
+  "type": "object",
+  "properties": {}
+}

@@ -1,0 +1,6 @@
+{
+  "id": "Nest.ICreateIndexRequest",
+  "title": "ICreateIndexRequest",
+  "type": "object",
+  "properties": {}
+}

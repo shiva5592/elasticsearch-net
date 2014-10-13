@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IBulkRequest",
+  "title": "IBulkRequest",
+  "type": "object",
+  "properties": {}
+}

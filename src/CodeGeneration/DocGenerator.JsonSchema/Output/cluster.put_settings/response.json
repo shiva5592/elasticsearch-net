@@ -1,0 +1,36 @@
+{
+  "id": "Nest.IClusterPutSettingsResponse",
+  "title": "IClusterPutSettingsResponse",
+  "type": "object",
+  "properties": {
+    "acknowledged": {
+      "required": true,
+      "type": "boolean"
+    },
+    "persistent": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "id": "System.Object",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {}
+      }
+    },
+    "transient": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "$ref": "System.Object"
+      }
+    }
+  }
+}

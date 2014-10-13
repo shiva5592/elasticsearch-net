@@ -1,0 +1,6 @@
+{
+  "id": "Nest.ITypeExistsRequest",
+  "title": "ITypeExistsRequest",
+  "type": "object",
+  "properties": {}
+}

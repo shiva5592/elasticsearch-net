@@ -6,18 +6,24 @@ using System.Linq;
 
 namespace Nest
 {
+	[JsonObject]
 	public interface IExplainResponse<T> : IResponse
 		where T : class
 	{
+		[JsonProperty(PropertyName = "matched")]
 		bool Matched { get; }
+
+		[JsonProperty(PropertyName = "explanation")]
 		ExplanationDetail Explanation { get; }
+
+		[JsonProperty(PropertyName = "get")]
 		ExplainGet<T> Get { get; }
 
 		T Source { get; }
+
 		FieldSelection<T> Fields { get; }
 	}
 
-	[JsonObject]
 	public class ExplainResponse<T> : BaseResponse, IExplainResponse<T>
 		where T : class
 	{
@@ -26,13 +32,10 @@ namespace Nest
 			this.IsValid = true;
 		}
 
-		[JsonProperty(PropertyName = "matched")]
 		public bool Matched { get; internal set; }
 
-		[JsonProperty(PropertyName = "explanation")]
 		public ExplanationDetail Explanation { get; internal set;}
 
-		[JsonProperty(PropertyName = "get")]
 		public ExplainGet<T> Get { get; internal set;}
 
 		public T Source

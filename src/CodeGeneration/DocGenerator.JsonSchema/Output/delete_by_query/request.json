@@ -1,0 +1,11 @@
+{
+  "id": "Nest.IDeleteByQueryRequest",
+  "title": "IDeleteByQueryRequest",
+  "type": "object",
+  "properties": {
+    "query": {
+      "required": true,
+      "type": "any"
+    }
+  }
+}

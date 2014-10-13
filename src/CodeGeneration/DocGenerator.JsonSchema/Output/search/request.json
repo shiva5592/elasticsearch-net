@@ -1,0 +1,344 @@
+{
+  "id": "Nest.ISearchRequest",
+  "title": "ISearchRequest",
+  "type": "object",
+  "properties": {
+    "timeout": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "from": {
+      "required": true,
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "size": {
+      "required": true,
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "explain": {
+      "required": true,
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "version": {
+      "required": true,
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "track_scores": {
+      "required": true,
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "min_score": {
+      "required": true,
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "indices_boost": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "sort": {
+      "id": "System.Collections.Generic.IList`1[[System.Collections.Generic.KeyValuePair`2[[Nest.PropertyPathMarker, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d],[Nest.ISort, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+      "required": true,
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "any"
+      }
+    },
+    "facets": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "suggest": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "id": "Nest.ISuggestBucket",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "text": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "term": {
+            "required": true,
+            "type": "any"
+          },
+          "phrase": {
+            "required": true,
+            "type": "any"
+          },
+          "completion": {
+            "id": "Nest.ICompletionSuggester",
+            "required": true,
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "fuzzy": {
+                "required": true,
+                "type": "any"
+              },
+              "context": {
+                "required": true,
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": {
+                  "id": "System.Object",
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "highlight": {
+      "required": true,
+      "type": "any"
+    },
+    "rescore": {
+      "required": true,
+      "type": "any"
+    },
+    "fields": {
+      "id": "System.Collections.Generic.IList`1[[Nest.PropertyPathMarker, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+      "required": true,
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "id": "Nest.PropertyPathMarker",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "Name": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Type": {
+            "id": "System.Linq.Expressions.Expression",
+            "required": true,
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "NodeType": {
+                "required": true,
+                "type": "integer",
+                "enum": [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  17,
+                  18,
+                  19,
+                  20,
+                  21,
+                  22,
+                  23,
+                  24,
+                  25,
+                  26,
+                  27,
+                  28,
+                  29,
+                  30,
+                  31,
+                  32,
+                  33,
+                  34,
+                  35,
+                  36,
+                  37,
+                  38,
+                  39,
+                  40,
+                  41,
+                  42,
+                  43,
+                  44,
+                  45,
+                  46,
+                  47,
+                  48,
+                  49,
+                  50,
+                  51,
+                  52,
+                  53,
+                  54,
+                  55,
+                  56,
+                  57,
+                  58,
+                  59,
+                  60,
+                  61,
+                  62,
+                  63,
+                  64,
+                  65,
+                  66,
+                  67,
+                  68,
+                  69,
+                  70,
+                  71,
+                  72,
+                  73,
+                  74,
+                  75,
+                  76,
+                  77,
+                  78,
+                  79,
+                  80,
+                  81,
+                  82,
+                  83,
+                  84
+                ]
+              },
+              "Type": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "CanReduce": {
+                "required": true,
+                "type": "boolean"
+              }
+            }
+          },
+          "Boost": {
+            "required": true,
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "script_fields": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "type": "any"
+      }
+    },
+    "_source": {
+      "id": "Nest.ISourceFilter",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "include": {
+          "id": "System.Collections.Generic.IEnumerable`1[[Nest.PropertyPathMarker, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+          "required": true,
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "Nest.PropertyPathMarker"
+          }
+        },
+        "exclude": {
+          "$ref": "System.Collections.Generic.IEnumerable`1[[Nest.PropertyPathMarker, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]"
+        }
+      }
+    },
+    "aggs": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "type": "any"
+      }
+    },
+    "query": {
+      "required": true,
+      "type": "any"
+    },
+    "filter": {
+      "required": true,
+      "type": "any"
+    }
+  }
+}

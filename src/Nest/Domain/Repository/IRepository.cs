@@ -7,7 +7,6 @@ namespace Nest
 	[JsonConverter(typeof(ReadAsTypeConverter<SnapshotRepository>))]
 	public interface IRepository
 	{
-
 		[JsonProperty("settings")]
 		IDictionary<string, object> Settings { get; set; }
 

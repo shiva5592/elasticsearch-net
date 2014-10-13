@@ -1,0 +1,6 @@
+{
+  "id": "Nest.INodesStatsRequest",
+  "title": "INodesStatsRequest",
+  "type": "object",
+  "properties": {}
+}

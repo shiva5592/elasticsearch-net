@@ -5,13 +5,16 @@ using Newtonsoft.Json;
 
 namespace Nest
 {
+    [JsonObject]
     public interface ITermVectorResponse : IResponse
     {
+        [JsonProperty("found")]
         bool Found { get; }
+
+        [JsonProperty("term_vectors")]
         IDictionary<string, TermVector> TermVectors { get; }
     }
 
-    [JsonObject]
     public class TermVectorResponse : BaseResponse, ITermVectorResponse
     {
         public TermVectorResponse()
@@ -20,10 +23,8 @@ namespace Nest
             TermVectors = new Dictionary<string, TermVector>();
         }
 
-        [JsonProperty("found")]
         public bool Found { get; internal set; }
 
-        [JsonProperty("term_vectors")]
         public IDictionary<string, TermVector> TermVectors { get; internal set; }
     }
 }

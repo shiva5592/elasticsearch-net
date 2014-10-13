@@ -1,0 +1,65 @@
+{
+  "id": "Nest.IMultiGetResponse",
+  "title": "IMultiGetResponse",
+  "type": "object",
+  "properties": {
+    "Documents": {
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.IMultiGetHit`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+      "required": true,
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "id": "Nest.IMultiGetHit`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "Source": {
+            "id": "System.Object",
+            "required": true,
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {}
+          },
+          "Index": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Found": {
+            "required": true,
+            "type": "boolean"
+          },
+          "Type": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Version": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Id": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "id": "Nest.ISnapshotResponse",
+  "title": "ISnapshotResponse",
+  "type": "object",
+  "properties": {
+    "accepted": {
+      "required": true,
+      "type": "boolean"
+    },
+    "snapshot": {
+      "id": "Nest.Snapshot",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "snapshot": {
+          "required": true,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "indices": {
+          "id": "System.Collections.Generic.IEnumerable`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+          "required": true,
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "state": {
+          "required": true,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "start_time": {
+          "required": true,
+          "type": "string"
+        },
+        "start_time_in_millis": {
+          "required": true,
+          "type": "integer"
+        },
+        "end_time": {
+          "required": true,
+          "type": "string"
+        },
+        "end_time_in_millis": {
+          "required": true,
+          "type": "integer"
+        },
+        "duration_in_millis": {
+          "required": true,
+          "type": "integer"
+        },
+        "failures": {
+          "$ref": "System.Collections.Generic.IEnumerable`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+        },
+        "shards": {
+          "id": "Nest.ShardsMetaData",
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "Total": {
+              "required": true,
+              "type": "integer"
+            },
+            "Successful": {
+              "required": true,
+              "type": "integer"
+            },
+            "Failed": {
+              "required": true,
+              "type": "integer"
+            },
+            "failures": {
+              "id": "System.Collections.Generic.IEnumerable`1[[Nest.ShardsFailureReason, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+              "required": true,
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "id": "Nest.ShardsFailureReason",
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "index": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "shard": {
+                    "required": true,
+                    "type": "integer"
+                  },
+                  "status": {
+                    "required": true,
+                    "type": "integer"
+                  },
+                  "reason": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

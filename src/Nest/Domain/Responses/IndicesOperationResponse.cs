@@ -2,12 +2,13 @@
 
 namespace Nest
 {
+    [JsonObject]
     public interface IIndicesOperationResponse : IResponse
     {
+		[JsonProperty(PropertyName = "acknowledged")]
         bool Acknowledged { get; }
     }
 
-    [JsonObject]
 	public class IndicesOperationResponse : BaseResponse, IIndicesOperationResponse
     {
 		public IndicesOperationResponse()
@@ -15,7 +16,6 @@ namespace Nest
 			this.IsValid = true;
 		}
 
-		[JsonProperty(PropertyName = "acknowledged")]
 		public bool Acknowledged { get; internal set; }
 	}
 }

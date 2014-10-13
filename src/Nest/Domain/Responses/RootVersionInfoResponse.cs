@@ -2,15 +2,22 @@
 
 namespace Nest
 {
+	[JsonObject]
 	public interface IRootInfoResponse : IResponse
 	{
+		[JsonProperty(PropertyName = "status")]
 		int Status { get; }
+
+		[JsonProperty(PropertyName = "name")]
 		string Name { get; }
+
+		[JsonProperty(PropertyName = "tagline")]
 		string Tagline { get;  }
+
+		[JsonProperty(PropertyName = "version")]
 		ElasticsearchVersionInfo Version { get;  }
 	}
 
-	[JsonObject]
 	public class RootInfoResponse : BaseResponse, IRootInfoResponse
 	{
 		public RootInfoResponse()
@@ -18,16 +25,12 @@ namespace Nest
 			this.IsValid = true;
 		}
 
-		[JsonProperty(PropertyName = "status")]
 		public int Status { get; internal set; }
 
-		[JsonProperty(PropertyName = "name")]
 		public string Name { get; internal set; }
 
-		[JsonProperty(PropertyName = "tagline")]
 		public string Tagline { get; internal set; }
 		
-		[JsonProperty(PropertyName = "version")]
 		public ElasticsearchVersionInfo Version { get; internal set; }
 
 	}

@@ -3,21 +3,21 @@ using Newtonsoft.Json;
 
 namespace Nest
 {
+	[JsonObject]
 	public interface ISegmentsResponse : IResponse
 	{
+		[JsonProperty(PropertyName = "_shards")]
 		ShardsMetaData Shards { get; }
+		[JsonProperty(PropertyName = "indices")]
+		[JsonConverter(typeof(DictionaryKeysAreNotPropertyNamesJsonConverter))]
 		Dictionary<string, IndexSegment> Indices { get; set; }
 	}
 
-	[JsonObject]
 	public class SegmentsResponse : BaseResponse, ISegmentsResponse
 	{
 
-		[JsonProperty(PropertyName = "_shards")]
 		public ShardsMetaData Shards { get; internal set; }
 
-		[JsonProperty(PropertyName = "indices")]
-		[JsonConverter(typeof(DictionaryKeysAreNotPropertyNamesJsonConverter))]
 		public Dictionary<string, IndexSegment> Indices { get; set; } 
 
 		

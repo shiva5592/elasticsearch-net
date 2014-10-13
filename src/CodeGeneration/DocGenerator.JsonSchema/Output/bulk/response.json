@@ -1,0 +1,29 @@
+{
+  "id": "Nest.IBulkResponse",
+  "title": "IBulkResponse",
+  "type": "object",
+  "properties": {
+    "Took": {
+      "required": true,
+      "type": "integer"
+    },
+    "Errors": {
+      "required": true,
+      "type": "boolean"
+    },
+    "Items": {
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.BulkOperationResponseItem, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+      "required": true,
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "any"
+      }
+    },
+    "ItemsWithErrors": {
+      "$ref": "System.Collections.Generic.IEnumerable`1[[Nest.BulkOperationResponseItem, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]"
+    }
+  }
+}

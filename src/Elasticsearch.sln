@@ -105,6 +105,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "templates", "http://localho
 		SlnRelativePath = "..\docs\templates\"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocGenerator.JsonSchema", "CodeGeneration\DocGenerator.JsonSchema\DocGenerator.JsonSchema.csproj", "{3E49F836-4839-4B81-89D4-61116C6964E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CodeGeneration|Any CPU = CodeGeneration|Any CPU
@@ -341,6 +343,21 @@ Global
 		{DF8388A1-4778-411E-A3F5-1062CDE8621F}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{DF8388A1-4778-411E-A3F5-1062CDE8621F}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{DF8388A1-4778-411E-A3F5-1062CDE8621F}.Release|x86.ActiveCfg = Debug|Any CPU
+		{3E49F836-4839-4B81-89D4-61116C6964E5}.CodeGeneration|Any CPU.ActiveCfg = Release|Any CPU
+		{3E49F836-4839-4B81-89D4-61116C6964E5}.CodeGeneration|Any CPU.Build.0 = Release|Any CPU
+		{3E49F836-4839-4B81-89D4-61116C6964E5}.CodeGeneration|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3E49F836-4839-4B81-89D4-61116C6964E5}.CodeGeneration|Mixed Platforms.Build.0 = Release|Any CPU
+		{3E49F836-4839-4B81-89D4-61116C6964E5}.CodeGeneration|x86.ActiveCfg = Release|Any CPU
+		{3E49F836-4839-4B81-89D4-61116C6964E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E49F836-4839-4B81-89D4-61116C6964E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E49F836-4839-4B81-89D4-61116C6964E5}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3E49F836-4839-4B81-89D4-61116C6964E5}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3E49F836-4839-4B81-89D4-61116C6964E5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3E49F836-4839-4B81-89D4-61116C6964E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E49F836-4839-4B81-89D4-61116C6964E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E49F836-4839-4B81-89D4-61116C6964E5}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3E49F836-4839-4B81-89D4-61116C6964E5}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3E49F836-4839-4B81-89D4-61116C6964E5}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -360,5 +377,6 @@ Global
 		{C54FFD67-C452-4DC4-A47A-663ECA98A38F} = {C7EA82B9-4C4A-4F68-ACD1-0D1A765BA98C}
 		{E005A0A9-ADAE-49D5-9686-73686471DA9F} = {E30CA256-C9A8-487A-94B7-D6B79D70F774}
 		{DF8388A1-4778-411E-A3F5-1062CDE8621F} = {E30CA256-C9A8-487A-94B7-D6B79D70F774}
+		{3E49F836-4839-4B81-89D4-61116C6964E5} = {93331BEE-0AA0-47B7-B1D2-BD5BD31634D1}
 	EndGlobalSection
 EndGlobal

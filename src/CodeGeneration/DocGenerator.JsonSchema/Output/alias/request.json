@@ -1,0 +1,20 @@
+{
+  "title": "IAliasRequest",
+  "type": "object",
+  "properties": {
+    "actions": {
+      "required": true,
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {}
+      }
+    }
+  }
+}

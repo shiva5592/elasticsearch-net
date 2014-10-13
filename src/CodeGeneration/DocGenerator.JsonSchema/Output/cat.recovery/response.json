@@ -1,0 +1,108 @@
+{
+  "id": "Nest.ICatResponse`1[[Nest.CatRecoveryRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+  "title": "ICatResponse`1",
+  "type": "object",
+  "properties": {
+    "Records": {
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.CatRecoveryRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+      "required": true,
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "id": "Nest.CatRecoveryRecord",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "shard": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "time": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "type": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "stage": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_host": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "target_host": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "repository": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "snapshot": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "files": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "files_percent": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "bytes": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "bytes_percent": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IAcknowledgedResponse",
+  "title": "IAcknowledgedResponse",
+  "type": "object",
+  "properties": {}
+}

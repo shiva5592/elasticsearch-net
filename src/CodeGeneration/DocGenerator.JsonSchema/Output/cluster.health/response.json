@@ -1,0 +1,147 @@
+{
+  "id": "Nest.IHealthResponse",
+  "title": "IHealthResponse",
+  "type": "object",
+  "properties": {
+    "ClusterName": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Status": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "TimedOut": {
+      "required": true,
+      "type": "boolean"
+    },
+    "NumberOfNodes": {
+      "required": true,
+      "type": "integer"
+    },
+    "NumberOfDataNodes": {
+      "required": true,
+      "type": "integer"
+    },
+    "ActivePrimaryShards": {
+      "required": true,
+      "type": "integer"
+    },
+    "ActiveShards": {
+      "required": true,
+      "type": "integer"
+    },
+    "RelocatingShards": {
+      "required": true,
+      "type": "integer"
+    },
+    "InitializingShards": {
+      "required": true,
+      "type": "integer"
+    },
+    "UnassignedShards": {
+      "required": true,
+      "type": "integer"
+    },
+    "Indices": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "id": "Nest.IndexHealthStats",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "status": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "number_of_shards": {
+            "required": true,
+            "type": "integer"
+          },
+          "number_of_replicas": {
+            "required": true,
+            "type": "integer"
+          },
+          "active_primary_shards": {
+            "required": true,
+            "type": "integer"
+          },
+          "active_shards": {
+            "required": true,
+            "type": "integer"
+          },
+          "relocating_shards": {
+            "required": true,
+            "type": "integer"
+          },
+          "initializing_shards": {
+            "required": true,
+            "type": "integer"
+          },
+          "unassigned_shards": {
+            "required": true,
+            "type": "integer"
+          },
+          "shards": {
+            "required": true,
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": {
+              "id": "Nest.ShardHealthStats",
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "status": {
+                  "required": true,
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "primary_active": {
+                  "required": true,
+                  "type": "boolean"
+                },
+                "active_shards": {
+                  "required": true,
+                  "type": "integer"
+                },
+                "relocating_shards": {
+                  "required": true,
+                  "type": "integer"
+                },
+                "initializing_shards": {
+                  "required": true,
+                  "type": "integer"
+                },
+                "unassigned_shards": {
+                  "required": true,
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

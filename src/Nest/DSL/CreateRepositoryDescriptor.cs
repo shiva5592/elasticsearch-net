@@ -9,6 +9,7 @@ namespace Nest
 	[JsonObject(MemberSerialization = MemberSerialization.OptIn)]
 	public interface ICreateRepositoryRequest : IRepositoryPath<CreateRepositoryRequestParameters>
 	{
+		[JsonProperty("repository")]
 		IRepository Repository { get; set; }
 	}
 

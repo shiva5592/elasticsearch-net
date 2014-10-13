@@ -1,0 +1,6 @@
+{
+  "id": "Nest.ITermvectorRequest",
+  "title": "ITermvectorRequest",
+  "type": "object",
+  "properties": {}
+}

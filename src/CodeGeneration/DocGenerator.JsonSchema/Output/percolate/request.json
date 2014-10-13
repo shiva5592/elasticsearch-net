@@ -1,0 +1,16 @@
+{
+  "id": "Nest.IPercolateRequest`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+  "title": "IPercolateRequest`1",
+  "type": "object",
+  "properties": {
+    "doc": {
+      "id": "System.Object",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {}
+    }
+  }
+}

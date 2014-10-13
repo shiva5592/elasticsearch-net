@@ -1,0 +1,17 @@
+{
+  "title": "AliasRemoveOperation",
+  "type": "object",
+  "properties": {
+    "index": {
+      "required": true,
+      "type": "any"
+    },
+    "alias": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

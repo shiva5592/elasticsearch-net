@@ -1,0 +1,96 @@
+{
+  "id": "Nest.IUpdateResponse",
+  "title": "IUpdateResponse",
+  "type": "object",
+  "properties": {
+    "_shards": {
+      "id": "Nest.ShardsMetaData",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Total": {
+          "required": true,
+          "type": "integer"
+        },
+        "Successful": {
+          "required": true,
+          "type": "integer"
+        },
+        "Failed": {
+          "required": true,
+          "type": "integer"
+        },
+        "failures": {
+          "id": "System.Collections.Generic.IEnumerable`1[[Nest.ShardsFailureReason, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+          "required": true,
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "id": "Nest.ShardsFailureReason",
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "index": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "shard": {
+                "required": true,
+                "type": "integer"
+              },
+              "status": {
+                "required": true,
+                "type": "integer"
+              },
+              "reason": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "_index": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "_type": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "_id": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "_version": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "title": "IAliasRemoveAction",
+  "type": "object",
+  "properties": {
+    "remove": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "index": {
+          "required": true,
+          "type": "any"
+        },
+        "alias": {
+          "required": true,
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

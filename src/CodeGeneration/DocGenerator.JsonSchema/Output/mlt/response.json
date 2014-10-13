@@ -1,0 +1,410 @@
+{
+  "id": "Nest.ISearchResponse`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+  "title": "ISearchResponse`1",
+  "type": "object",
+  "properties": {
+    "Shards": {
+      "id": "Nest.ShardsMetaData",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Total": {
+          "required": true,
+          "type": "integer"
+        },
+        "Successful": {
+          "required": true,
+          "type": "integer"
+        },
+        "Failed": {
+          "required": true,
+          "type": "integer"
+        },
+        "failures": {
+          "id": "System.Collections.Generic.IEnumerable`1[[Nest.ShardsFailureReason, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+          "required": true,
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "id": "Nest.ShardsFailureReason",
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "index": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "shard": {
+                "required": true,
+                "type": "integer"
+              },
+              "status": {
+                "required": true,
+                "type": "integer"
+              },
+              "reason": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "HitsMetaData": {
+      "id": "Nest.HitsMetaData`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "total": {
+          "required": true,
+          "type": "integer"
+        },
+        "max_score": {
+          "required": true,
+          "type": "number"
+        },
+        "hits": {
+          "id": "System.Collections.Generic.List`1[[Nest.IHit`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+          "required": true,
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "id": "Nest.IHit`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "Fields": {
+                "id": "Nest.Domain.IFieldSelection`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+                "required": true,
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "FieldValuesDictionary": {
+                    "required": true,
+                    "type": [
+                      "object",
+                      "null"
+                    ],
+                    "additionalProperties": {
+                      "id": "System.Object",
+                      "required": true,
+                      "type": [
+                        "object",
+                        "null"
+                      ],
+                      "properties": {}
+                    }
+                  }
+                }
+              },
+              "Source": {
+                "$ref": "System.Object"
+              },
+              "Index": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "Score": {
+                "required": true,
+                "type": "number"
+              },
+              "Type": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "Version": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "Id": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "Sorts": {
+                "id": "System.Collections.Generic.IEnumerable`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+                "required": true,
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "$ref": "System.Object"
+                }
+              },
+              "Highlights": {
+                "required": true,
+                "type": "any"
+              },
+              "Explanation": {
+                "id": "Nest.Explanation",
+                "required": true,
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "value": {
+                    "required": true,
+                    "type": "number"
+                  },
+                  "description": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "details": {
+                    "id": "System.Collections.Generic.IEnumerable`1[[Nest.ExplanationDetail, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+                    "required": true,
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "id": "explanation_detail",
+                      "type": [
+                        "object",
+                        "null"
+                      ],
+                      "properties": {
+                        "value": {
+                          "required": true,
+                          "type": "number"
+                        },
+                        "description": {
+                          "required": true,
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "details": {
+                          "$ref": "System.Collections.Generic.IEnumerable`1[[Nest.ExplanationDetail, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Facets": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "id": "Nest.Facet",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {}
+      }
+    },
+    "Aggregations": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "id": "Nest.IAggregation",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {}
+      }
+    },
+    "Aggs": {
+      "id": "Nest.AggregationsHelper",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Aggregations": {
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "$ref": "Nest.IAggregation"
+          }
+        }
+      }
+    },
+    "Suggest": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "id": "Nest.Suggest[]",
+        "type": [
+          "array",
+          "null"
+        ],
+        "items": {
+          "id": "Nest.Suggest",
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "length": {
+              "required": true,
+              "type": "integer"
+            },
+            "offset": {
+              "required": true,
+              "type": "integer"
+            },
+            "text": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "options": {
+              "id": "System.Collections.Generic.IEnumerable`1[[Nest.SuggestOption, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+              "required": true,
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "id": "Nest.SuggestOption",
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "freq": {
+                    "required": true,
+                    "type": [
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "score": {
+                    "required": true,
+                    "type": "number"
+                  },
+                  "text": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "payload": {
+                    "$ref": "System.Object"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "ElapsedMilliseconds": {
+      "required": true,
+      "type": "integer"
+    },
+    "ScrollId": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Total": {
+      "required": true,
+      "type": "integer"
+    },
+    "MaxScore": {
+      "required": true,
+      "type": "number"
+    },
+    "Documents": {
+      "$ref": "System.Collections.Generic.IEnumerable`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+    },
+    "Hits": {
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.IHit`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+      "required": true,
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "Nest.IHit`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"
+      }
+    },
+    "FieldSelections": {
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.Domain.FieldSelection`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+      "required": true,
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "id": "Nest.Domain.FieldSelection`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {}
+      }
+    },
+    "Highlights": {
+      "required": true,
+      "type": "any"
+    }
+  }
+}

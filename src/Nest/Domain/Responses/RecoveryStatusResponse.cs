@@ -4,16 +4,16 @@ using Newtonsoft.Json;
 
 namespace Nest
 {
+	[JsonObject]
 	public interface IRecoveryStatusResponse : IResponse
 	{
+		[JsonConverter(typeof(DictionaryKeysAreNotPropertyNamesJsonConverter))]
 		Dictionary<string, RecoveryStatus> Indices { get; set; }
 	}
 
-	[JsonObject]
 	public class RecoveryStatusResponse : BaseResponse, IRecoveryStatusResponse
 	{
 
-		[JsonConverter(typeof(DictionaryKeysAreNotPropertyNamesJsonConverter))]
 		public Dictionary<string, RecoveryStatus> Indices { get; set; } 
 	}
 }

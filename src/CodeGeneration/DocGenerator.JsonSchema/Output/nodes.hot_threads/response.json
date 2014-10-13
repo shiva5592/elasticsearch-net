@@ -1,0 +1,45 @@
+{
+  "id": "Nest.INodesHotThreadsResponse",
+  "title": "INodesHotThreadsResponse",
+  "type": "object",
+  "properties": {
+    "HotThreads": {
+      "id": "System.Collections.Generic.List`1[[Nest.HotThreadInformation, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+      "required": true,
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "id": "Nest.HotThreadInformation",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "Node": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Threads": {
+            "id": "System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+            "required": true,
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

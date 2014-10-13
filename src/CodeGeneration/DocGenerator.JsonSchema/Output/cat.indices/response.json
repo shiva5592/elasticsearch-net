@@ -1,0 +1,80 @@
+{
+  "id": "Nest.ICatResponse`1[[Nest.CatIndicesRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+  "title": "ICatResponse`1",
+  "type": "object",
+  "properties": {
+    "Records": {
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.CatIndicesRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+      "required": true,
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "id": "Nest.CatIndicesRecord",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "docs.count": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "docs.deleted": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "health": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "index": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "pri": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "pri.store.size": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "rep": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "store.size": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

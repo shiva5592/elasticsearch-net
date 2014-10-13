@@ -1,0 +1,732 @@
+{
+  "id": "Nest.IClusterStatsResponse",
+  "title": "IClusterStatsResponse",
+  "type": "object",
+  "properties": {
+    "ClusterName": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Status": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Indices": {
+      "id": "Nest.IndicesStats",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "count": {
+          "required": true,
+          "type": "integer"
+        },
+        "shards": {
+          "id": "Nest.IndicesShardsStats",
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "total": {
+              "required": true,
+              "type": "number"
+            },
+            "primaries": {
+              "required": true,
+              "type": "number"
+            },
+            "replication": {
+              "required": true,
+              "type": "number"
+            },
+            "index": {
+              "id": "Nest.IndicesShardsIndexStats",
+              "required": true,
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "shards": {
+                  "id": "Nest.IndicesShardsIndexStatsMetrics",
+                  "required": true,
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {
+                    "min": {
+                      "required": true,
+                      "type": "number"
+                    },
+                    "max": {
+                      "required": true,
+                      "type": "number"
+                    },
+                    "avg": {
+                      "required": true,
+                      "type": "number"
+                    }
+                  }
+                },
+                "primaries": {
+                  "$ref": "Nest.IndicesShardsIndexStatsMetrics"
+                },
+                "replication": {
+                  "$ref": "Nest.IndicesShardsIndexStatsMetrics"
+                }
+              }
+            }
+          }
+        },
+        "docs": {
+          "id": "Nest.DocStats",
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "count": {
+              "required": true,
+              "type": "integer"
+            },
+            "deleted": {
+              "required": true,
+              "type": "integer"
+            }
+          }
+        },
+        "store": {
+          "id": "Nest.StoreStats",
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "size": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "size_in_bytes": {
+              "required": true,
+              "type": "number"
+            },
+            "throttle_time": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "throttle_time_in_millis": {
+              "required": true,
+              "type": "number"
+            }
+          }
+        },
+        "fielddata": {
+          "id": "Nest.FieldDataStats",
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "memory_size": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "memory_size_in_bytes": {
+              "required": true,
+              "type": "integer"
+            },
+            "evictions": {
+              "required": true,
+              "type": "integer"
+            }
+          }
+        },
+        "filter_cache": {
+          "id": "Nest.FilterCacheStats",
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "memory_size": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "memory_size_in_bytes": {
+              "required": true,
+              "type": "integer"
+            },
+            "evictions": {
+              "required": true,
+              "type": "integer"
+            }
+          }
+        },
+        "id_cache": {
+          "id": "Nest.IdCacheStats",
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "memory_size": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "memory_size_in_bytes": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "completion": {
+          "id": "Nest.CompletionStats",
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "size": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "size_in_bytes": {
+              "required": true,
+              "type": "integer"
+            }
+          }
+        },
+        "segments": {
+          "id": "Nest.SegmentsStats",
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "count": {
+              "required": true,
+              "type": "integer"
+            },
+            "memory_in_bytes": {
+              "required": true,
+              "type": "integer"
+            },
+            "index_writer_memory_in_bytes": {
+              "required": true,
+              "type": "integer"
+            },
+            "version_map_memory_in_bytes": {
+              "required": true,
+              "type": "integer"
+            }
+          }
+        },
+        "percolate": {
+          "id": "Nest.PercolateStats",
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "total": {
+              "required": true,
+              "type": "integer"
+            },
+            "time_in_millis": {
+              "required": true,
+              "type": "integer"
+            },
+            "current": {
+              "required": true,
+              "type": "integer"
+            },
+            "memory_size_in_bytes": {
+              "required": true,
+              "type": "integer"
+            },
+            "memory_size": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "queries": {
+              "required": true,
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "Nodes": {
+      "id": "Nest.ClusterNodesStats",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "count": {
+          "id": "Nest.ClusterNodeCount",
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "total": {
+              "required": true,
+              "type": "integer"
+            },
+            "master_only": {
+              "required": true,
+              "type": "integer"
+            },
+            "data_only": {
+              "required": true,
+              "type": "integer"
+            },
+            "master_data": {
+              "required": true,
+              "type": "integer"
+            },
+            "client": {
+              "required": true,
+              "type": "integer"
+            }
+          }
+        },
+        "versions": {
+          "id": "System.Collections.Generic.List`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+          "required": true,
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "os": {
+          "id": "Nest.ClusterOs",
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "available_processors": {
+              "required": true,
+              "type": "integer"
+            },
+            "mem": {
+              "id": "Nest.ClusterOsMemory",
+              "required": true,
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "total_in_bytes": {
+                  "required": true,
+                  "type": "integer"
+                }
+              }
+            },
+            "cpu": {
+              "id": "System.Collections.Generic.List`1[[Nest.ClusterCpu, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+              "required": true,
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "id": "Nest.ClusterCpu",
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "vendor": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "model": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "mhz": {
+                    "required": true,
+                    "type": "integer"
+                  },
+                  "total_scores": {
+                    "required": true,
+                    "type": "integer"
+                  },
+                  "total_sockets": {
+                    "required": true,
+                    "type": "integer"
+                  },
+                  "cores_per_socket": {
+                    "required": true,
+                    "type": "integer"
+                  },
+                  "cache_size_in_bytes": {
+                    "required": true,
+                    "type": "integer"
+                  },
+                  "count": {
+                    "required": true,
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "process": {
+          "id": "Nest.ClusterProcess",
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "cpu": {
+              "id": "Nest.ClusterProcessCpu",
+              "required": true,
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "percent": {
+                  "required": true,
+                  "type": "integer"
+                }
+              }
+            },
+            "open_file_descriptors": {
+              "id": "Nest.ClusterProcessOpenFileDescriptors",
+              "required": true,
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "min": {
+                  "required": true,
+                  "type": "integer"
+                },
+                "max": {
+                  "required": true,
+                  "type": "integer"
+                },
+                "avg": {
+                  "required": true,
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        },
+        "jvm": {
+          "id": "Nest.ClusterJvm",
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "max_uptime": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "max_uptime_in_milliseconds": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "versions": {
+              "id": "System.Collections.Generic.List`1[[Nest.ClusterJvmVersion, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+              "required": true,
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "id": "Nest.ClusterJvmVersion",
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "version": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "vm_name": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "vm_version": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "vm_vendor": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "count": {
+                    "required": true,
+                    "type": "integer"
+                  }
+                }
+              }
+            },
+            "mem": {
+              "id": "Nest.ClusterJvmMemory",
+              "required": true,
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "heap_used": {
+                  "required": true,
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "heap_used_in_bytes": {
+                  "required": true,
+                  "type": "integer"
+                },
+                "heap_max": {
+                  "required": true,
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "heap_max_in_bytes": {
+                  "required": true,
+                  "type": "integer"
+                }
+              }
+            },
+            "threads": {
+              "required": true,
+              "type": "integer"
+            }
+          }
+        },
+        "fs": {
+          "id": "Nest.ClusterFileSystem",
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "total": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "total_in_bytes": {
+              "required": true,
+              "type": "integer"
+            },
+            "free": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "free_in_bytes": {
+              "required": true,
+              "type": "integer"
+            },
+            "available": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "available_in_bytes": {
+              "required": true,
+              "type": "integer"
+            },
+            "disk_reads": {
+              "required": true,
+              "type": "integer"
+            },
+            "disk_writes": {
+              "required": true,
+              "type": "integer"
+            },
+            "disk_io_op": {
+              "required": true,
+              "type": "integer"
+            },
+            "disk_read_size": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "disk_read_size_in_bytes": {
+              "required": true,
+              "type": "integer"
+            },
+            "disk_write_size": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "disk_write_size_in_bytes": {
+              "required": true,
+              "type": "integer"
+            },
+            "disk_queue": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "plugins": {
+          "id": "System.Collections.Generic.List`1[[Nest.PluginStats, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+          "required": true,
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "id": "Nest.PluginStats",
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "name": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "version": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "description": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "url": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "jvm": {
+                "required": true,
+                "type": "boolean"
+              },
+              "site": {
+                "required": true,
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

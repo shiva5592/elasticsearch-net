@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IFlushRequest",
+  "title": "IFlushRequest",
+  "type": "object",
+  "properties": {}
+}

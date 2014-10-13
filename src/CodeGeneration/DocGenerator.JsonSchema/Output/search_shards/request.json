@@ -1,0 +1,6 @@
+{
+  "id": "Nest.ISearchShardsRequest",
+  "title": "ISearchShardsRequest",
+  "type": "object",
+  "properties": {}
+}

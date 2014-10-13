@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IClusterGetSettingsRequest",
+  "title": "IClusterGetSettingsRequest",
+  "type": "object",
+  "properties": {}
+}

@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IClusterStatsRequest",
+  "title": "IClusterStatsRequest",
+  "type": "object",
+  "properties": {}
+}

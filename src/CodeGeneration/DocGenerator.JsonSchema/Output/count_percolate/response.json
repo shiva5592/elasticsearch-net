@@ -1,0 +1,15 @@
+{
+  "id": "Nest.IPercolateCountResponse",
+  "title": "IPercolateCountResponse",
+  "type": "object",
+  "properties": {
+    "Took": {
+      "required": true,
+      "type": "integer"
+    },
+    "Total": {
+      "required": true,
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,294 @@
+{
+  "id": "Nest.IClusterStateResponse",
+  "title": "IClusterStateResponse",
+  "type": "object",
+  "properties": {
+    "ClusterName": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MasterNode": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Nodes": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "id": "Nest.NodeState",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "name": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "transport_address": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "attributes": {
+            "required": true,
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Metadata": {
+      "id": "Nest.MetadataState",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "indices": {
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "id": "Nest.MetadataIndexState",
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "state": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "settings": {
+                "required": true,
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": {
+                  "id": "System.Object",
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {}
+                }
+              },
+              "mappings": {
+                "required": true,
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": {
+                  "id": "Nest.ObjectMapping",
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {
+                    "type": {
+                      "required": true,
+                      "type": "any"
+                    },
+                    "similarity": {
+                      "required": true,
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "dynamic": {
+                      "required": true,
+                      "type": "any"
+                    },
+                    "enabled": {
+                      "required": true,
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "include_in_all": {
+                      "required": true,
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "path": {
+                      "required": true,
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "properties": {
+                      "required": true,
+                      "type": [
+                        "object",
+                        "null"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "RoutingTable": {
+      "id": "Nest.RoutingTableState",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "indices": {
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "id": "Nest.IndexRoutingTable",
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "shards": {
+                "required": true,
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": {
+                  "id": "System.Collections.Generic.List`1[[Nest.RoutingShard, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+                  "required": true,
+                  "type": [
+                    "array",
+                    "null"
+                  ],
+                  "items": {
+                    "id": "Nest.RoutingShard",
+                    "type": [
+                      "object",
+                      "null"
+                    ],
+                    "properties": {
+                      "state": {
+                        "required": true,
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "primary": {
+                        "required": true,
+                        "type": "boolean"
+                      },
+                      "node": {
+                        "required": true,
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "relocating_node": {
+                        "required": true,
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "shard": {
+                        "required": true,
+                        "type": "integer"
+                      },
+                      "index": {
+                        "required": true,
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "RoutingNodes": {
+      "id": "Nest.RoutingNodesState",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "unassigned": {
+          "$ref": "System.Collections.Generic.List`1[[Nest.RoutingShard, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]"
+        },
+        "nodes": {
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "$ref": "System.Collections.Generic.List`1[[Nest.RoutingShard, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]"
+          }
+        }
+      }
+    },
+    "Blocks": {
+      "id": "Nest.BlockState",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "read_only": {
+          "required": true,
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

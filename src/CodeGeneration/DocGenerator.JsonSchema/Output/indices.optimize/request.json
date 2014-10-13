@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IOptimizeRequest",
+  "title": "IOptimizeRequest",
+  "type": "object",
+  "properties": {}
+}

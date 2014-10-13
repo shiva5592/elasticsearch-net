@@ -1,0 +1,88 @@
+{
+  "id": "Nest.IExplainResponse`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+  "title": "IExplainResponse`1",
+  "type": "object",
+  "properties": {
+    "matched": {
+      "required": true,
+      "type": "boolean"
+    },
+    "explanation": {
+      "id": "explanation_detail",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "value": {
+          "required": true,
+          "type": "number"
+        },
+        "description": {
+          "required": true,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "details": {
+          "id": "System.Collections.Generic.IEnumerable`1[[Nest.ExplanationDetail, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+          "required": true,
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "explanation_detail"
+          }
+        }
+      }
+    },
+    "get": {
+      "id": "Nest.ExplainGet`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "found": {
+          "required": true,
+          "type": "boolean"
+        },
+        "_source": {
+          "id": "System.Object",
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {}
+        },
+        "fields": {
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "$ref": "System.Object"
+          }
+        }
+      }
+    },
+    "Source": {
+      "$ref": "System.Object"
+    },
+    "Fields": {
+      "id": "Nest.Domain.FieldSelection`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {}
+    }
+  }
+}

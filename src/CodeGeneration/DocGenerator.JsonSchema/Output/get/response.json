@@ -1,0 +1,57 @@
+{
+  "id": "Nest.IGetResponse`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+  "title": "IGetResponse`1",
+  "type": "object",
+  "properties": {
+    "Found": {
+      "required": true,
+      "type": "boolean"
+    },
+    "Index": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Type": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Id": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Version": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Source": {
+      "id": "System.Object",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {}
+    },
+    "Fields": {
+      "id": "Nest.Domain.FieldSelection`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {}
+    }
+  }
+}

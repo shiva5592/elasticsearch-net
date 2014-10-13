@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IGetFieldMappingRequest",
+  "title": "IGetFieldMappingRequest",
+  "type": "object",
+  "properties": {}
+}

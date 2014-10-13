@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IGetSnapshotRequest",
+  "title": "IGetSnapshotRequest",
+  "type": "object",
+  "properties": {}
+}

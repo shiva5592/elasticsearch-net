@@ -1,0 +1,50 @@
+{
+  "id": "Nest.IAnalyzeResponse",
+  "title": "IAnalyzeResponse",
+  "type": "object",
+  "properties": {
+    "Tokens": {
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.AnalyzeToken, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+      "required": true,
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "id": "Nest.AnalyzeToken",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "token": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "type": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "start_offset": {
+            "required": true,
+            "type": "integer"
+          },
+          "end_offset": {
+            "required": true,
+            "type": "integer"
+          },
+          "position": {
+            "required": true,
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}

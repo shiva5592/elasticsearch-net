@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IDeleteIndexRequest",
+  "title": "IDeleteIndexRequest",
+  "type": "object",
+  "properties": {}
+}

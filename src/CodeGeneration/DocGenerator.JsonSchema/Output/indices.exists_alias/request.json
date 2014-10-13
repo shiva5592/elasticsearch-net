@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IAliasExistsRequest",
+  "title": "IAliasExistsRequest",
+  "type": "object",
+  "properties": {}
+}

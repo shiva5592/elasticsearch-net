@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IAnalyzeRequest",
+  "title": "IAnalyzeRequest",
+  "type": "object",
+  "properties": {}
+}

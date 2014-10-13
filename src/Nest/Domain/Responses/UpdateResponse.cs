@@ -2,28 +2,28 @@
 
 namespace Nest
 {
+	[JsonObject]
 	public interface IUpdateResponse : IResponse
 	{
+		[JsonProperty(PropertyName = "_shards")]
 		ShardsMetaData ShardsHit { get; }
+		[JsonProperty(PropertyName = "_index")]
 		string Index { get; }
+		[JsonProperty(PropertyName = "_type")]
 		string Type { get; }
+		[JsonProperty(PropertyName = "_id")]
 		string Id { get; }
+		[JsonProperty(PropertyName = "_version")]
 		string Version { get; }
 	}
 
-	[JsonObject]
 	public class UpdateResponse : BaseResponse, IUpdateResponse
 	{
-		[JsonProperty(PropertyName = "_shards")]
 		public ShardsMetaData ShardsHit { get; private set; }
 
-		[JsonProperty(PropertyName = "_index")]
 		public string Index { get; private set; }
-		[JsonProperty(PropertyName = "_type")]
 		public string Type { get; private set; }
-		[JsonProperty(PropertyName = "_id")]
 		public string Id { get; private set; }
-		[JsonProperty(PropertyName = "_version")]
 		public string Version { get; private set; }
 	}
 }

@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IGetIndexSettingsRequest",
+  "title": "IGetIndexSettingsRequest",
+  "type": "object",
+  "properties": {}
+}

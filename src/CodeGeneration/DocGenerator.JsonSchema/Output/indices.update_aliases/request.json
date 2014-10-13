@@ -1,0 +1,23 @@
+{
+  "id": "Nest.IAliasRequest",
+  "title": "IAliasRequest",
+  "type": "object",
+  "properties": {
+    "actions": {
+      "id": "System.Collections.Generic.IList`1[[Nest.IAliasAction, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+      "required": true,
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "id": "Nest.IAliasAction",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {}
+      }
+    }
+  }
+}

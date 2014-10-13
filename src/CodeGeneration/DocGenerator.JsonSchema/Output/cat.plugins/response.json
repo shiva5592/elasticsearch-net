@@ -1,0 +1,66 @@
+{
+  "id": "Nest.ICatResponse`1[[Nest.CatPluginsRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+  "title": "ICatResponse`1",
+  "type": "object",
+  "properties": {
+    "Records": {
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.CatPluginsRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+      "required": true,
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "id": "Nest.CatPluginsRecord",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "name": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "component": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "version": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "type": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "isolation": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "url": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

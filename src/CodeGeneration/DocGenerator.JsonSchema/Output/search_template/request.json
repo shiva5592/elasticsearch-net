@@ -1,0 +1,43 @@
+{
+  "id": "Nest.ISearchTemplateRequest",
+  "title": "ISearchTemplateRequest",
+  "type": "object",
+  "properties": {
+    "params": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "id": "System.Object",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {}
+      }
+    },
+    "template": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "file": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "id": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

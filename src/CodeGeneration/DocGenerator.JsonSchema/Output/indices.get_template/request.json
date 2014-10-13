@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IGetTemplateRequest",
+  "title": "IGetTemplateRequest",
+  "type": "object",
+  "properties": {}
+}

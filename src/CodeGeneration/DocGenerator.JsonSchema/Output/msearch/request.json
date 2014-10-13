@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IMultiSearchRequest",
+  "title": "IMultiSearchRequest",
+  "type": "object",
+  "properties": {}
+}

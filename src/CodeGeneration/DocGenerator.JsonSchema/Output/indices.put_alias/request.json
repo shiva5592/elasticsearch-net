@@ -1,0 +1,18 @@
+{
+  "id": "Nest.IPutAliasRequest",
+  "title": "IPutAliasRequest",
+  "type": "object",
+  "properties": {
+    "routing": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "filter": {
+      "required": true,
+      "type": "any"
+    }
+  }
+}

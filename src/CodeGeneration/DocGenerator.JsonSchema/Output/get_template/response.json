@@ -1,0 +1,525 @@
+{
+  "id": "Nest.ITemplateResponse",
+  "title": "ITemplateResponse",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "TemplateMapping": {
+      "id": "Nest.TemplateMapping",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "template": {
+          "required": true,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "order": {
+          "required": true,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "settings": {
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "id": "System.Object",
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {}
+          }
+        },
+        "mappings": {
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "id": "Nest.RootObjectMapping",
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "type": {
+                "required": true,
+                "type": "any"
+              },
+              "index_analyzer": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "search_analyzer": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "dynamic_date_formats": {
+                "id": "System.Collections.Generic.IEnumerable`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+                "required": true,
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "date_detection": {
+                "required": true,
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "numeric_detection": {
+                "required": true,
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "transform": {
+                "id": "System.Collections.Generic.IList`1[[Nest.MappingTransform, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+                "required": true,
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "id": "Nest.MappingTransform",
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {
+                    "script": {
+                      "required": true,
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "params": {
+                      "required": true,
+                      "type": [
+                        "object",
+                        "null"
+                      ],
+                      "additionalProperties": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    },
+                    "lang": {
+                      "required": true,
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  }
+                }
+              },
+              "_id": {
+                "required": true,
+                "type": "any"
+              },
+              "_source": {
+                "required": true,
+                "type": "any"
+              },
+              "_type": {
+                "required": true,
+                "type": "any"
+              },
+              "_all": {
+                "required": true,
+                "type": "any"
+              },
+              "_analyzer": {
+                "required": true,
+                "type": "any"
+              },
+              "_boost": {
+                "required": true,
+                "type": "any"
+              },
+              "_parent": {
+                "id": "Nest.ParentFieldMapping",
+                "required": true,
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "type": {
+                    "required": true,
+                    "type": "any"
+                  }
+                }
+              },
+              "_routing": {
+                "required": true,
+                "type": "any"
+              },
+              "_index": {
+                "required": true,
+                "type": "any"
+              },
+              "_size": {
+                "required": true,
+                "type": "any"
+              },
+              "_timestamp": {
+                "required": true,
+                "type": "any"
+              },
+              "_ttl": {
+                "required": true,
+                "type": "any"
+              },
+              "_meta": {
+                "required": true,
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": {
+                  "$ref": "System.Object"
+                }
+              },
+              "dynamic_templates": {
+                "required": true,
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "additionalProperties": {
+                  "id": "Nest.DynamicTemplate",
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {
+                    "match": {
+                      "required": true,
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "unmatch": {
+                      "required": true,
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "match_mapping_type": {
+                      "required": true,
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "path_match": {
+                      "required": true,
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "path_unmatch": {
+                      "required": true,
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "mapping": {
+                      "id": "Nest.IElasticType",
+                      "required": true,
+                      "type": [
+                        "object",
+                        "null"
+                      ],
+                      "properties": {
+                        "Name": {
+                          "id": "Nest.PropertyNameMarker",
+                          "required": true,
+                          "type": [
+                            "object",
+                            "null"
+                          ],
+                          "properties": {
+                            "Name": {
+                              "required": true,
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            },
+                            "Expression": {
+                              "id": "System.Linq.Expressions.Expression",
+                              "required": true,
+                              "type": [
+                                "object",
+                                "null"
+                              ],
+                              "properties": {
+                                "NodeType": {
+                                  "required": true,
+                                  "type": "integer",
+                                  "enum": [
+                                    0,
+                                    1,
+                                    2,
+                                    3,
+                                    4,
+                                    5,
+                                    6,
+                                    7,
+                                    8,
+                                    9,
+                                    10,
+                                    11,
+                                    12,
+                                    13,
+                                    14,
+                                    15,
+                                    16,
+                                    17,
+                                    18,
+                                    19,
+                                    20,
+                                    21,
+                                    22,
+                                    23,
+                                    24,
+                                    25,
+                                    26,
+                                    27,
+                                    28,
+                                    29,
+                                    30,
+                                    31,
+                                    32,
+                                    33,
+                                    34,
+                                    35,
+                                    36,
+                                    37,
+                                    38,
+                                    39,
+                                    40,
+                                    41,
+                                    42,
+                                    43,
+                                    44,
+                                    45,
+                                    46,
+                                    47,
+                                    48,
+                                    49,
+                                    50,
+                                    51,
+                                    52,
+                                    53,
+                                    54,
+                                    55,
+                                    56,
+                                    57,
+                                    58,
+                                    59,
+                                    60,
+                                    61,
+                                    62,
+                                    63,
+                                    64,
+                                    65,
+                                    66,
+                                    67,
+                                    68,
+                                    69,
+                                    70,
+                                    71,
+                                    72,
+                                    73,
+                                    74,
+                                    75,
+                                    76,
+                                    77,
+                                    78,
+                                    79,
+                                    80,
+                                    81,
+                                    82,
+                                    83,
+                                    84
+                                  ]
+                                },
+                                "Type": {
+                                  "required": true,
+                                  "type": [
+                                    "string",
+                                    "null"
+                                  ]
+                                },
+                                "CanReduce": {
+                                  "required": true,
+                                  "type": "boolean"
+                                }
+                              }
+                            },
+                            "Type": {
+                              "required": true,
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            },
+                            "Boost": {
+                              "required": true,
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            }
+                          }
+                        },
+                        "Type": {
+                          "required": true,
+                          "type": "any"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "similarity": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "dynamic": {
+                "required": true,
+                "type": "any"
+              },
+              "enabled": {
+                "required": true,
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "include_in_all": {
+                "required": true,
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "path": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "properties": {
+                "required": true,
+                "type": [
+                  "object",
+                  "null"
+                ]
+              }
+            }
+          }
+        },
+        "warmers": {
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "type": "any"
+          }
+        },
+        "aliases": {
+          "required": true,
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": {
+            "id": "Nest.ICreateAliasOperation",
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "filter": {
+                "required": true,
+                "type": "any"
+              },
+              "routing": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "index_routing": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "search_routing": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

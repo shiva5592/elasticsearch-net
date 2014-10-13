@@ -1,0 +1,38 @@
+{
+  "id": "Nest.IPercolateResponse",
+  "title": "IPercolateResponse",
+  "type": "object",
+  "properties": {
+    "Matches": {
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.PercolatorMatch, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+      "required": true,
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "id": "Nest.PercolatorMatch",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "_index": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "_id": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IDeleteWarmerRequest",
+  "title": "IDeleteWarmerRequest",
+  "type": "object",
+  "properties": {}
+}

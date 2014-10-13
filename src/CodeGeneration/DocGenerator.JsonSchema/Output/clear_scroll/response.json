@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IEmptyResponse",
+  "title": "IEmptyResponse",
+  "type": "object",
+  "properties": {}
+}

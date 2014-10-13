@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IRefreshRequest",
+  "title": "IRefreshRequest",
+  "type": "object",
+  "properties": {}
+}

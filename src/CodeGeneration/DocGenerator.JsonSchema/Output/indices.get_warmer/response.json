@@ -1,0 +1,23 @@
+{
+  "id": "Nest.IWarmerResponse",
+  "title": "IWarmerResponse",
+  "type": "object",
+  "properties": {
+    "Indices": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "additionalProperties": {
+          "type": "any"
+        }
+      }
+    }
+  }
+}

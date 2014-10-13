@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IGetRepositoryRequest",
+  "title": "IGetRepositoryRequest",
+  "type": "object",
+  "properties": {}
+}

@@ -1,0 +1,454 @@
+{
+  "id": "Nest.INodeInfoResponse",
+  "title": "INodeInfoResponse",
+  "type": "object",
+  "properties": {
+    "ClusterName": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Nodes": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "id": "Nest.NodeInfo",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "name": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "transport_address": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "host": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "version": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "http_address": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "settings": {
+            "required": true,
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": {
+              "id": "System.Object",
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {}
+            }
+          },
+          "os": {
+            "id": "Nest.NodeInfoOS",
+            "required": true,
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "refresh_interval": {
+                "required": true,
+                "type": "integer"
+              },
+              "available_processors": {
+                "required": true,
+                "type": "integer"
+              },
+              "cpu": {
+                "id": "Nest.NodeInfoOSCPU",
+                "required": true,
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "vendor": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "model": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "mhz": {
+                    "required": true,
+                    "type": "integer"
+                  },
+                  "total_cores": {
+                    "required": true,
+                    "type": "integer"
+                  },
+                  "total_sockets": {
+                    "required": true,
+                    "type": "integer"
+                  },
+                  "cores_per_socket": {
+                    "required": true,
+                    "type": "integer"
+                  },
+                  "cache_size": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "cache_size_in_bytes": {
+                    "required": true,
+                    "type": "integer"
+                  }
+                }
+              },
+              "mem": {
+                "id": "Nest.NodeInfoMemory",
+                "required": true,
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "total": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "total_in_bytes": {
+                    "required": true,
+                    "type": "integer"
+                  }
+                }
+              },
+              "swap": {
+                "$ref": "Nest.NodeInfoMemory"
+              }
+            }
+          },
+          "process": {
+            "id": "Nest.NodeInfoProcess",
+            "required": true,
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "refresh_interval": {
+                "required": true,
+                "type": "integer"
+              },
+              "id": {
+                "required": true,
+                "type": "integer"
+              },
+              "max_file_descriptors": {
+                "required": true,
+                "type": "integer"
+              }
+            }
+          },
+          "jvm": {
+            "id": "Nest.NodeInfoJVM",
+            "required": true,
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "pid": {
+                "required": true,
+                "type": "integer"
+              },
+              "version": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "vm_name": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "vm_version": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "vm_vendor": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "start_time": {
+                "required": true,
+                "type": "integer"
+              },
+              "mem": {
+                "id": "Nest.NodeInfoJVMMemory",
+                "required": true,
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "heap_init": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "heap_init_in_bytes": {
+                    "required": true,
+                    "type": "integer"
+                  },
+                  "heap_max": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "heap_max_in_bytes": {
+                    "required": true,
+                    "type": "integer"
+                  },
+                  "non_heap_init": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "non_heap_init_in_bytes": {
+                    "required": true,
+                    "type": "integer"
+                  },
+                  "non_heap_max": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "non_heap_max_in_bytes": {
+                    "required": true,
+                    "type": "integer"
+                  },
+                  "direct_max": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "direct_max_in_bytes": {
+                    "required": true,
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          },
+          "thread_pool": {
+            "required": true,
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": {
+              "id": "Nest.NodeInfoThreadPoolThreadInfo",
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "type": {
+                  "required": true,
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "min": {
+                  "required": true,
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "max": {
+                  "required": true,
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "keep_alive": {
+                  "required": true,
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          "network": {
+            "id": "Nest.NodeInfoNetwork",
+            "required": true,
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "refresh_interval": {
+                "required": true,
+                "type": "integer"
+              },
+              "primary_interface": {
+                "id": "Nest.NodeInfoNetworkInterface",
+                "required": true,
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "address": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "name": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "mac_address": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "transport": {
+            "id": "Nest.NodeInfoTransport",
+            "required": true,
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "bound_address": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "publish_address": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "http": {
+            "id": "Nest.NodeInfoHTTP",
+            "required": true,
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "bound_address": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "publish_address": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "max_content_length": {
+                "required": true,
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "max_content_length_in_bytes": {
+                "required": true,
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "Nest.IExplainRequest",
+  "title": "IExplainRequest",
+  "type": "object",
+  "properties": {
+    "query": {
+      "required": true,
+      "type": "any"
+    }
+  }
+}

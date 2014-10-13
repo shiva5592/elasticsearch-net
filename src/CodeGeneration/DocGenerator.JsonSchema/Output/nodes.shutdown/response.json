@@ -1,0 +1,33 @@
+{
+  "id": "Nest.INodesShutdownResponse",
+  "title": "INodesShutdownResponse",
+  "type": "object",
+  "properties": {
+    "ClusterName": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Nodes": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "additionalProperties": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

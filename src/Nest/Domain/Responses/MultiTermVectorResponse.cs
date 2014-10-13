@@ -5,12 +5,13 @@ using Newtonsoft.Json;
 
 namespace Nest
 {
+    [JsonObject]
     public interface IMultiTermVectorResponse : IResponse
     {
+        [JsonProperty("docs")]
         IEnumerable<TermVectorResponse> Documents { get; }
     }
 
-    [JsonObject]
     public class MultiTermVectorResponse : BaseResponse, IMultiTermVectorResponse
     {
         public MultiTermVectorResponse()
@@ -19,7 +20,6 @@ namespace Nest
             Documents = new List<TermVectorResponse>();
         }
 
-        [JsonProperty("docs")]
         public IEnumerable<TermVectorResponse> Documents { get; internal set; }
     }
 }

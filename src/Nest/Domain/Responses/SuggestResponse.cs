@@ -4,13 +4,16 @@ using System.Linq;
 
 namespace Nest
 {
+	[JsonObject]
 	public interface ISuggestResponse : IResponse
 	{
+        [JsonProperty("shards")]
 		ShardsMetaData Shards { get; }
+
+		[JsonProperty("suggestions")]
 		IDictionary<string, Suggest[]> Suggestions { get; set; }
 	}
 
-	[JsonObject]
 	public class SuggestResponse : BaseResponse, ISuggestResponse
 	{
 		public SuggestResponse()

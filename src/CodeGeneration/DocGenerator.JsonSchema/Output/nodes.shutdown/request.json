@@ -1,0 +1,6 @@
+{
+  "id": "Nest.INodesShutdownRequest",
+  "title": "INodesShutdownRequest",
+  "type": "object",
+  "properties": {}
+}

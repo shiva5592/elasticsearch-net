@@ -5,13 +5,17 @@ using Newtonsoft.Json;
 
 namespace Nest
 {
+    [JsonObject]
     public interface INodeStatsResponse : IResponse
     {
+        [JsonProperty(PropertyName = "cluster_name")]
         string ClusterName { get; }
+
+        [JsonProperty(PropertyName = "nodes")]
+		[JsonConverter(typeof(DictionaryKeysAreNotPropertyNamesJsonConverter))]
         Dictionary<string, NodeStats> Nodes { get; }
     }
 
-    [JsonObject]
     public class NodeStatsResponse : BaseResponse, INodeStatsResponse
     {
         public NodeStatsResponse()
@@ -19,10 +23,8 @@ namespace Nest
             this.IsValid = true;
         }
 
-        [JsonProperty(PropertyName = "cluster_name")]
         public string ClusterName { get; internal set; }
-        [JsonProperty(PropertyName = "nodes")]
-		[JsonConverter(typeof(DictionaryKeysAreNotPropertyNamesJsonConverter))]
+
 		public Dictionary<string, NodeStats> Nodes { get; set; }
     }
 }

@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IMoreLikeThisRequest",
+  "title": "IMoreLikeThisRequest",
+  "type": "object",
+  "properties": {}
+}

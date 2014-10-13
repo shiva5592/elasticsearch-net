@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IRecoveryStatusRequest",
+  "title": "IRecoveryStatusRequest",
+  "type": "object",
+  "properties": {}
+}

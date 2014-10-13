@@ -4,14 +4,19 @@ using System.Linq;
 
 namespace Nest
 {
+	[JsonObject]
 	public interface IValidateResponse : IResponse
 	{
+		[JsonProperty(PropertyName = "valid")]
 		bool Valid { get; }
+
+		[JsonProperty(PropertyName = "_shards")]
 		ShardsMetaData Shards { get; }
+
+		[JsonProperty(PropertyName = "explanations")]
 		IList<ValidationExplanation> Explanations { get; set; }
 	}
 
-	[JsonObject]
 	public class ValidateResponse : BaseResponse, IValidateResponse
 	{
 		public ValidateResponse()
@@ -19,16 +24,13 @@ namespace Nest
 			this.IsValid = true;
 		}
 
-		[JsonProperty(PropertyName = "valid")]
 		public bool Valid { get; internal set; }
 
-		[JsonProperty(PropertyName = "_shards")]
 		public ShardsMetaData Shards { get; internal set; }
 
 		/// <summary>
 		/// Gets the explanations if Explain() was set.
 		/// </summary>
-		[JsonProperty(PropertyName = "explanations")]
 		public IList<ValidationExplanation> Explanations { get; set;}
 	}
 }

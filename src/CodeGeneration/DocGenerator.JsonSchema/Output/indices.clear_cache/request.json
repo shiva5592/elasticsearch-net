@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IClearCacheRequest",
+  "title": "IClearCacheRequest",
+  "type": "object",
+  "properties": {}
+}

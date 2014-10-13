@@ -2,14 +2,15 @@
 
 namespace Nest
 {
+	[JsonObject]
 	public interface IShardsOperationResponse : IResponse
 	{
+		[JsonProperty("_shards")]
 		ShardsMetaData Shards { get; }
 	}
 
 	public class ShardsOperationResponse : BaseResponse, IShardsOperationResponse
 	{
-		[JsonProperty("_shards")]
 		public ShardsMetaData Shards { get; internal set; }
 	}
 }

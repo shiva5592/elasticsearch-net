@@ -1,0 +1,11 @@
+{
+  "id": "Nest.IExistsResponse",
+  "title": "IExistsResponse",
+  "type": "object",
+  "properties": {
+    "Exists": {
+      "required": true,
+      "type": "boolean"
+    }
+  }
+}

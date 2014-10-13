@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IIndicesStatsRequest",
+  "title": "IIndicesStatsRequest",
+  "type": "object",
+  "properties": {}
+}

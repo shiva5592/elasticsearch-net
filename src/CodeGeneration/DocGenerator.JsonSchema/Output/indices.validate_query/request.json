@@ -1,0 +1,11 @@
+{
+  "id": "Nest.IValidateQueryRequest",
+  "title": "IValidateQueryRequest",
+  "type": "object",
+  "properties": {
+    "query": {
+      "required": true,
+      "type": "any"
+    }
+  }
+}

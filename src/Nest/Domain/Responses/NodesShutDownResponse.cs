@@ -7,19 +7,20 @@ using System.Text;
 namespace Nest
 {
 
+	[JsonObject]
 	public interface INodesShutdownResponse : IResponse
 	{
+		[JsonProperty("cluster_name")]
 		string ClusterName { get; set; }
+
+		[JsonProperty("nodes")]
 		Dictionary<string, Dictionary<string, string>> Nodes { get; set; }
 	}
 
-	[JsonObject]
 	public class NodesShutdownResponse : BaseResponse, INodesShutdownResponse
 	{
-		[JsonProperty("cluster_name")]
 		public string ClusterName { get; set; }
 
-		[JsonProperty("nodes")]
 		public Dictionary<string, Dictionary<string, string>> Nodes { get; set; }
 	}
 }

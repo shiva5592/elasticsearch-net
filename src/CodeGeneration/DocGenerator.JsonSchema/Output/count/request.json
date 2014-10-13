@@ -1,0 +1,11 @@
+{
+  "id": "Nest.ICountRequest",
+  "title": "ICountRequest",
+  "type": "object",
+  "properties": {
+    "query": {
+      "required": true,
+      "type": "any"
+    }
+  }
+}

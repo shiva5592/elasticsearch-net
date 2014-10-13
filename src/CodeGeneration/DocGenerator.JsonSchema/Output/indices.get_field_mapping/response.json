@@ -1,0 +1,67 @@
+{
+  "id": "Nest.IGetFieldMappingResponse",
+  "title": "IGetFieldMappingResponse",
+  "type": "object",
+  "properties": {
+    "Indices": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "id": "Nest.TypeFieldMappings",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "mappings": {
+            "required": true,
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "additionalProperties": {
+                "id": "Nest.FieldMapping",
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "full_name": {
+                    "required": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "mapping": {
+                    "required": true,
+                    "type": [
+                      "object",
+                      "null"
+                    ],
+                    "additionalProperties": {
+                      "id": "Nest.IFieldMapping",
+                      "type": [
+                        "object",
+                        "null"
+                      ],
+                      "properties": {}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

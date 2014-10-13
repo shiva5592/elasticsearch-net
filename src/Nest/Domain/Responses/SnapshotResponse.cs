@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 
 namespace Nest
 {
+	[JsonObject]
 	public interface ISnapshotResponse : IResponse
 	{
 		[JsonProperty("accepted")]
@@ -14,11 +15,10 @@ namespace Nest
 		Snapshot Snapshot { get; set; }
 	}
 
-	[JsonObject]
 	public class SnapshotResponse : BaseResponse, ISnapshotResponse
 	{
 		private bool _accepted = false;
-		[JsonProperty("accepted")]
+		
 		public bool Accepted
 		{
 			get
@@ -28,7 +28,6 @@ namespace Nest
 			internal set { _accepted = value; }
 		}
 
-		[JsonProperty("snapshot")]
 		public Snapshot Snapshot { get; set; }
 
 	}

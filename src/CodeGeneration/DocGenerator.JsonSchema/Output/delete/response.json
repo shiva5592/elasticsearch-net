@@ -1,0 +1,39 @@
+{
+  "id": "Nest.IDeleteResponse",
+  "title": "IDeleteResponse",
+  "type": "object",
+  "properties": {
+    "Id": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Index": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Type": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Version": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Found": {
+      "required": true,
+      "type": "boolean"
+    }
+  }
+}

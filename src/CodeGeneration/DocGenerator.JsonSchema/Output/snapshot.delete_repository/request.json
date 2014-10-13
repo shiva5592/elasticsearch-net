@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IDeleteRepositoryRequest",
+  "title": "IDeleteRepositoryRequest",
+  "type": "object",
+  "properties": {}
+}

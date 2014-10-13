@@ -1,0 +1,113 @@
+{
+  "id": "Nest.ITermVectorResponse",
+  "title": "ITermVectorResponse",
+  "type": "object",
+  "properties": {
+    "Found": {
+      "required": true,
+      "type": "boolean"
+    },
+    "TermVectors": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "id": "Nest.TermVector",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "field_statistics": {
+            "id": "Nest.FieldStatistics",
+            "required": true,
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "doc_count": {
+                "required": true,
+                "type": "integer"
+              },
+              "sum_doc_freq": {
+                "required": true,
+                "type": "integer"
+              },
+              "sum_ttf": {
+                "required": true,
+                "type": "integer"
+              }
+            }
+          },
+          "terms": {
+            "required": true,
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": {
+              "id": "Nest.TermVectorTerm",
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "doc_freq": {
+                  "required": true,
+                  "type": "integer"
+                },
+                "term_freq": {
+                  "required": true,
+                  "type": "integer"
+                },
+                "tokens": {
+                  "id": "System.Collections.Generic.IEnumerable`1[[Nest.Token, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+                  "required": true,
+                  "type": [
+                    "array",
+                    "null"
+                  ],
+                  "items": {
+                    "id": "Nest.Token",
+                    "type": [
+                      "object",
+                      "null"
+                    ],
+                    "properties": {
+                      "end_offset": {
+                        "required": true,
+                        "type": "integer"
+                      },
+                      "payload": {
+                        "required": true,
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "position": {
+                        "required": true,
+                        "type": "integer"
+                      },
+                      "start_offset": {
+                        "required": true,
+                        "type": "integer"
+                      }
+                    }
+                  }
+                },
+                "ttf": {
+                  "required": true,
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

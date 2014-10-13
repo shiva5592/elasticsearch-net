@@ -4,9 +4,13 @@ using Newtonsoft.Json;
 
 namespace Nest
 {
+	[JsonObject]
 	public interface IPercolateCountResponse : IResponse
 	{
+		[JsonProperty(PropertyName = "took")]
 		int Took { get; }
+
+		[JsonProperty(PropertyName = "total")]
 		long Total { get; }
 	}
 
@@ -16,7 +20,6 @@ namespace Nest
 		IEnumerable<PercolatorMatch> Matches { get; }
 	}
 
-	[JsonObject]
 	public class PercolateCountResponse : BaseResponse, IPercolateCountResponse
 	{
 		public PercolateCountResponse()
@@ -24,9 +27,8 @@ namespace Nest
 			this.IsValid = true;
 		}
 
-		[JsonProperty(PropertyName = "took")]
 		public int Took { get; internal set; }
-		[JsonProperty(PropertyName = "total")]
+
 		public long Total { get; internal set; }
 		
 		/// <summary>

@@ -1,0 +1,53 @@
+{
+  "id": "Nest.IClusterPendingTasksResponse",
+  "title": "IClusterPendingTasksResponse",
+  "type": "object",
+  "properties": {
+    "Tasks": {
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.PendingTask, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+      "required": true,
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "id": "Nest.PendingTask",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "insert_order": {
+            "required": true,
+            "type": "integer"
+          },
+          "priority": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "time_in_queue_millis": {
+            "required": true,
+            "type": "integer"
+          },
+          "time_in_queue": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

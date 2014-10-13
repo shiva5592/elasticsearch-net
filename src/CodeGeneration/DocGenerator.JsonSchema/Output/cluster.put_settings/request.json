@@ -1,0 +1,32 @@
+{
+  "id": "Nest.IClusterSettingsRequest",
+  "title": "IClusterSettingsRequest",
+  "type": "object",
+  "properties": {
+    "persistent": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "id": "System.Object",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {}
+      }
+    },
+    "transient": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "$ref": "System.Object"
+      }
+    }
+  }
+}

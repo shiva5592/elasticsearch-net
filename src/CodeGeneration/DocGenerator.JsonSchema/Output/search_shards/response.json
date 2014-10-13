@@ -1,0 +1,97 @@
+{
+  "id": "Nest.ISearchShardsResponse",
+  "title": "ISearchShardsResponse",
+  "type": "object",
+  "properties": {
+    "shards": {
+      "id": "System.Collections.Generic.IEnumerable`1[[System.Collections.Generic.IEnumerable`1[[Nest.SearchShard, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+      "required": true,
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "id": "System.Collections.Generic.IEnumerable`1[[Nest.SearchShard, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+        "type": [
+          "array",
+          "null"
+        ],
+        "items": {
+          "id": "Nest.SearchShard",
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "name": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "primary": {
+              "required": true,
+              "type": "boolean"
+            },
+            "node": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "relocating_node": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "shard": {
+              "required": true,
+              "type": "integer"
+            },
+            "index": {
+              "required": true,
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "nodes": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "id": "Nest.SearchNode",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "name": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "transport_address": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

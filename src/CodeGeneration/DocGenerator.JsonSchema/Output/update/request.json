@@ -1,0 +1,50 @@
+{
+  "id": "Nest.IUpdateRequest`2[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+  "title": "IUpdateRequest`2",
+  "type": "object",
+  "properties": {
+    "script": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lang": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "params": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "id": "System.Object",
+        "required": true,
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {}
+      }
+    },
+    "upsert": {
+      "$ref": "System.Object"
+    },
+    "doc_as_upsert": {
+      "required": true,
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "doc": {
+      "$ref": "System.Object"
+    }
+  }
+}

@@ -6,41 +6,40 @@ using Newtonsoft.Json;
 
 namespace Nest
 {
+	[JsonObject(MemberSerialization.OptIn)]
 	public interface IGetResponse<T> : IResponse where T : class
 	{
+		[JsonProperty(PropertyName = "found")]
 		bool Found { get; }
+		[JsonProperty(PropertyName = "_index")]
 		string Index { get; }
+		[JsonProperty(PropertyName = "_type")]
 		string Type { get; }
+		[JsonProperty(PropertyName = "_id")]
 		string Id { get; }
+		[JsonProperty(PropertyName = "_version")]
 		string Version { get; }
+		[JsonProperty(PropertyName = "_source")]
 		T Source { get; }
+		
 		FieldSelection<T> Fields { get; }
 	}
 
-
-	[JsonObject(MemberSerialization.OptIn)]
 	public class GetResponse<T> : BaseResponse, IGetResponse<T> where T : class
 	{
 		private IDictionary<string, object> _fieldValues;
 
-		[JsonProperty(PropertyName = "_index")]
 		public string Index { get; private set; }
 
-		[JsonProperty(PropertyName = "_type")]
 		public string Type { get; private set; }
 
-		[JsonProperty(PropertyName = "_id")]
 		public string Id { get; private set; }
 
-		[JsonProperty(PropertyName = "_version")]
 		public string Version { get; private set; }
 
-		[JsonProperty(PropertyName = "found")]
 		public bool Found { get; private set; }
 
-		[JsonProperty(PropertyName = "_source")]
 		public T Source { get; private set; }
-
 
 		[JsonConverter(typeof(DictionaryKeysAreNotPropertyNamesJsonConverter))]
 		[JsonProperty(PropertyName = "fields")]

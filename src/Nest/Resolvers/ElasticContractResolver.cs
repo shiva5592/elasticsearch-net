@@ -99,6 +99,7 @@ namespace Nest.Resolvers
 			defaultProperties = PropertiesOf<IExternalFieldDeclaration>(type, memberSerialization, defaultProperties, lookup);
 			defaultProperties = PropertiesOf<IQueryContainer>(type, memberSerialization, defaultProperties, lookup);
 			defaultProperties = PropertiesOf<IRequest>(type, memberSerialization, defaultProperties, lookup);
+			defaultProperties = PropertiesOf<IResponse>(type, memberSerialization, defaultProperties, lookup);
 			defaultProperties = PropertiesOf<IFilter>(type, memberSerialization, defaultProperties, lookup, append: true);
 			defaultProperties = PropertiesOf<IFilterContainer>(type, memberSerialization, defaultProperties, lookup);
 			defaultProperties = PropertiesOf<IRandomScoreFunction>(type, memberSerialization, defaultProperties, lookup);

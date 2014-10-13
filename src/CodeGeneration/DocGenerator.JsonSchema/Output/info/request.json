@@ -1,0 +1,6 @@
+{
+  "id": "Nest.IInfoRequest",
+  "title": "IInfoRequest",
+  "type": "object",
+  "properties": {}
+}

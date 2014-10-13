@@ -1,0 +1,6 @@
+{
+  "id": "Nest.ISegmentsRequest",
+  "title": "ISegmentsRequest",
+  "type": "object",
+  "properties": {}
+}

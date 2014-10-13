@@ -1,0 +1,39 @@
+{
+  "id": "Nest.ISnapshotRequest",
+  "title": "ISnapshotRequest",
+  "type": "object",
+  "properties": {
+    "indices": {
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.IndexNameMarker, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+      "required": true,
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "any"
+      }
+    },
+    "ignore_unavailable": {
+      "required": true,
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "include_global_state": {
+      "required": true,
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "partial": {
+      "required": true,
+      "type": [
+        "boolean",
+        "null"
+      ]
+    }
+  }
+}

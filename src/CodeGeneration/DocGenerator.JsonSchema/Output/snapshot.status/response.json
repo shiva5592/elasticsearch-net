@@ -1,0 +1,145 @@
+{
+  "id": "Nest.ISnapshotStatusResponse",
+  "title": "ISnapshotStatusResponse",
+  "type": "object",
+  "properties": {
+    "snapshots": {
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.SnapshotStatus, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+      "required": true,
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "id": "Nest.SnapshotStatus",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "snapshot": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "repository": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "state": {
+            "required": true,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "shards_stats": {
+            "id": "Nest.SnapshotShardsStats",
+            "required": true,
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "initializing": {
+                "required": true,
+                "type": "integer"
+              },
+              "started": {
+                "required": true,
+                "type": "integer"
+              },
+              "finalizing": {
+                "required": true,
+                "type": "integer"
+              },
+              "done": {
+                "required": true,
+                "type": "integer"
+              },
+              "failed": {
+                "required": true,
+                "type": "integer"
+              },
+              "total": {
+                "required": true,
+                "type": "integer"
+              }
+            }
+          },
+          "stats": {
+            "id": "Nest.SnapshotStats",
+            "required": true,
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "number_of_files": {
+                "required": true,
+                "type": "integer"
+              },
+              "processed_files": {
+                "required": true,
+                "type": "integer"
+              },
+              "total_size_in_bytes": {
+                "required": true,
+                "type": "integer"
+              },
+              "processed_size_in_bytes": {
+                "required": true,
+                "type": "integer"
+              },
+              "start_time_in_millis": {
+                "required": true,
+                "type": "integer"
+              },
+              "time_in_millis": {
+                "required": true,
+                "type": "integer"
+              }
+            }
+          },
+          "indices": {
+            "required": true,
+            "type": [
+              "object",
+              "null"
+            ],
+            "additionalProperties": {
+              "id": "Nest.SnapshotIndexStats",
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "shards_stats": {
+                  "$ref": "Nest.SnapshotShardsStats"
+                },
+                "stats": {
+                  "$ref": "Nest.SnapshotStats"
+                },
+                "shards": {
+                  "required": true,
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "additionalProperties": {
+                    "$ref": "Nest.SnapshotShardsStats"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

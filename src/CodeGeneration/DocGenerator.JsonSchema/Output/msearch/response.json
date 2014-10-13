@@ -1,0 +1,11 @@
+{
+  "id": "Nest.IMultiSearchResponse",
+  "title": "IMultiSearchResponse",
+  "type": "object",
+  "properties": {
+    "TotalResponses": {
+      "required": true,
+      "type": "integer"
+    }
+  }
+}

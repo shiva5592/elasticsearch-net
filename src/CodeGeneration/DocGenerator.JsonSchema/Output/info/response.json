@@ -1,0 +1,53 @@
+{
+  "id": "Nest.IRootInfoResponse",
+  "title": "IRootInfoResponse",
+  "type": "object",
+  "properties": {
+    "Status": {
+      "required": true,
+      "type": "integer"
+    },
+    "Name": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Tagline": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Version": {
+      "id": "Nest.ElasticsearchVersionInfo",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Number": {
+          "required": true,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "snapshot_build": {
+          "required": true,
+          "type": "boolean"
+        },
+        "lucene_version": {
+          "required": true,
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}
