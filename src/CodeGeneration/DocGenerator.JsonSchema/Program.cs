@@ -343,7 +343,7 @@ namespace DocGenerator.JsonSchema
 			using(var schema = new ElasticsearchSchema("get"))
 			{
 				schema.Request<IGetRequest>();
-				schema.Response<IGetResponse<object>>();
+				schema.Response<GetResponse<object>>(); //class because fields is weaker typed there
 			}
 			using(var schema = new ElasticsearchSchema("explain"))
 			{

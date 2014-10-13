@@ -1,12 +1,8 @@
 {
-  "id": "Nest.IGetResponse`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
-  "title": "IGetResponse`1",
+  "id": "Nest.GetResponse`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+  "title": "GetResponse`1",
   "type": "object",
   "properties": {
-    "found": {
-      "required": true,
-      "type": "boolean"
-    },
     "_index": {
       "required": true,
       "type": [
@@ -35,6 +31,10 @@
         "null"
       ]
     },
+    "found": {
+      "required": true,
+      "type": "boolean"
+    },
     "_source": {
       "id": "System.Object",
       "required": true,
@@ -43,6 +43,16 @@
         "null"
       ],
       "properties": {}
+    },
+    "fields": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "$ref": "System.Object"
+      }
     }
   }
 }
