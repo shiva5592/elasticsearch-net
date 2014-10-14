@@ -6,26 +6,29 @@ using System.Text;
 
 namespace Nest
 {
+	[JsonObject]
 	public interface IClusterStatsResponse : IResponse
 	{
+		[JsonProperty("cluster_name")]
 		string ClusterName { get; set; }
+
+		[JsonProperty("status")]
 		string Status { get; set; }
+
+		[JsonProperty("indices")]
 		IndicesStats Indices { get; set; }
+
+		[JsonProperty("nodes")]
 		ClusterNodesStats Nodes { get; set; }
 	}
 
-	[JsonObject]
 	public class ClusterStatsResponse : BaseResponse, IClusterStatsResponse
 	{
-		[JsonProperty("cluster_name")]
 		public string ClusterName { get; set; }
-		[JsonProperty("status")]
 		public string Status { get; set; }
 
-		[JsonProperty("indices")]
 		public IndicesStats Indices { get; set; }
 
-		[JsonProperty("nodes")]
 		public ClusterNodesStats Nodes { get; set; }
 	}
 }

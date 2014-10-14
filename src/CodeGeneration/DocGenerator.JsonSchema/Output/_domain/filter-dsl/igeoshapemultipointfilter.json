@@ -1,0 +1,35 @@
+{
+  "id": "Nest.IGeoShapeMultiPointFilter",
+  "title": "IGeoShapeMultiPointFilter",
+  "type": "object",
+  "properties": {
+    "shape": {
+      "id": "Nest.IMultiPointGeoShape",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "coordinates": {
+          "id": "System.Collections.Generic.IEnumerable`1[[System.Collections.Generic.IEnumerable`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+          "required": true,
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "id": "System.Collections.Generic.IEnumerable`1[[System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    }
+  }
+}

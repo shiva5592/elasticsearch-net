@@ -1,0 +1,11 @@
+{
+  "id": "Nest.IWildcardQuery",
+  "title": "IWildcardQuery",
+  "type": "object",
+  "properties": {
+    "rewrite": {
+      "required": true,
+      "type": "any"
+    }
+  }
+}

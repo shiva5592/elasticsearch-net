@@ -10,6 +10,7 @@ namespace Nest
 	public interface ICatResponse<TCatRectord> : IResponse
 		where TCatRectord : ICatRecord
 	{
+		[JsonProperty("records")]
 		IEnumerable<TCatRectord> Records { get; }
 	}
 

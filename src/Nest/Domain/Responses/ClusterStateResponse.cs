@@ -3,43 +3,51 @@ using Newtonsoft.Json;
 
 namespace Nest
 {
+	[JsonObject]
 	public interface IClusterStateResponse : IResponse
 	{
+		[JsonProperty("cluster_name")]
 		string ClusterName { get; }
+		
+		[JsonProperty("master_node")]
 		string MasterNode { get; }
+		
+		[JsonProperty("nodes")]
+		[JsonConverter(typeof(DictionaryKeysAreNotPropertyNamesJsonConverter))]
 		Dictionary<string, NodeState> Nodes { get; }
+		
+		[JsonProperty("metadata")]
 		MetadataState Metadata { get; }
+		
+		[JsonProperty("routing_table")]
 		RoutingTableState RoutingTable { get; }
+	
+		[JsonProperty("routing_nodes")]
 		RoutingNodesState RoutingNodes { get; }
+		
+		[JsonProperty("blocks")]
 		BlockState Blocks { get; }
 	}
 
-	[JsonObject]
 	public class ClusterStateResponse : BaseResponse, IClusterStateResponse
 	{
 		public ClusterStateResponse()
 		{
 			this.IsValid = true;
 		}
-		[JsonProperty("cluster_name")]
+
 		public string ClusterName { get; internal set; }
-		[JsonProperty("master_node")]
+		
 		public string MasterNode { get; internal set; }
 
-		[JsonProperty("nodes")]
-		[JsonConverter(typeof(DictionaryKeysAreNotPropertyNamesJsonConverter))]
 		public Dictionary<string, NodeState> Nodes { get; internal set; }
 
-		[JsonProperty("metadata")]
 		public MetadataState Metadata { get; internal set; }
 
-		[JsonProperty("routing_table")]
 		public RoutingTableState RoutingTable { get; internal set; }
 
-		[JsonProperty("routing_nodes")]
 		public RoutingNodesState RoutingNodes { get; internal set; }
 
-		[JsonProperty("blocks")]
 		public BlockState Blocks { get; internal set; }
 	}
 }

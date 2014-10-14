@@ -1,0 +1,28 @@
+{
+  "id": "Nest.IRegexpQuery",
+  "title": "IRegexpQuery",
+  "type": "object",
+  "properties": {
+    "value": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "flags": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "boost": {
+      "required": true,
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  }
+}

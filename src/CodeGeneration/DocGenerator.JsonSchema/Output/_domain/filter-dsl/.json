@@ -1,0 +1,21 @@
+{
+  "id": "Nest.IRegexpFilter",
+  "title": "IRegexpFilter",
+  "type": "object",
+  "properties": {
+    "value": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "flags": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

@@ -3,21 +3,21 @@
   "title": "IClusterStateResponse",
   "type": "object",
   "properties": {
-    "ClusterName": {
+    "cluster_name": {
       "required": true,
       "type": [
         "string",
         "null"
       ]
     },
-    "MasterNode": {
+    "master_node": {
       "required": true,
       "type": [
         "string",
         "null"
       ]
     },
-    "Nodes": {
+    "nodes": {
       "required": true,
       "type": [
         "object",
@@ -60,7 +60,7 @@
         }
       }
     },
-    "Metadata": {
+    "metadata": {
       "id": "Nest.MetadataState",
       "required": true,
       "type": [
@@ -167,7 +167,7 @@
         }
       }
     },
-    "RoutingTable": {
+    "routing_table": {
       "id": "Nest.RoutingTableState",
       "required": true,
       "type": [
@@ -253,7 +253,7 @@
         }
       }
     },
-    "RoutingNodes": {
+    "routing_nodes": {
       "id": "Nest.RoutingNodesState",
       "required": true,
       "type": [
@@ -276,7 +276,7 @@
         }
       }
     },
-    "Blocks": {
+    "blocks": {
       "id": "Nest.BlockState",
       "required": true,
       "type": [

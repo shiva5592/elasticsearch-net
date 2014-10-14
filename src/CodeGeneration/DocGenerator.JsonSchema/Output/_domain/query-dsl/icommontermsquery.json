@@ -1,0 +1,57 @@
+{
+  "id": "Nest.ICommonTermsQuery",
+  "title": "ICommonTermsQuery",
+  "type": "object",
+  "properties": {
+    "query": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cutoff_frequency": {
+      "required": true,
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "low_freq_operator": {
+      "required": true,
+      "type": "any"
+    },
+    "high_freq_operator": {
+      "required": true,
+      "type": "any"
+    },
+    "minimum_should_match": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "boost": {
+      "required": true,
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "analyzer": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "disable_coord": {
+      "required": true,
+      "type": [
+        "boolean",
+        "null"
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "Nest.IGeoDistanceFilter",
+  "title": "IGeoDistanceFilter",
+  "type": "object",
+  "properties": {
+    "distance": {
+      "id": "System.Object",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {}
+    },
+    "unit": {
+      "required": true,
+      "type": "any"
+    },
+    "optimize_bbox": {
+      "required": true,
+      "type": "any"
+    },
+    "distance_type": {
+      "required": true,
+      "type": "any"
+    }
+  }
+}

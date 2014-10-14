@@ -3,21 +3,21 @@
   "title": "IClusterStatsResponse",
   "type": "object",
   "properties": {
-    "ClusterName": {
+    "cluster_name": {
       "required": true,
       "type": [
         "string",
         "null"
       ]
     },
-    "Status": {
+    "status": {
       "required": true,
       "type": [
         "string",
         "null"
       ]
     },
-    "Indices": {
+    "indices": {
       "id": "Nest.IndicesStats",
       "required": true,
       "type": [
@@ -299,7 +299,7 @@
         }
       }
     },
-    "Nodes": {
+    "nodes": {
       "id": "Nest.ClusterNodesStats",
       "required": true,
       "type": [

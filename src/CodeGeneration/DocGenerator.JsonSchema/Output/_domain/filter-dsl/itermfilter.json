@@ -1,0 +1,23 @@
+{
+  "id": "Nest.ITermFilter",
+  "title": "ITermFilter",
+  "type": "object",
+  "properties": {
+    "value": {
+      "id": "System.Object",
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {}
+    },
+    "boost": {
+      "required": true,
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  }
+}

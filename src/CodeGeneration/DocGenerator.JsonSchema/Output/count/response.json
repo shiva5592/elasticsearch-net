@@ -3,11 +3,11 @@
   "title": "ICountResponse",
   "type": "object",
   "properties": {
-    "Count": {
+    "count": {
       "required": true,
       "type": "integer"
     },
-    "Shards": {
+    "_shards": {
       "id": "Nest.ShardsMetaData",
       "required": true,
       "type": [

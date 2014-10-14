@@ -3,15 +3,15 @@
   "title": "IBulkResponse",
   "type": "object",
   "properties": {
-    "Took": {
+    "took": {
       "required": true,
       "type": "integer"
     },
-    "Errors": {
+    "errors": {
       "required": true,
       "type": "boolean"
     },
-    "Items": {
+    "items": {
       "id": "System.Collections.Generic.IEnumerable`1[[Nest.BulkOperationResponseItem, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
       "required": true,
       "type": [
@@ -21,9 +21,6 @@
       "items": {
         "type": "any"
       }
-    },
-    "ItemsWithErrors": {
-      "$ref": "System.Collections.Generic.IEnumerable`1[[Nest.BulkOperationResponseItem, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]"
     }
   }
 }

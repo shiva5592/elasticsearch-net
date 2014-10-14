@@ -3,7 +3,7 @@
   "title": "IClusterPendingTasksResponse",
   "type": "object",
   "properties": {
-    "Tasks": {
+    "tasks": {
       "id": "System.Collections.Generic.IEnumerable`1[[Nest.PendingTask, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
       "required": true,
       "type": [

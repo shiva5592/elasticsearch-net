@@ -1,0 +1,29 @@
+{
+  "id": "Nest.ITemplateQuery",
+  "title": "ITemplateQuery",
+  "type": "object",
+  "properties": {
+    "query": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "params": {
+      "required": true,
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": {
+        "id": "System.Object",
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {}
+      }
+    }
+  }
+}

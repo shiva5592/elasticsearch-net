@@ -1,0 +1,25 @@
+{
+  "id": "Nest.IGeoBoundingBoxFilter",
+  "title": "IGeoBoundingBoxFilter",
+  "type": "object",
+  "properties": {
+    "top_left": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bottom_right": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "type": {
+      "required": true,
+      "type": "any"
+    }
+  }
+}

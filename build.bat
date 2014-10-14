@@ -12,7 +12,8 @@ if not exist build\tools\FAKE\tools\Fake.exe (
     "build\tools\nuget\nuget.exe" "install" "FAKE" "-OutputDirectory" "build\tools" "-ExcludeVersion" "-Prerelease"
 )
 
-"build\tools\nuget\nuget.exe" "install" "gitlink" "-OutputDirectory" "build\tools" "-ExcludeVersion" "-Prerelease"
+REM We'd love to use gitlink but we are waiting on confirmation that pdbstr may be redistributed
+REM "build\tools\nuget\nuget.exe" "install" "gitlink" "-OutputDirectory" "build\tools" "-ExcludeVersion" "-Prerelease"
 
 REM we need nunit-console to run our tests
 if not exist build\tools\NUnit.Runners\tools\nunit-console.exe (

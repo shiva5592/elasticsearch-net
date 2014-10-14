@@ -3,7 +3,7 @@
   "title": "ICatResponse`1",
   "type": "object",
   "properties": {
-    "Records": {
+    "records": {
       "id": "System.Collections.Generic.IEnumerable`1[[Nest.CatNodesRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
       "required": true,
       "type": [

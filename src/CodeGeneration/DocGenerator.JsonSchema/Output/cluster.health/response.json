@@ -3,53 +3,53 @@
   "title": "IHealthResponse",
   "type": "object",
   "properties": {
-    "ClusterName": {
+    "cluster_name": {
       "required": true,
       "type": [
         "string",
         "null"
       ]
     },
-    "Status": {
+    "status": {
       "required": true,
       "type": [
         "string",
         "null"
       ]
     },
-    "TimedOut": {
+    "timed_out": {
       "required": true,
       "type": "boolean"
     },
-    "NumberOfNodes": {
+    "number_of_nodes": {
       "required": true,
       "type": "integer"
     },
-    "NumberOfDataNodes": {
+    "number_of_data_nodes": {
       "required": true,
       "type": "integer"
     },
-    "ActivePrimaryShards": {
+    "active_primary_shards": {
       "required": true,
       "type": "integer"
     },
-    "ActiveShards": {
+    "active_shards": {
       "required": true,
       "type": "integer"
     },
-    "RelocatingShards": {
+    "relocating_shards": {
       "required": true,
       "type": "integer"
     },
-    "InitializingShards": {
+    "initializing_shards": {
       "required": true,
       "type": "integer"
     },
-    "UnassignedShards": {
+    "unassigned_shards": {
       "required": true,
       "type": "integer"
     },
-    "Indices": {
+    "indices": {
       "required": true,
       "type": [
         "object",

@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 namespace Nest
 {
-	[JsonObject]
 	public class BulkResponse : BaseResponse, IBulkResponse
 	{
 		private bool _isValid;
@@ -20,16 +19,12 @@ namespace Nest
 			}
 		}
 
-		[JsonProperty("took")]
 		public int Took { get; internal set; }
 
-		[JsonProperty("errors")]
 		public bool Errors { get; internal set; }
 
-		[JsonProperty("items")]
 		public IEnumerable<BulkOperationResponseItem> Items { get; internal set; }
 
-		[JsonIgnore]
 		public IEnumerable<BulkOperationResponseItem> ItemsWithErrors
 		{
 			get

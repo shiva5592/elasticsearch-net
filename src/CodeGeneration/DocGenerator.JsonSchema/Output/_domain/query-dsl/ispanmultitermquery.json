@@ -1,0 +1,11 @@
+{
+  "id": "Nest.ISpanMultiTermQuery",
+  "title": "ISpanMultiTermQuery",
+  "type": "object",
+  "properties": {
+    "match": {
+      "required": true,
+      "type": "any"
+    }
+  }
+}

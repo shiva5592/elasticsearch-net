@@ -1,0 +1,11 @@
+{
+  "id": "Nest.IPrefixQuery",
+  "title": "IPrefixQuery",
+  "type": "object",
+  "properties": {
+    "rewrite": {
+      "required": true,
+      "type": "any"
+    }
+  }
+}

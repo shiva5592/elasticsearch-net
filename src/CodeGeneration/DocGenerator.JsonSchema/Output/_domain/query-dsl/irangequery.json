@@ -1,0 +1,56 @@
+{
+  "id": "Nest.IRangeQuery",
+  "title": "IRangeQuery",
+  "type": "object",
+  "properties": {
+    "gte": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lte": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gt": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lt": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "boost": {
+      "required": true,
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "_cache": {
+      "required": true,
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "_name": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

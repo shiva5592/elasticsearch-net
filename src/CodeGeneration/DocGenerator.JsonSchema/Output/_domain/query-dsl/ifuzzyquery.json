@@ -1,0 +1,46 @@
+{
+  "id": "Nest.IFuzzyQuery",
+  "title": "IFuzzyQuery",
+  "type": "object",
+  "properties": {
+    "boost": {
+      "required": true,
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "fuzziness": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rewrite": {
+      "required": true,
+      "type": "any"
+    },
+    "max_expansions": {
+      "required": true,
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "transpositions": {
+      "required": true,
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "unicode_aware": {
+      "required": true,
+      "type": [
+        "boolean",
+        "null"
+      ]
+    }
+  }
+}

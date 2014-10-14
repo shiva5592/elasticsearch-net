@@ -1,0 +1,35 @@
+{
+  "id": "Nest.IRangeFilter",
+  "title": "IRangeFilter",
+  "type": "object",
+  "properties": {
+    "gte": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lte": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "gt": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lt": {
+      "required": true,
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

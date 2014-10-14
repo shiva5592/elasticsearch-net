@@ -6,15 +6,15 @@ using System.Text;
 
 namespace Nest
 {
+	[JsonObject]
 	public interface IClusterPendingTasksResponse : IResponse
 	{
+		[JsonProperty("tasks")]
 		IEnumerable<PendingTask> Tasks { get; set; }
 	}
 
-	[JsonObject]
 	public class ClusterPendingTasksResponse : BaseResponse, IClusterPendingTasksResponse
 	{
-		[JsonProperty("tasks")]
 		public IEnumerable<PendingTask> Tasks { get; set; }
 	}
 
