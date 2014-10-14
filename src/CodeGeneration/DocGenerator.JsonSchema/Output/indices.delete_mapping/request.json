@@ -1,5 +1,6 @@
 {
   "id": "Nest.IDeleteMappingRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IDeleteMappingRequest",
   "type": "object",
   "properties": {}

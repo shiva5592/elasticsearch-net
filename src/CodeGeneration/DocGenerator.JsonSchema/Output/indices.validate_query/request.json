@@ -1,11 +1,14 @@
 {
   "id": "Nest.IValidateQueryRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IValidateQueryRequest",
   "type": "object",
   "properties": {
     "query": {
-      "required": true,
       "type": "any"
     }
-  }
+  },
+  "required": [
+    "query"
+  ]
 }

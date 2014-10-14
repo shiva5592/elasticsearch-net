@@ -1,5 +1,6 @@
 {
   "id": "Nest.IIndicesStatsRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IIndicesStatsRequest",
   "type": "object",
   "properties": {}

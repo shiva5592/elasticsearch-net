@@ -1,5 +1,6 @@
 {
   "id": "Nest.ICatMasterRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ICatMasterRequest",
   "type": "object",
   "properties": {}

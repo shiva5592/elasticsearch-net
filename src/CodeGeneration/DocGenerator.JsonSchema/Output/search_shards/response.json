@@ -1,17 +1,17 @@
 {
   "id": "Nest.ISearchShardsResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ISearchShardsResponse",
   "type": "object",
   "properties": {
     "shards": {
-      "id": "System.Collections.Generic.IEnumerable`1[[System.Collections.Generic.IEnumerable`1[[Nest.SearchShard, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
-      "required": true,
+      "id": "System.Collections.Generic.IEnumerable`1[[System.Collections.Generic.IEnumerable`1[[Nest.SearchShard, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
       "type": [
         "array",
         "null"
       ],
       "items": {
-        "id": "System.Collections.Generic.IEnumerable`1[[Nest.SearchShard, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+        "id": "System.Collections.Generic.IEnumerable`1[[Nest.SearchShard, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "type": [
           "array",
           "null"
@@ -24,47 +24,48 @@
           ],
           "properties": {
             "name": {
-              "required": true,
               "type": [
                 "string",
                 "null"
               ]
             },
             "primary": {
-              "required": true,
               "type": "boolean"
             },
             "node": {
-              "required": true,
               "type": [
                 "string",
                 "null"
               ]
             },
             "relocating_node": {
-              "required": true,
               "type": [
                 "string",
                 "null"
               ]
             },
             "shard": {
-              "required": true,
               "type": "integer"
             },
             "index": {
-              "required": true,
               "type": [
                 "string",
                 "null"
               ]
             }
-          }
+          },
+          "required": [
+            "name",
+            "primary",
+            "node",
+            "relocating_node",
+            "shard",
+            "index"
+          ]
         }
       }
     },
     "nodes": {
-      "required": true,
       "type": [
         "object",
         "null"
@@ -77,21 +78,27 @@
         ],
         "properties": {
           "name": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "transport_address": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           }
-        }
+        },
+        "required": [
+          "name",
+          "transport_address"
+        ]
       }
     }
-  }
+  },
+  "required": [
+    "shards",
+    "nodes"
+  ]
 }

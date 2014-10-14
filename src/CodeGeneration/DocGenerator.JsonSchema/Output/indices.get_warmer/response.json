@@ -1,10 +1,10 @@
 {
   "id": "Nest.IWarmerResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IWarmerResponse",
   "type": "object",
   "properties": {
     "Indices": {
-      "required": true,
       "type": [
         "object",
         "null"
@@ -19,5 +19,8 @@
         }
       }
     }
-  }
+  },
+  "required": [
+    "Indices"
+  ]
 }

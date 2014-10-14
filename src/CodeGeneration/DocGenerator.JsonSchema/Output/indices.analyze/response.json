@@ -1,11 +1,11 @@
 {
   "id": "Nest.IAnalyzeResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IAnalyzeResponse",
   "type": "object",
   "properties": {
     "Tokens": {
-      "id": "System.Collections.Generic.IEnumerable`1[[Nest.AnalyzeToken, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-      "required": true,
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.AnalyzeToken, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
       "type": [
         "array",
         "null"
@@ -18,33 +18,38 @@
         ],
         "properties": {
           "token": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "type": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "start_offset": {
-            "required": true,
             "type": "integer"
           },
           "end_offset": {
-            "required": true,
             "type": "integer"
           },
           "position": {
-            "required": true,
             "type": "integer"
           }
-        }
+        },
+        "required": [
+          "token",
+          "type",
+          "start_offset",
+          "end_offset",
+          "position"
+        ]
       }
     }
-  }
+  },
+  "required": [
+    "Tokens"
+  ]
 }

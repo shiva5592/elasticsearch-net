@@ -1,10 +1,10 @@
 {
   "id": "Nest.IRecoveryStatusResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IRecoveryStatusResponse",
   "type": "object",
   "properties": {
     "Indices": {
-      "required": true,
       "type": [
         "object",
         "null"
@@ -17,8 +17,7 @@
         ],
         "properties": {
           "shards": {
-            "id": "System.Collections.Generic.IEnumerable`1[[Nest.ShardRecovery, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-            "required": true,
+            "id": "System.Collections.Generic.IEnumerable`1[[Nest.ShardRecovery, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
             "type": [
               "array",
               "null"
@@ -31,157 +30,144 @@
               ],
               "properties": {
                 "id": {
-                  "required": true,
                   "type": "integer"
                 },
                 "type": {
-                  "required": true,
                   "type": [
                     "string",
                     "null"
                   ]
                 },
                 "stage": {
-                  "required": true,
                   "type": [
                     "string",
                     "null"
                   ]
                 },
                 "primary": {
-                  "required": true,
                   "type": "boolean"
                 },
                 "start_time": {
-                  "required": true,
                   "type": [
                     "string",
                     "null"
                   ]
                 },
                 "stop_time": {
-                  "required": true,
                   "type": [
                     "string",
                     "null"
                   ]
                 },
                 "total_time_in_millis": {
-                  "required": true,
                   "type": "integer"
                 },
                 "source": {
                   "id": "Nest.RecoveryOrigin",
-                  "required": true,
                   "type": [
                     "object",
                     "null"
                   ],
                   "properties": {
                     "id": {
-                      "required": true,
                       "type": [
                         "string",
                         "null"
                       ]
                     },
                     "hostname": {
-                      "required": true,
                       "type": [
                         "string",
                         "null"
                       ]
                     },
                     "ip": {
-                      "required": true,
                       "type": [
                         "string",
                         "null"
                       ]
                     },
                     "name": {
-                      "required": true,
                       "type": [
                         "string",
                         "null"
                       ]
                     }
-                  }
+                  },
+                  "required": [
+                    "id",
+                    "hostname",
+                    "ip",
+                    "name"
+                  ]
                 },
                 "target": {
                   "$ref": "Nest.RecoveryOrigin"
                 },
                 "index": {
                   "id": "Nest.RecoveryIndexStatus",
-                  "required": true,
                   "type": [
                     "object",
                     "null"
                   ],
                   "properties": {
                     "total_time_in_millis": {
-                      "required": true,
                       "type": "integer"
                     },
                     "bytes": {
                       "id": "Nest.RecoveryBytes",
-                      "required": true,
                       "type": [
                         "object",
                         "null"
                       ],
                       "properties": {
                         "total": {
-                          "required": true,
                           "type": "integer"
                         },
                         "reused": {
-                          "required": true,
                           "type": "integer"
                         },
                         "recovered": {
-                          "required": true,
                           "type": "integer"
                         },
                         "percent": {
-                          "required": true,
                           "type": [
                             "string",
                             "null"
                           ]
                         }
-                      }
+                      },
+                      "required": [
+                        "total",
+                        "reused",
+                        "recovered",
+                        "percent"
+                      ]
                     },
                     "files": {
                       "id": "Nest.RecoveryFiles",
-                      "required": true,
                       "type": [
                         "object",
                         "null"
                       ],
                       "properties": {
                         "total": {
-                          "required": true,
                           "type": "integer"
                         },
                         "reused": {
-                          "required": true,
                           "type": "integer"
                         },
                         "recovered": {
-                          "required": true,
                           "type": "integer"
                         },
                         "percent": {
-                          "required": true,
                           "type": [
                             "string",
                             "null"
                           ]
                         },
                         "details": {
-                          "id": "System.Collections.Generic.IEnumerable`1[[Nest.RecoveryFileDetails, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-                          "required": true,
+                          "id": "System.Collections.Generic.IEnumerable`1[[Nest.RecoveryFileDetails, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
                           "type": [
                             "array",
                             "null"
@@ -194,74 +180,110 @@
                             ],
                             "properties": {
                               "name": {
-                                "required": true,
                                 "type": [
                                   "string",
                                   "null"
                                 ]
                               },
                               "length": {
-                                "required": true,
                                 "type": "integer"
                               },
                               "recovered": {
-                                "required": true,
                                 "type": "integer"
                               }
-                            }
+                            },
+                            "required": [
+                              "name",
+                              "length",
+                              "recovered"
+                            ]
                           }
                         }
-                      }
+                      },
+                      "required": [
+                        "total",
+                        "reused",
+                        "recovered",
+                        "percent",
+                        "details"
+                      ]
                     }
-                  }
+                  },
+                  "required": [
+                    "total_time_in_millis",
+                    "bytes",
+                    "files"
+                  ]
                 },
                 "translog": {
                   "id": "Nest.RecoveryTranslogStatus",
-                  "required": true,
                   "type": [
                     "object",
                     "null"
                   ],
                   "properties": {
                     "recovered": {
-                      "required": true,
                       "type": "integer"
                     },
                     "total_time_in_millis": {
-                      "required": true,
                       "type": [
                         "string",
                         "null"
                       ]
                     }
-                  }
+                  },
+                  "required": [
+                    "recovered",
+                    "total_time_in_millis"
+                  ]
                 },
                 "start": {
                   "id": "Nest.RecoveryStartStatus",
-                  "required": true,
                   "type": [
                     "object",
                     "null"
                   ],
                   "properties": {
                     "check_index_time": {
-                      "required": true,
                       "type": "integer"
                     },
                     "total_time_in_millis": {
-                      "required": true,
                       "type": [
                         "string",
                         "null"
                       ]
                     }
-                  }
+                  },
+                  "required": [
+                    "check_index_time",
+                    "total_time_in_millis"
+                  ]
                 }
-              }
+              },
+              "required": [
+                "id",
+                "type",
+                "stage",
+                "primary",
+                "start_time",
+                "stop_time",
+                "total_time_in_millis",
+                "source",
+                "target",
+                "index",
+                "translog",
+                "start"
+              ]
             }
           }
-        }
+        },
+        "required": [
+          "shards"
+        ]
       }
     }
-  }
+  },
+  "required": [
+    "Indices"
+  ]
 }

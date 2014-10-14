@@ -1,5 +1,6 @@
 {
   "id": "Nest.INodesInfoRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "INodesInfoRequest",
   "type": "object",
   "properties": {}

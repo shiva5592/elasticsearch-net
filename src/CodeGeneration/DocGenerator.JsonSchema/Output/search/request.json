@@ -1,67 +1,59 @@
 {
   "id": "Nest.ISearchRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ISearchRequest",
   "type": "object",
   "properties": {
     "timeout": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "from": {
-      "required": true,
       "type": [
         "integer",
         "null"
       ]
     },
     "size": {
-      "required": true,
       "type": [
         "integer",
         "null"
       ]
     },
     "explain": {
-      "required": true,
       "type": [
         "boolean",
         "null"
       ]
     },
     "version": {
-      "required": true,
       "type": [
         "boolean",
         "null"
       ]
     },
     "track_scores": {
-      "required": true,
       "type": [
         "boolean",
         "null"
       ]
     },
     "min_score": {
-      "required": true,
       "type": [
         "number",
         "null"
       ]
     },
     "indices_boost": {
-      "required": true,
       "type": [
         "object",
         "null"
       ]
     },
     "sort": {
-      "id": "System.Collections.Generic.IList`1[[System.Collections.Generic.KeyValuePair`2[[Nest.PropertyPathMarker, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d],[Nest.ISort, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
-      "required": true,
+      "id": "System.Collections.Generic.IList`1[[System.Collections.Generic.KeyValuePair`2[[Nest.PropertyPathMarker, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Nest.ISort, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
       "type": [
         "array",
         "null"
@@ -71,14 +63,12 @@
       }
     },
     "facets": {
-      "required": true,
       "type": [
         "object",
         "null"
       ]
     },
     "suggest": {
-      "required": true,
       "type": [
         "object",
         "null"
@@ -91,34 +81,28 @@
         ],
         "properties": {
           "text": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "term": {
-            "required": true,
             "type": "any"
           },
           "phrase": {
-            "required": true,
             "type": "any"
           },
           "completion": {
             "id": "Nest.ICompletionSuggester",
-            "required": true,
             "type": [
               "object",
               "null"
             ],
             "properties": {
               "fuzzy": {
-                "required": true,
                 "type": "any"
               },
               "context": {
-                "required": true,
                 "type": [
                   "object",
                   "null"
@@ -132,22 +116,29 @@
                   "properties": {}
                 }
               }
-            }
+            },
+            "required": [
+              "fuzzy",
+              "context"
+            ]
           }
-        }
+        },
+        "required": [
+          "text",
+          "term",
+          "phrase",
+          "completion"
+        ]
       }
     },
     "highlight": {
-      "required": true,
       "type": "any"
     },
     "rescore": {
-      "required": true,
       "type": "any"
     },
     "fields": {
-      "id": "System.Collections.Generic.IList`1[[Nest.PropertyPathMarker, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-      "required": true,
+      "id": "System.Collections.Generic.IList`1[[Nest.PropertyPathMarker, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
       "type": [
         "array",
         "null"
@@ -160,7 +151,6 @@
         ],
         "properties": {
           "Name": {
-            "required": true,
             "type": [
               "string",
               "null"
@@ -168,14 +158,12 @@
           },
           "Type": {
             "id": "System.Linq.Expressions.Expression",
-            "required": true,
             "type": [
               "object",
               "null"
             ],
             "properties": {
               "NodeType": {
-                "required": true,
                 "type": "integer",
                 "enum": [
                   0,
@@ -266,30 +254,36 @@
                 ]
               },
               "Type": {
-                "required": true,
                 "type": [
                   "string",
                   "null"
                 ]
               },
               "CanReduce": {
-                "required": true,
                 "type": "boolean"
               }
-            }
+            },
+            "required": [
+              "NodeType",
+              "Type",
+              "CanReduce"
+            ]
           },
           "Boost": {
-            "required": true,
             "type": [
               "number",
               "null"
             ]
           }
-        }
+        },
+        "required": [
+          "Name",
+          "Type",
+          "Boost"
+        ]
       }
     },
     "script_fields": {
-      "required": true,
       "type": [
         "object",
         "null"
@@ -300,15 +294,13 @@
     },
     "_source": {
       "id": "Nest.ISourceFilter",
-      "required": true,
       "type": [
         "object",
         "null"
       ],
       "properties": {
         "include": {
-          "id": "System.Collections.Generic.IEnumerable`1[[Nest.PropertyPathMarker, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-          "required": true,
+          "id": "System.Collections.Generic.IEnumerable`1[[Nest.PropertyPathMarker, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
           "type": [
             "array",
             "null"
@@ -318,12 +310,15 @@
           }
         },
         "exclude": {
-          "$ref": "System.Collections.Generic.IEnumerable`1[[Nest.PropertyPathMarker, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]"
+          "$ref": "System.Collections.Generic.IEnumerable`1[[Nest.PropertyPathMarker, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
         }
-      }
+      },
+      "required": [
+        "include",
+        "exclude"
+      ]
     },
     "aggs": {
-      "required": true,
       "type": [
         "object",
         "null"
@@ -333,12 +328,31 @@
       }
     },
     "query": {
-      "required": true,
       "type": "any"
     },
     "filter": {
-      "required": true,
       "type": "any"
     }
-  }
+  },
+  "required": [
+    "timeout",
+    "from",
+    "size",
+    "explain",
+    "version",
+    "track_scores",
+    "min_score",
+    "indices_boost",
+    "sort",
+    "facets",
+    "suggest",
+    "highlight",
+    "rescore",
+    "fields",
+    "script_fields",
+    "_source",
+    "aggs",
+    "query",
+    "filter"
+  ]
 }

@@ -1,11 +1,11 @@
 {
-  "id": "Nest.ICatResponse`1[[Nest.CatPendingTasksRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+  "id": "Nest.ICatResponse`1[[Nest.CatPendingTasksRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ICatResponse`1",
   "type": "object",
   "properties": {
     "records": {
-      "id": "System.Collections.Generic.IEnumerable`1[[Nest.CatPendingTasksRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-      "required": true,
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.CatPendingTasksRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
       "type": [
         "array",
         "null"
@@ -18,35 +18,40 @@
         ],
         "properties": {
           "insertOrder": {
-            "required": true,
             "type": [
               "integer",
               "null"
             ]
           },
           "timeInQueue": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "priority": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "source": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           }
-        }
+        },
+        "required": [
+          "insertOrder",
+          "timeInQueue",
+          "priority",
+          "source"
+        ]
       }
     }
-  }
+  },
+  "required": [
+    "records"
+  ]
 }

@@ -1,11 +1,11 @@
 {
   "id": "Nest.ISnapshotStatusResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ISnapshotStatusResponse",
   "type": "object",
   "properties": {
     "snapshots": {
-      "id": "System.Collections.Generic.IEnumerable`1[[Nest.SnapshotStatus, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-      "required": true,
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.SnapshotStatus, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
       "type": [
         "array",
         "null"
@@ -18,21 +18,18 @@
         ],
         "properties": {
           "snapshot": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "repository": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "state": {
-            "required": true,
             "type": [
               "string",
               "null"
@@ -40,74 +37,75 @@
           },
           "shards_stats": {
             "id": "Nest.SnapshotShardsStats",
-            "required": true,
             "type": [
               "object",
               "null"
             ],
             "properties": {
               "initializing": {
-                "required": true,
                 "type": "integer"
               },
               "started": {
-                "required": true,
                 "type": "integer"
               },
               "finalizing": {
-                "required": true,
                 "type": "integer"
               },
               "done": {
-                "required": true,
                 "type": "integer"
               },
               "failed": {
-                "required": true,
                 "type": "integer"
               },
               "total": {
-                "required": true,
                 "type": "integer"
               }
-            }
+            },
+            "required": [
+              "initializing",
+              "started",
+              "finalizing",
+              "done",
+              "failed",
+              "total"
+            ]
           },
           "stats": {
             "id": "Nest.SnapshotStats",
-            "required": true,
             "type": [
               "object",
               "null"
             ],
             "properties": {
               "number_of_files": {
-                "required": true,
                 "type": "integer"
               },
               "processed_files": {
-                "required": true,
                 "type": "integer"
               },
               "total_size_in_bytes": {
-                "required": true,
                 "type": "integer"
               },
               "processed_size_in_bytes": {
-                "required": true,
                 "type": "integer"
               },
               "start_time_in_millis": {
-                "required": true,
                 "type": "integer"
               },
               "time_in_millis": {
-                "required": true,
                 "type": "integer"
               }
-            }
+            },
+            "required": [
+              "number_of_files",
+              "processed_files",
+              "total_size_in_bytes",
+              "processed_size_in_bytes",
+              "start_time_in_millis",
+              "time_in_millis"
+            ]
           },
           "indices": {
-            "required": true,
             "type": [
               "object",
               "null"
@@ -126,7 +124,6 @@
                   "$ref": "Nest.SnapshotStats"
                 },
                 "shards": {
-                  "required": true,
                   "type": [
                     "object",
                     "null"
@@ -135,11 +132,27 @@
                     "$ref": "Nest.SnapshotShardsStats"
                   }
                 }
-              }
+              },
+              "required": [
+                "shards_stats",
+                "stats",
+                "shards"
+              ]
             }
           }
-        }
+        },
+        "required": [
+          "snapshot",
+          "repository",
+          "state",
+          "shards_stats",
+          "stats",
+          "indices"
+        ]
       }
     }
-  }
+  },
+  "required": [
+    "snapshots"
+  ]
 }

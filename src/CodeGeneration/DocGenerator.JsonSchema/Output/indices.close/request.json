@@ -1,5 +1,6 @@
 {
   "id": "Nest.ICloseIndexRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ICloseIndexRequest",
   "type": "object",
   "properties": {}

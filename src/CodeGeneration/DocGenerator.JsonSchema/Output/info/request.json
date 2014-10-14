@@ -1,5 +1,6 @@
 {
   "id": "Nest.IInfoRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IInfoRequest",
   "type": "object",
   "properties": {}

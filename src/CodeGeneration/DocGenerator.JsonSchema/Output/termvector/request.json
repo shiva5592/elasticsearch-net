@@ -1,5 +1,6 @@
 {
   "id": "Nest.ITermvectorRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ITermvectorRequest",
   "type": "object",
   "properties": {}

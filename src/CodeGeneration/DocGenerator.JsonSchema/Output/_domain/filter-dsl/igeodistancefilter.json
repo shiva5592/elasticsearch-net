@@ -1,11 +1,11 @@
 {
   "id": "Nest.IGeoDistanceFilter",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IGeoDistanceFilter",
   "type": "object",
   "properties": {
     "distance": {
       "id": "System.Object",
-      "required": true,
       "type": [
         "object",
         "null"
@@ -13,16 +13,19 @@
       "properties": {}
     },
     "unit": {
-      "required": true,
       "type": "any"
     },
     "optimize_bbox": {
-      "required": true,
       "type": "any"
     },
     "distance_type": {
-      "required": true,
       "type": "any"
     }
-  }
+  },
+  "required": [
+    "distance",
+    "unit",
+    "optimize_bbox",
+    "distance_type"
+  ]
 }

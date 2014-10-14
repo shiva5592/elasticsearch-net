@@ -1,5 +1,6 @@
 {
   "id": "Nest.IPingResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IPingResponse",
   "type": "object",
   "properties": {}

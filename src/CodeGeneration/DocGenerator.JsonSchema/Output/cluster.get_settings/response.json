@@ -1,10 +1,10 @@
 {
   "id": "Nest.IClusterGetSettingsResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IClusterGetSettingsResponse",
   "type": "object",
   "properties": {
     "persistent": {
-      "required": true,
       "type": [
         "object",
         "null"
@@ -19,7 +19,6 @@
       }
     },
     "transient": {
-      "required": true,
       "type": [
         "object",
         "null"
@@ -28,5 +27,9 @@
         "$ref": "System.Object"
       }
     }
-  }
+  },
+  "required": [
+    "persistent",
+    "transient"
+  ]
 }

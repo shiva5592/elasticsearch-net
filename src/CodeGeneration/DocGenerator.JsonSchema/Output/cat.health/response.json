@@ -1,11 +1,11 @@
 {
-  "id": "Nest.ICatResponse`1[[Nest.CatHealthRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+  "id": "Nest.ICatResponse`1[[Nest.CatHealthRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ICatResponse`1",
   "type": "object",
   "properties": {
     "records": {
-      "id": "System.Collections.Generic.IEnumerable`1[[Nest.CatHealthRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-      "required": true,
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.CatHealthRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
       "type": [
         "array",
         "null"
@@ -18,84 +18,89 @@
         ],
         "properties": {
           "cluster": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "epoch": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "node.data": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "node.total": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "pri": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "relo": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "init": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "shards": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "status": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "timestamp": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "unassign": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           }
-        }
+        },
+        "required": [
+          "cluster",
+          "epoch",
+          "node.data",
+          "node.total",
+          "pri",
+          "relo",
+          "init",
+          "shards",
+          "status",
+          "timestamp",
+          "unassign"
+        ]
       }
     }
-  }
+  },
+  "required": [
+    "records"
+  ]
 }

@@ -1,5 +1,6 @@
 {
   "id": "Nest.ICatRecoveryRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ICatRecoveryRequest",
   "type": "object",
   "properties": {}

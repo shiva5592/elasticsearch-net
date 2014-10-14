@@ -1,11 +1,11 @@
 {
   "id": "Nest.IClusterPendingTasksResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IClusterPendingTasksResponse",
   "type": "object",
   "properties": {
     "tasks": {
-      "id": "System.Collections.Generic.IEnumerable`1[[Nest.PendingTask, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-      "required": true,
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.PendingTask, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
       "type": [
         "array",
         "null"
@@ -18,36 +18,41 @@
         ],
         "properties": {
           "insert_order": {
-            "required": true,
             "type": "integer"
           },
           "priority": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "source": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "time_in_queue_millis": {
-            "required": true,
             "type": "integer"
           },
           "time_in_queue": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           }
-        }
+        },
+        "required": [
+          "insert_order",
+          "priority",
+          "source",
+          "time_in_queue_millis",
+          "time_in_queue"
+        ]
       }
     }
-  }
+  },
+  "required": [
+    "tasks"
+  ]
 }

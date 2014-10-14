@@ -1,35 +1,38 @@
 {
   "id": "Nest.IRangeFilter",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IRangeFilter",
   "type": "object",
   "properties": {
     "gte": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "lte": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "gt": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "lt": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     }
-  }
+  },
+  "required": [
+    "gte",
+    "lte",
+    "gt",
+    "lt"
+  ]
 }

@@ -1,11 +1,11 @@
 {
-  "id": "Nest.ICatResponse`1[[Nest.CatShardsRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+  "id": "Nest.ICatResponse`1[[Nest.CatShardsRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ICatResponse`1",
   "type": "object",
   "properties": {
     "records": {
-      "id": "System.Collections.Generic.IEnumerable`1[[Nest.CatShardsRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-      "required": true,
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.CatShardsRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
       "type": [
         "array",
         "null"
@@ -18,63 +18,68 @@
         ],
         "properties": {
           "index": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "shard": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "prirep": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "state": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "docs": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "store": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "ip": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "node": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           }
-        }
+        },
+        "required": [
+          "index",
+          "shard",
+          "prirep",
+          "state",
+          "docs",
+          "store",
+          "ip",
+          "node"
+        ]
       }
     }
-  }
+  },
+  "required": [
+    "records"
+  ]
 }

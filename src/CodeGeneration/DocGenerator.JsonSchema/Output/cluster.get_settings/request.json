@@ -1,5 +1,6 @@
 {
   "id": "Nest.IClusterGetSettingsRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IClusterGetSettingsRequest",
   "type": "object",
   "properties": {}

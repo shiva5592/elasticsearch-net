@@ -1,21 +1,24 @@
 {
   "id": "Nest.IRegexpFilter",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IRegexpFilter",
   "type": "object",
   "properties": {
     "value": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "flags": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     }
-  }
+  },
+  "required": [
+    "value",
+    "flags"
+  ]
 }

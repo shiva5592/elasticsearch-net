@@ -1,11 +1,11 @@
 {
-  "id": "Nest.ICatResponse`1[[Nest.CatNodesRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+  "id": "Nest.ICatResponse`1[[Nest.CatNodesRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ICatResponse`1",
   "type": "object",
   "properties": {
     "records": {
-      "id": "System.Collections.Generic.IEnumerable`1[[Nest.CatNodesRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-      "required": true,
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.CatNodesRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
       "type": [
         "array",
         "null"
@@ -18,1288 +18,1293 @@
         ],
         "properties": {
           "id": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "nodeId": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "pid": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "p": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "host": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "h": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "ip": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "i": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "port": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "po": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "version": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "v": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "build": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "b": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "jdk": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "j": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "disk.avail": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "d": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "disk": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "diskAvail": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "heap.percent": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "hp": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "heapPercent": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "heap.max": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "hm": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "heapMax": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "ram.percent": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "rp": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "ramPercent": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "ram.max": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "rm": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "ramMax": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "load": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "l": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "uptime": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "u": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "node.role": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "r": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "dc": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "data/client": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "nodeRole": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "master": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "m": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "name": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "n": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "completion.size": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "cs": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "completionSize": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "fielddata.memory_size": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "fm": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "fielddataMemory": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "fielddata.evictions": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "fe": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "fielddataEvictions": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "filter_cache.memory_size": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "fcm": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "filterCacheMemory": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "filter_cache.evictions": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "fce": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "filterCacheEvictions": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "flush.total": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "ft": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "flushTotal": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "flush.total_time": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "ftt": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "flushTotalTime": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "get.current": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "gc": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "getCurrent": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "get.time": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "gti": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "getTime": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "get.total": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "gto": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "getTotal": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "get.exists_time": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "geti": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "getExistsTime": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "get.exists_total": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "geto": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "getExistsTotal": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "get.missing_time": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "gmti": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "getMissingTime": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "get.missing_total": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "gmto": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "getMissingTotal": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "id_cache.memory_size": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "im": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "idCacheMemory": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "indexing.delete_current": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "idc": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "indexingDeleteCurrent": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "indexing.delete_time": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "idti": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "indexingDeleteTime": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "indexing.delete_total": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "idto": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "indexingDeleteTotal": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "indexing.index_current": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "iic": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "indexingIndexCurrent": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "indexing.index_time": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "iiti": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "indexingIndexTime": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "indexing.index_total": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "iito": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "indexingIndexTotal": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "merges.current": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "mc": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "mergesCurrent": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "merges.current_docs": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "mcd": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "mergesCurrentDocs": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "merges.current_size": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "mcs": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "mergesCurrentSize": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "merges.total": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "mt": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "mergesTotal": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "merges.total_docs": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "mtd": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "mergesTotalDocs": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "merges.total_time": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "mtt": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "mergesTotalTime": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "percolate.current": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "pc": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "percolateCurrent": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "percolate.memory_size": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "pm": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "percolateMemory": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "percolate.queries": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "pq": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "percolateQueries": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "percolate.time": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "pti": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "percolateTime": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "percolate.total": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "pto": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "percolateTotal": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "refresh.total": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "rto": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "refreshTotal": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "refresh.time": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "rti": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "refreshTime": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "search.fetch_current": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "sfc": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "searchFetchCurrent": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "search.fetch_time": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "sfti": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "searchFetchTime": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "search.fetch_total": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "sfto": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "searchFetchTotal": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "search.open_contexts": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "so": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "searchOpenContexts": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "search.query_current": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "sqc": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "searchQueryCurrent": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "search.query_time": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "sqti": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "searchQueryTime": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "search.query_total": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "sqto": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "searchQueryTotal": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "segments.count": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "sc": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "segmentsCount": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "segments.memory": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "sm": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "segmentsMemory": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "segments.index_writer_memory": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "siwm": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "segmentsIndexWriterMemory": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "segments.index_writer_max_memory": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "siwmx": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "segmentsIndexWriterMaxMemory": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "segments.version_map_memory": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "svmm": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "segmentsVersionMapMemory": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           }
-        }
+        },
+        "required": [
+          "id",
+          "nodeId",
+          "pid",
+          "p",
+          "host",
+          "h",
+          "ip",
+          "i",
+          "port",
+          "po",
+          "version",
+          "v",
+          "build",
+          "b",
+          "jdk",
+          "j",
+          "disk.avail",
+          "d",
+          "disk",
+          "diskAvail",
+          "heap.percent",
+          "hp",
+          "heapPercent",
+          "heap.max",
+          "hm",
+          "heapMax",
+          "ram.percent",
+          "rp",
+          "ramPercent",
+          "ram.max",
+          "rm",
+          "ramMax",
+          "load",
+          "l",
+          "uptime",
+          "u",
+          "node.role",
+          "r",
+          "dc",
+          "data/client",
+          "nodeRole",
+          "master",
+          "m",
+          "name",
+          "n",
+          "completion.size",
+          "cs",
+          "completionSize",
+          "fielddata.memory_size",
+          "fm",
+          "fielddataMemory",
+          "fielddata.evictions",
+          "fe",
+          "fielddataEvictions",
+          "filter_cache.memory_size",
+          "fcm",
+          "filterCacheMemory",
+          "filter_cache.evictions",
+          "fce",
+          "filterCacheEvictions",
+          "flush.total",
+          "ft",
+          "flushTotal",
+          "flush.total_time",
+          "ftt",
+          "flushTotalTime",
+          "get.current",
+          "gc",
+          "getCurrent",
+          "get.time",
+          "gti",
+          "getTime",
+          "get.total",
+          "gto",
+          "getTotal",
+          "get.exists_time",
+          "geti",
+          "getExistsTime",
+          "get.exists_total",
+          "geto",
+          "getExistsTotal",
+          "get.missing_time",
+          "gmti",
+          "getMissingTime",
+          "get.missing_total",
+          "gmto",
+          "getMissingTotal",
+          "id_cache.memory_size",
+          "im",
+          "idCacheMemory",
+          "indexing.delete_current",
+          "idc",
+          "indexingDeleteCurrent",
+          "indexing.delete_time",
+          "idti",
+          "indexingDeleteTime",
+          "indexing.delete_total",
+          "idto",
+          "indexingDeleteTotal",
+          "indexing.index_current",
+          "iic",
+          "indexingIndexCurrent",
+          "indexing.index_time",
+          "iiti",
+          "indexingIndexTime",
+          "indexing.index_total",
+          "iito",
+          "indexingIndexTotal",
+          "merges.current",
+          "mc",
+          "mergesCurrent",
+          "merges.current_docs",
+          "mcd",
+          "mergesCurrentDocs",
+          "merges.current_size",
+          "mcs",
+          "mergesCurrentSize",
+          "merges.total",
+          "mt",
+          "mergesTotal",
+          "merges.total_docs",
+          "mtd",
+          "mergesTotalDocs",
+          "merges.total_time",
+          "mtt",
+          "mergesTotalTime",
+          "percolate.current",
+          "pc",
+          "percolateCurrent",
+          "percolate.memory_size",
+          "pm",
+          "percolateMemory",
+          "percolate.queries",
+          "pq",
+          "percolateQueries",
+          "percolate.time",
+          "pti",
+          "percolateTime",
+          "percolate.total",
+          "pto",
+          "percolateTotal",
+          "refresh.total",
+          "rto",
+          "refreshTotal",
+          "refresh.time",
+          "rti",
+          "refreshTime",
+          "search.fetch_current",
+          "sfc",
+          "searchFetchCurrent",
+          "search.fetch_time",
+          "sfti",
+          "searchFetchTime",
+          "search.fetch_total",
+          "sfto",
+          "searchFetchTotal",
+          "search.open_contexts",
+          "so",
+          "searchOpenContexts",
+          "search.query_current",
+          "sqc",
+          "searchQueryCurrent",
+          "search.query_time",
+          "sqti",
+          "searchQueryTime",
+          "search.query_total",
+          "sqto",
+          "searchQueryTotal",
+          "segments.count",
+          "sc",
+          "segmentsCount",
+          "segments.memory",
+          "sm",
+          "segmentsMemory",
+          "segments.index_writer_memory",
+          "siwm",
+          "segmentsIndexWriterMemory",
+          "segments.index_writer_max_memory",
+          "siwmx",
+          "segmentsIndexWriterMaxMemory",
+          "segments.version_map_memory",
+          "svmm",
+          "segmentsVersionMapMemory"
+        ]
       }
     }
-  }
+  },
+  "required": [
+    "records"
+  ]
 }

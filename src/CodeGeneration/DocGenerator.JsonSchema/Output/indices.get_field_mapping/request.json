@@ -1,5 +1,6 @@
 {
   "id": "Nest.IGetFieldMappingRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IGetFieldMappingRequest",
   "type": "object",
   "properties": {}

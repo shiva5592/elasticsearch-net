@@ -1,5 +1,6 @@
 {
   "id": "Nest.IMultiPercolateRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IMultiPercolateRequest",
   "type": "object",
   "properties": {}

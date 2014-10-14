@@ -1,17 +1,16 @@
 {
   "id": "Nest.INodesShutdownResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "INodesShutdownResponse",
   "type": "object",
   "properties": {
     "cluster_name": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "nodes": {
-      "required": true,
       "type": [
         "object",
         "null"
@@ -29,5 +28,9 @@
         }
       }
     }
-  }
+  },
+  "required": [
+    "cluster_name",
+    "nodes"
+  ]
 }

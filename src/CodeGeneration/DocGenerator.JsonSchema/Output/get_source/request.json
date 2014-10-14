@@ -1,5 +1,6 @@
 {
   "id": "Nest.ISourceRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ISourceRequest",
   "type": "object",
   "properties": {}

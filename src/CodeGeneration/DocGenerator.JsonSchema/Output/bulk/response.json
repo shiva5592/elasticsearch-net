@@ -1,19 +1,17 @@
 {
   "id": "Nest.IBulkResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IBulkResponse",
   "type": "object",
   "properties": {
     "took": {
-      "required": true,
       "type": "integer"
     },
     "errors": {
-      "required": true,
       "type": "boolean"
     },
     "items": {
-      "id": "System.Collections.Generic.IEnumerable`1[[Nest.BulkOperationResponseItem, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-      "required": true,
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.BulkOperationResponseItem, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
       "type": [
         "array",
         "null"
@@ -22,5 +20,10 @@
         "type": "any"
       }
     }
-  }
+  },
+  "required": [
+    "took",
+    "errors",
+    "items"
+  ]
 }

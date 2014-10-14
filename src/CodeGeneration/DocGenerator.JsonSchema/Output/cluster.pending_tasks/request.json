@@ -1,5 +1,6 @@
 {
   "id": "Nest.IClusterPendingTasksRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IClusterPendingTasksRequest",
   "type": "object",
   "properties": {}

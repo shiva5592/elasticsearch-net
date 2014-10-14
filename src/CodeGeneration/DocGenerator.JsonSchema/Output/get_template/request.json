@@ -1,5 +1,6 @@
 {
   "id": "Nest.IGetTemplateRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IGetTemplateRequest",
   "type": "object",
   "properties": {}

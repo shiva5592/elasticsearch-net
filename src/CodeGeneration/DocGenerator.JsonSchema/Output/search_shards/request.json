@@ -1,5 +1,6 @@
 {
   "id": "Nest.ISearchShardsRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ISearchShardsRequest",
   "type": "object",
   "properties": {}

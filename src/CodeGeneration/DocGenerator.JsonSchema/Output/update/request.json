@@ -1,31 +1,28 @@
 {
   "id": "Nest.IUpdateRequest`2[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IUpdateRequest`2",
   "type": "object",
   "properties": {
     "script": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "lang": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "params": {
-      "required": true,
       "type": [
         "object",
         "null"
       ],
       "additionalProperties": {
         "id": "System.Object",
-        "required": true,
         "type": [
           "object",
           "null"
@@ -37,7 +34,6 @@
       "$ref": "System.Object"
     },
     "doc_as_upsert": {
-      "required": true,
       "type": [
         "boolean",
         "null"
@@ -46,5 +42,13 @@
     "doc": {
       "$ref": "System.Object"
     }
-  }
+  },
+  "required": [
+    "script",
+    "lang",
+    "params",
+    "upsert",
+    "doc_as_upsert",
+    "doc"
+  ]
 }

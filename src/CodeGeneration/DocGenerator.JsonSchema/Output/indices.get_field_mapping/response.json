@@ -1,10 +1,10 @@
 {
   "id": "Nest.IGetFieldMappingResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IGetFieldMappingResponse",
   "type": "object",
   "properties": {
     "Indices": {
-      "required": true,
       "type": [
         "object",
         "null"
@@ -17,7 +17,6 @@
         ],
         "properties": {
           "mappings": {
-            "required": true,
             "type": [
               "object",
               "null"
@@ -35,14 +34,12 @@
                 ],
                 "properties": {
                   "full_name": {
-                    "required": true,
                     "type": [
                       "string",
                       "null"
                     ]
                   },
                   "mapping": {
-                    "required": true,
                     "type": [
                       "object",
                       "null"
@@ -56,12 +53,22 @@
                       "properties": {}
                     }
                   }
-                }
+                },
+                "required": [
+                  "full_name",
+                  "mapping"
+                ]
               }
             }
           }
-        }
+        },
+        "required": [
+          "mappings"
+        ]
       }
     }
-  }
+  },
+  "required": [
+    "Indices"
+  ]
 }

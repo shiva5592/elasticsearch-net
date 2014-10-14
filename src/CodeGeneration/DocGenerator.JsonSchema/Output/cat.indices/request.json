@@ -1,5 +1,6 @@
 {
   "id": "Nest.ICatIndicesRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ICatIndicesRequest",
   "type": "object",
   "properties": {}

@@ -1,11 +1,11 @@
 {
   "id": "Nest.IAliasRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IAliasRequest",
   "type": "object",
   "properties": {
     "actions": {
-      "id": "System.Collections.Generic.IList`1[[Nest.IAliasAction, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-      "required": true,
+      "id": "System.Collections.Generic.IList`1[[Nest.IAliasAction, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
       "type": [
         "array",
         "null"
@@ -19,5 +19,8 @@
         "properties": {}
       }
     }
-  }
+  },
+  "required": [
+    "actions"
+  ]
 }

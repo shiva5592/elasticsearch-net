@@ -1,11 +1,11 @@
 {
   "id": "Nest.ISnapshotRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ISnapshotRequest",
   "type": "object",
   "properties": {
     "indices": {
-      "id": "System.Collections.Generic.IEnumerable`1[[Nest.IndexNameMarker, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-      "required": true,
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.IndexNameMarker, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
       "type": [
         "array",
         "null"
@@ -15,25 +15,28 @@
       }
     },
     "ignore_unavailable": {
-      "required": true,
       "type": [
         "boolean",
         "null"
       ]
     },
     "include_global_state": {
-      "required": true,
       "type": [
         "boolean",
         "null"
       ]
     },
     "partial": {
-      "required": true,
       "type": [
         "boolean",
         "null"
       ]
     }
-  }
+  },
+  "required": [
+    "indices",
+    "ignore_unavailable",
+    "include_global_state",
+    "partial"
+  ]
 }

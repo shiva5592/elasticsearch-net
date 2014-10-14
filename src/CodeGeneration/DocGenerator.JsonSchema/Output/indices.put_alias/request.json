@@ -1,18 +1,21 @@
 {
   "id": "Nest.IPutAliasRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IPutAliasRequest",
   "type": "object",
   "properties": {
     "routing": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "filter": {
-      "required": true,
       "type": "any"
     }
-  }
+  },
+  "required": [
+    "routing",
+    "filter"
+  ]
 }

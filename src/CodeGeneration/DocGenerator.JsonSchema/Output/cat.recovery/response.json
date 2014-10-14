@@ -1,11 +1,11 @@
 {
-  "id": "Nest.ICatResponse`1[[Nest.CatRecoveryRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+  "id": "Nest.ICatResponse`1[[Nest.CatRecoveryRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ICatResponse`1",
   "type": "object",
   "properties": {
     "records": {
-      "id": "System.Collections.Generic.IEnumerable`1[[Nest.CatRecoveryRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-      "required": true,
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.CatRecoveryRecord, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
       "type": [
         "array",
         "null"
@@ -18,91 +18,96 @@
         ],
         "properties": {
           "shard": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "time": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "type": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "stage": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "source_host": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "target_host": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "repository": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "snapshot": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "files": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "files_percent": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "bytes": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "bytes_percent": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           }
-        }
+        },
+        "required": [
+          "shard",
+          "time",
+          "type",
+          "stage",
+          "source_host",
+          "target_host",
+          "repository",
+          "snapshot",
+          "files",
+          "files_percent",
+          "bytes",
+          "bytes_percent"
+        ]
       }
     }
-  }
+  },
+  "required": [
+    "records"
+  ]
 }

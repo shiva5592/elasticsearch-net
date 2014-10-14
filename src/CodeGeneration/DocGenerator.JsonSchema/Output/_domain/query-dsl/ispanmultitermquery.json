@@ -1,11 +1,14 @@
 {
   "id": "Nest.ISpanMultiTermQuery",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ISpanMultiTermQuery",
   "type": "object",
   "properties": {
     "match": {
-      "required": true,
       "type": "any"
     }
-  }
+  },
+  "required": [
+    "match"
+  ]
 }

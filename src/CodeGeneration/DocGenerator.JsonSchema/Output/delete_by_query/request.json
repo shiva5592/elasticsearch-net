@@ -1,11 +1,14 @@
 {
   "id": "Nest.IDeleteByQueryRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IDeleteByQueryRequest",
   "type": "object",
   "properties": {
     "query": {
-      "required": true,
       "type": "any"
     }
-  }
+  },
+  "required": [
+    "query"
+  ]
 }

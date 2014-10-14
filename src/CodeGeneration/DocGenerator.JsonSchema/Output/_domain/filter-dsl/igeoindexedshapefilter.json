@@ -1,41 +1,36 @@
 {
   "id": "Nest.IGeoIndexedShapeFilter",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IGeoIndexedShapeFilter",
   "type": "object",
   "properties": {
     "indexed_shape": {
       "id": "Nest.IndexedGeoShape",
-      "required": true,
       "type": [
         "object",
         "null"
       ],
       "properties": {
         "id": {
-          "required": true,
           "type": [
             "string",
             "null"
           ]
         },
         "type": {
-          "required": true,
           "type": "any"
         },
         "index": {
-          "required": true,
           "type": "any"
         },
         "path": {
           "id": "Nest.PropertyPathMarker",
-          "required": true,
           "type": [
             "object",
             "null"
           ],
           "properties": {
             "Name": {
-              "required": true,
               "type": [
                 "string",
                 "null"
@@ -43,14 +38,12 @@
             },
             "Type": {
               "id": "System.Linq.Expressions.Expression",
-              "required": true,
               "type": [
                 "object",
                 "null"
               ],
               "properties": {
                 "NodeType": {
-                  "required": true,
                   "type": "integer",
                   "enum": [
                     0,
@@ -141,28 +134,44 @@
                   ]
                 },
                 "Type": {
-                  "required": true,
                   "type": [
                     "string",
                     "null"
                   ]
                 },
                 "CanReduce": {
-                  "required": true,
                   "type": "boolean"
                 }
-              }
+              },
+              "required": [
+                "NodeType",
+                "Type",
+                "CanReduce"
+              ]
             },
             "Boost": {
-              "required": true,
               "type": [
                 "number",
                 "null"
               ]
             }
-          }
+          },
+          "required": [
+            "Name",
+            "Type",
+            "Boost"
+          ]
         }
-      }
+      },
+      "required": [
+        "id",
+        "type",
+        "index",
+        "path"
+      ]
     }
-  }
+  },
+  "required": [
+    "indexed_shape"
+  ]
 }

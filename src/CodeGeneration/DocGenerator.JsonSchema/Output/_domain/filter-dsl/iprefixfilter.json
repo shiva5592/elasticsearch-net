@@ -1,5 +1,6 @@
 {
   "id": "Nest.IPrefixFilter",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IPrefixFilter",
   "type": "object",
   "properties": {}

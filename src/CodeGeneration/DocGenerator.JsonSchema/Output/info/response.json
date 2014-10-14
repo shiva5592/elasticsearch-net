@@ -1,21 +1,19 @@
 {
   "id": "Nest.IRootInfoResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IRootInfoResponse",
   "type": "object",
   "properties": {
     "status": {
-      "required": true,
       "type": "integer"
     },
     "name": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "tagline": {
-      "required": true,
       "type": [
         "string",
         "null"
@@ -23,31 +21,38 @@
     },
     "version": {
       "id": "Nest.ElasticsearchVersionInfo",
-      "required": true,
       "type": [
         "object",
         "null"
       ],
       "properties": {
         "Number": {
-          "required": true,
           "type": [
             "string",
             "null"
           ]
         },
         "snapshot_build": {
-          "required": true,
           "type": "boolean"
         },
         "lucene_version": {
-          "required": true,
           "type": [
             "string",
             "null"
           ]
         }
-      }
+      },
+      "required": [
+        "Number",
+        "snapshot_build",
+        "lucene_version"
+      ]
     }
-  }
+  },
+  "required": [
+    "status",
+    "name",
+    "tagline",
+    "version"
+  ]
 }

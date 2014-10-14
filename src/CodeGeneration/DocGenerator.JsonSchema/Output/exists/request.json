@@ -1,5 +1,6 @@
 {
   "id": "Nest.IDocumentExistsRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IDocumentExistsRequest",
   "type": "object",
   "properties": {}

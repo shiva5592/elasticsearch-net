@@ -1,39 +1,42 @@
 {
   "id": "Nest.IDeleteResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IDeleteResponse",
   "type": "object",
   "properties": {
     "Id": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "Index": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "Type": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "Version": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "Found": {
-      "required": true,
       "type": "boolean"
     }
-  }
+  },
+  "required": [
+    "Id",
+    "Index",
+    "Type",
+    "Version",
+    "Found"
+  ]
 }

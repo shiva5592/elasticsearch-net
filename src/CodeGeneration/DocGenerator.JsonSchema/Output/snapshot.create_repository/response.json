@@ -1,11 +1,14 @@
 {
   "id": "Nest.IAcknowledgedResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IAcknowledgedResponse",
   "type": "object",
   "properties": {
     "acknowledged": {
-      "required": true,
       "type": "boolean"
     }
-  }
+  },
+  "required": [
+    "acknowledged"
+  ]
 }

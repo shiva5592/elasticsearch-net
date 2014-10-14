@@ -1,15 +1,18 @@
 {
   "id": "Nest.IPercolateCountResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IPercolateCountResponse",
   "type": "object",
   "properties": {
     "took": {
-      "required": true,
       "type": "integer"
     },
     "total": {
-      "required": true,
       "type": "integer"
     }
-  }
+  },
+  "required": [
+    "took",
+    "total"
+  ]
 }

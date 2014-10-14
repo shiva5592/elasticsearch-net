@@ -1,35 +1,30 @@
 {
   "id": "Nest.IValidateResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IValidateResponse",
   "type": "object",
   "properties": {
     "valid": {
-      "required": true,
       "type": "boolean"
     },
     "_shards": {
       "id": "Nest.ShardsMetaData",
-      "required": true,
       "type": [
         "object",
         "null"
       ],
       "properties": {
         "Total": {
-          "required": true,
           "type": "integer"
         },
         "Successful": {
-          "required": true,
           "type": "integer"
         },
         "Failed": {
-          "required": true,
           "type": "integer"
         },
         "failures": {
-          "id": "System.Collections.Generic.IEnumerable`1[[Nest.ShardsFailureReason, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-          "required": true,
+          "id": "System.Collections.Generic.IEnumerable`1[[Nest.ShardsFailureReason, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
           "type": [
             "array",
             "null"
@@ -42,35 +37,42 @@
             ],
             "properties": {
               "index": {
-                "required": true,
                 "type": [
                   "string",
                   "null"
                 ]
               },
               "shard": {
-                "required": true,
                 "type": "integer"
               },
               "status": {
-                "required": true,
                 "type": "integer"
               },
               "reason": {
-                "required": true,
                 "type": [
                   "string",
                   "null"
                 ]
               }
-            }
+            },
+            "required": [
+              "index",
+              "shard",
+              "status",
+              "reason"
+            ]
           }
         }
-      }
+      },
+      "required": [
+        "Total",
+        "Successful",
+        "Failed",
+        "failures"
+      ]
     },
     "explanations": {
-      "id": "System.Collections.Generic.IList`1[[Nest.ValidationExplanation, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-      "required": true,
+      "id": "System.Collections.Generic.IList`1[[Nest.ValidationExplanation, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
       "type": [
         "array",
         "null"
@@ -83,25 +85,32 @@
         ],
         "properties": {
           "index": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "description": {
-            "required": true,
             "type": "boolean"
           },
           "error": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           }
-        }
+        },
+        "required": [
+          "index",
+          "description",
+          "error"
+        ]
       }
     }
-  }
+  },
+  "required": [
+    "valid",
+    "_shards",
+    "explanations"
+  ]
 }

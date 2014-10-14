@@ -1,5 +1,6 @@
 {
   "id": "Nest.IClearScrollRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IClearScrollRequest",
   "type": "object",
   "properties": {}

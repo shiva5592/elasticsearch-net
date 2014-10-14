@@ -1,5 +1,6 @@
 {
   "id": "Nest.IRefreshRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IRefreshRequest",
   "type": "object",
   "properties": {}

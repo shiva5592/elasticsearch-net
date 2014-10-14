@@ -1,11 +1,11 @@
 {
   "id": "Nest.IMultiTermVectorResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IMultiTermVectorResponse",
   "type": "object",
   "properties": {
     "docs": {
-      "id": "System.Collections.Generic.IEnumerable`1[[Nest.TermVectorResponse, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-      "required": true,
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.TermVectorResponse, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
       "type": [
         "array",
         "null"
@@ -18,11 +18,9 @@
         ],
         "properties": {
           "found": {
-            "required": true,
             "type": "boolean"
           },
           "term_vectors": {
-            "required": true,
             "type": [
               "object",
               "null"
@@ -36,28 +34,28 @@
               "properties": {
                 "field_statistics": {
                   "id": "Nest.FieldStatistics",
-                  "required": true,
                   "type": [
                     "object",
                     "null"
                   ],
                   "properties": {
                     "doc_count": {
-                      "required": true,
                       "type": "integer"
                     },
                     "sum_doc_freq": {
-                      "required": true,
                       "type": "integer"
                     },
                     "sum_ttf": {
-                      "required": true,
                       "type": "integer"
                     }
-                  }
+                  },
+                  "required": [
+                    "doc_count",
+                    "sum_doc_freq",
+                    "sum_ttf"
+                  ]
                 },
                 "terms": {
-                  "required": true,
                   "type": [
                     "object",
                     "null"
@@ -70,16 +68,13 @@
                     ],
                     "properties": {
                       "doc_freq": {
-                        "required": true,
                         "type": "integer"
                       },
                       "term_freq": {
-                        "required": true,
                         "type": "integer"
                       },
                       "tokens": {
-                        "id": "System.Collections.Generic.IEnumerable`1[[Nest.Token, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-                        "required": true,
+                        "id": "System.Collections.Generic.IEnumerable`1[[Nest.Token, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
                         "type": [
                           "array",
                           "null"
@@ -92,56 +87,63 @@
                           ],
                           "properties": {
                             "end_offset": {
-                              "required": true,
                               "type": "integer"
                             },
                             "payload": {
-                              "required": true,
                               "type": [
                                 "string",
                                 "null"
                               ]
                             },
                             "position": {
-                              "required": true,
                               "type": "integer"
                             },
                             "start_offset": {
-                              "required": true,
                               "type": "integer"
                             }
-                          }
+                          },
+                          "required": [
+                            "end_offset",
+                            "payload",
+                            "position",
+                            "start_offset"
+                          ]
                         }
                       },
                       "ttf": {
-                        "required": true,
                         "type": "integer"
                       }
-                    }
+                    },
+                    "required": [
+                      "doc_freq",
+                      "term_freq",
+                      "tokens",
+                      "ttf"
+                    ]
                   }
                 }
-              }
+              },
+              "required": [
+                "field_statistics",
+                "terms"
+              ]
             }
           },
           "IsValid": {
-            "required": true,
             "type": "boolean"
           },
           "ConnectionStatus": {
             "id": "Elasticsearch.Net.IElasticsearchResponse",
-            "required": true,
             "type": [
               "object",
               "null"
             ],
             "properties": {
               "Success": {
-                "required": true,
                 "type": "boolean"
               },
               "Settings": {
                 "id": "Elasticsearch.Net.Connection.IConnectionConfigurationValues",
-                "required": true,
                 "type": [
                   "object",
                   "null"
@@ -149,121 +151,102 @@
                 "properties": {
                   "ConnectionPool": {
                     "id": "Elasticsearch.Net.ConnectionPool.IConnectionPool",
-                    "required": true,
                     "type": [
                       "object",
                       "null"
                     ],
                     "properties": {
                       "MaxRetries": {
-                        "required": true,
                         "type": "integer"
                       },
                       "AcceptsUpdates": {
-                        "required": true,
                         "type": "boolean"
                       }
-                    }
+                    },
+                    "required": [
+                      "MaxRetries",
+                      "AcceptsUpdates"
+                    ]
                   },
                   "MaximumAsyncConnections": {
-                    "required": true,
                     "type": "integer"
                   },
                   "Timeout": {
-                    "required": true,
                     "type": "integer"
                   },
                   "PingTimeout": {
-                    "required": true,
                     "type": [
                       "integer",
                       "null"
                     ]
                   },
                   "DeadTimeout": {
-                    "required": true,
                     "type": [
                       "integer",
                       "null"
                     ]
                   },
                   "MaxDeadTimeout": {
-                    "required": true,
                     "type": [
                       "integer",
                       "null"
                     ]
                   },
                   "MaxRetries": {
-                    "required": true,
                     "type": [
                       "integer",
                       "null"
                     ]
                   },
                   "DisablePings": {
-                    "required": true,
                     "type": "boolean"
                   },
                   "EnableCompressedResponses": {
-                    "required": true,
                     "type": "boolean"
                   },
                   "ProxyAddress": {
-                    "required": true,
                     "type": [
                       "string",
                       "null"
                     ]
                   },
                   "ProxyUsername": {
-                    "required": true,
                     "type": [
                       "string",
                       "null"
                     ]
                   },
                   "ProxyPassword": {
-                    "required": true,
                     "type": [
                       "string",
                       "null"
                     ]
                   },
                   "TraceEnabled": {
-                    "required": true,
                     "type": "boolean"
                   },
                   "MetricsEnabled": {
-                    "required": true,
                     "type": "boolean"
                   },
                   "UsesPrettyResponses": {
-                    "required": true,
                     "type": "boolean"
                   },
                   "KeepRawResponse": {
-                    "required": true,
                     "type": "boolean"
                   },
                   "DisableAutomaticProxyDetection": {
-                    "required": true,
                     "type": "boolean"
                   },
                   "ThrowOnElasticsearchServerExceptions": {
-                    "required": true,
                     "type": "boolean"
                   },
                   "SniffsOnStartup": {
-                    "required": true,
                     "type": "boolean"
                   },
                   "SniffsOnConnectionFault": {
-                    "required": true,
                     "type": "boolean"
                   },
                   "SniffInformationLifeSpan": {
-                    "required": true,
                     "type": [
                       "string",
                       "null"
@@ -271,7 +254,6 @@
                   },
                   "QueryStringParameters": {
                     "id": "System.Collections.Specialized.NameValueCollection",
-                    "required": true,
                     "type": [
                       "array",
                       "null"
@@ -279,7 +261,6 @@
                   },
                   "ConnectionStatusHandler": {
                     "id": "System.Action`1[[Elasticsearch.Net.IElasticsearchResponse, Elasticsearch.Net, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-                    "required": true,
                     "type": [
                       "object",
                       "null"
@@ -287,82 +268,95 @@
                   },
                   "Serializer": {
                     "id": "Elasticsearch.Net.Serialization.IElasticsearchSerializer",
-                    "required": true,
                     "type": [
                       "object",
                       "null"
                     ],
                     "properties": {}
                   }
-                }
+                },
+                "required": [
+                  "ConnectionPool",
+                  "MaximumAsyncConnections",
+                  "Timeout",
+                  "PingTimeout",
+                  "DeadTimeout",
+                  "MaxDeadTimeout",
+                  "MaxRetries",
+                  "DisablePings",
+                  "EnableCompressedResponses",
+                  "ProxyAddress",
+                  "ProxyUsername",
+                  "ProxyPassword",
+                  "TraceEnabled",
+                  "MetricsEnabled",
+                  "UsesPrettyResponses",
+                  "KeepRawResponse",
+                  "DisableAutomaticProxyDetection",
+                  "ThrowOnElasticsearchServerExceptions",
+                  "SniffsOnStartup",
+                  "SniffsOnConnectionFault",
+                  "SniffInformationLifeSpan",
+                  "QueryStringParameters",
+                  "ConnectionStatusHandler",
+                  "Serializer"
+                ]
               },
               "OriginalException": {
                 "id": "System.Exception",
-                "required": true,
                 "type": [
                   "object",
                   "null"
                 ]
               },
               "RequestMethod": {
-                "required": true,
                 "type": [
                   "string",
                   "null"
                 ]
               },
               "RequestUrl": {
-                "required": true,
                 "type": [
                   "string",
                   "null"
                 ]
               },
               "HttpStatusCode": {
-                "required": true,
                 "type": [
                   "integer",
                   "null"
                 ]
               },
               "NumberOfRetries": {
-                "required": true,
                 "type": "integer"
               },
               "Metrics": {
                 "id": "Elasticsearch.Net.CallMetrics",
-                "required": true,
                 "type": [
                   "object",
                   "null"
                 ],
                 "properties": {
                   "Path": {
-                    "required": true,
                     "type": [
                       "string",
                       "null"
                     ]
                   },
                   "SerializationTime": {
-                    "required": true,
                     "type": "integer"
                   },
                   "DeserializationTime": {
-                    "required": true,
                     "type": "integer"
                   },
                   "StartedOn": {
-                    "required": true,
                     "type": "string"
                   },
                   "CompletedOn": {
-                    "required": true,
                     "type": "string"
                   },
                   "Requests": {
                     "id": "System.Collections.Generic.List`1[[Elasticsearch.Net.RequestMetrics, Elasticsearch.Net, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-                    "required": true,
                     "type": [
                       "array",
                       "null"
@@ -375,7 +369,6 @@
                       ],
                       "properties": {
                         "RequestType": {
-                          "required": true,
                           "type": "integer",
                           "enum": [
                             0,
@@ -384,106 +377,140 @@
                           ]
                         },
                         "Node": {
-                          "required": true,
                           "type": [
                             "string",
                             "null"
                           ]
                         },
                         "StartedOn": {
-                          "required": true,
                           "type": "string"
                         },
                         "EllapsedMilliseconds": {
-                          "required": true,
                           "type": "integer"
                         },
                         "Path": {
-                          "required": true,
                           "type": [
                             "string",
                             "null"
                           ]
                         },
                         "HttpStatusCode": {
-                          "required": true,
                           "type": [
                             "integer",
                             "null"
                           ]
                         },
                         "Success": {
-                          "required": true,
                           "type": "boolean"
                         }
-                      }
+                      },
+                      "required": [
+                        "RequestType",
+                        "Node",
+                        "StartedOn",
+                        "EllapsedMilliseconds",
+                        "Path",
+                        "HttpStatusCode",
+                        "Success"
+                      ]
                     }
                   }
-                }
+                },
+                "required": [
+                  "Path",
+                  "SerializationTime",
+                  "DeserializationTime",
+                  "StartedOn",
+                  "CompletedOn",
+                  "Requests"
+                ]
               },
               "ResponseRaw": {
-                "required": true,
                 "type": [
                   "string",
                   "null"
                 ]
               },
               "Request": {
-                "required": true,
                 "type": [
                   "string",
                   "null"
                 ]
               }
-            }
+            },
+            "required": [
+              "Success",
+              "Settings",
+              "OriginalException",
+              "RequestMethod",
+              "RequestUrl",
+              "HttpStatusCode",
+              "NumberOfRetries",
+              "Metrics",
+              "ResponseRaw",
+              "Request"
+            ]
           },
           "ServerError": {
             "id": "Elasticsearch.Net.ElasticsearchServerError",
-            "required": true,
             "type": [
               "object",
               "null"
             ],
             "properties": {
               "Status": {
-                "required": true,
                 "type": "integer"
               },
               "Error": {
-                "required": true,
                 "type": [
                   "string",
                   "null"
                 ]
               },
               "ExceptionType": {
-                "required": true,
                 "type": [
                   "string",
                   "null"
                 ]
               }
-            }
+            },
+            "required": [
+              "Status",
+              "Error",
+              "ExceptionType"
+            ]
           },
           "Infer": {
             "id": "Nest.ElasticInferrer",
-            "required": true,
             "type": [
               "object",
               "null"
             ],
             "properties": {
               "DefaultIndex": {
-                "required": true,
                 "type": [
                   "string",
                   "null"
                 ]
               }
-            }
+            },
+            "required": [
+              "DefaultIndex"
+            ]
           }
-        }
+        },
+        "required": [
+          "found",
+          "term_vectors",
+          "IsValid",
+          "ConnectionStatus",
+          "ServerError",
+          "Infer"
+        ]
       }
     }
-  }
+  },
+  "required": [
+    "docs"
+  ]
 }

@@ -1,11 +1,14 @@
 {
   "id": "Nest.IWildcardQuery",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IWildcardQuery",
   "type": "object",
   "properties": {
     "rewrite": {
-      "required": true,
       "type": "any"
     }
-  }
+  },
+  "required": [
+    "rewrite"
+  ]
 }

@@ -1,14 +1,13 @@
 {
   "id": "Nest.IClusterPutSettingsResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IClusterPutSettingsResponse",
   "type": "object",
   "properties": {
     "acknowledged": {
-      "required": true,
       "type": "boolean"
     },
     "persistent": {
-      "required": true,
       "type": [
         "object",
         "null"
@@ -23,7 +22,6 @@
       }
     },
     "transient": {
-      "required": true,
       "type": [
         "object",
         "null"
@@ -32,5 +30,10 @@
         "$ref": "System.Object"
       }
     }
-  }
+  },
+  "required": [
+    "acknowledged",
+    "persistent",
+    "transient"
+  ]
 }

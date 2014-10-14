@@ -1,11 +1,11 @@
 {
   "id": "Nest.ITermFilter",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ITermFilter",
   "type": "object",
   "properties": {
     "value": {
       "id": "System.Object",
-      "required": true,
       "type": [
         "object",
         "null"
@@ -13,11 +13,14 @@
       "properties": {}
     },
     "boost": {
-      "required": true,
       "type": [
         "number",
         "null"
       ]
     }
-  }
+  },
+  "required": [
+    "value",
+    "boost"
+  ]
 }

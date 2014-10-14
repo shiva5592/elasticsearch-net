@@ -1,5 +1,6 @@
 {
   "id": "Nest.IFlushRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IFlushRequest",
   "type": "object",
   "properties": {}

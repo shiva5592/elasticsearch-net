@@ -1,11 +1,11 @@
 {
   "id": "Nest.IMultiGetResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IMultiGetResponse",
   "type": "object",
   "properties": {
     "Documents": {
-      "id": "System.Collections.Generic.IEnumerable`1[[Nest.IMultiGetHit`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-      "required": true,
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.IMultiGetHit`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
       "type": [
         "array",
         "null"
@@ -19,7 +19,6 @@
         "properties": {
           "Source": {
             "id": "System.Object",
-            "required": true,
             "type": [
               "object",
               "null"
@@ -27,39 +26,45 @@
             "properties": {}
           },
           "Index": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "Found": {
-            "required": true,
             "type": "boolean"
           },
           "Type": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "Version": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "Id": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           }
-        }
+        },
+        "required": [
+          "Source",
+          "Index",
+          "Found",
+          "Type",
+          "Version",
+          "Id"
+        ]
       }
     }
-  }
+  },
+  "required": [
+    "Documents"
+  ]
 }

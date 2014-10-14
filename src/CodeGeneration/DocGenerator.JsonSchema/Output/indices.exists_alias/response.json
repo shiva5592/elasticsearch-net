@@ -1,11 +1,14 @@
 {
   "id": "Nest.IExistsResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IExistsResponse",
   "type": "object",
   "properties": {
     "Exists": {
-      "required": true,
       "type": "boolean"
     }
-  }
+  },
+  "required": [
+    "Exists"
+  ]
 }

@@ -1,14 +1,13 @@
 {
   "id": "Nest.ITermVectorResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ITermVectorResponse",
   "type": "object",
   "properties": {
     "found": {
-      "required": true,
       "type": "boolean"
     },
     "term_vectors": {
-      "required": true,
       "type": [
         "object",
         "null"
@@ -22,28 +21,28 @@
         "properties": {
           "field_statistics": {
             "id": "Nest.FieldStatistics",
-            "required": true,
             "type": [
               "object",
               "null"
             ],
             "properties": {
               "doc_count": {
-                "required": true,
                 "type": "integer"
               },
               "sum_doc_freq": {
-                "required": true,
                 "type": "integer"
               },
               "sum_ttf": {
-                "required": true,
                 "type": "integer"
               }
-            }
+            },
+            "required": [
+              "doc_count",
+              "sum_doc_freq",
+              "sum_ttf"
+            ]
           },
           "terms": {
-            "required": true,
             "type": [
               "object",
               "null"
@@ -56,16 +55,13 @@
               ],
               "properties": {
                 "doc_freq": {
-                  "required": true,
                   "type": "integer"
                 },
                 "term_freq": {
-                  "required": true,
                   "type": "integer"
                 },
                 "tokens": {
-                  "id": "System.Collections.Generic.IEnumerable`1[[Nest.Token, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-                  "required": true,
+                  "id": "System.Collections.Generic.IEnumerable`1[[Nest.Token, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
                   "type": [
                     "array",
                     "null"
@@ -78,36 +74,51 @@
                     ],
                     "properties": {
                       "end_offset": {
-                        "required": true,
                         "type": "integer"
                       },
                       "payload": {
-                        "required": true,
                         "type": [
                           "string",
                           "null"
                         ]
                       },
                       "position": {
-                        "required": true,
                         "type": "integer"
                       },
                       "start_offset": {
-                        "required": true,
                         "type": "integer"
                       }
-                    }
+                    },
+                    "required": [
+                      "end_offset",
+                      "payload",
+                      "position",
+                      "start_offset"
+                    ]
                   }
                 },
                 "ttf": {
-                  "required": true,
                   "type": "integer"
                 }
-              }
+              },
+              "required": [
+                "doc_freq",
+                "term_freq",
+                "tokens",
+                "ttf"
+              ]
             }
           }
-        }
+        },
+        "required": [
+          "field_statistics",
+          "terms"
+        ]
       }
     }
-  }
+  },
+  "required": [
+    "found",
+    "term_vectors"
+  ]
 }

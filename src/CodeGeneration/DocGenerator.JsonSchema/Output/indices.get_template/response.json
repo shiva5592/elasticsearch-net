@@ -1,10 +1,10 @@
 {
   "id": "Nest.ITemplateResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ITemplateResponse",
   "type": "object",
   "properties": {
     "Name": {
-      "required": true,
       "type": [
         "string",
         "null"
@@ -12,28 +12,24 @@
     },
     "TemplateMapping": {
       "id": "Nest.TemplateMapping",
-      "required": true,
       "type": [
         "object",
         "null"
       ],
       "properties": {
         "template": {
-          "required": true,
           "type": [
             "string",
             "null"
           ]
         },
         "order": {
-          "required": true,
           "type": [
             "integer",
             "null"
           ]
         },
         "settings": {
-          "required": true,
           "type": [
             "object",
             "null"
@@ -48,7 +44,6 @@
           }
         },
         "mappings": {
-          "required": true,
           "type": [
             "object",
             "null"
@@ -61,18 +56,15 @@
             ],
             "properties": {
               "type": {
-                "required": true,
                 "type": "any"
               },
               "index_analyzer": {
-                "required": true,
                 "type": [
                   "string",
                   "null"
                 ]
               },
               "search_analyzer": {
-                "required": true,
                 "type": [
                   "string",
                   "null"
@@ -80,7 +72,6 @@
               },
               "dynamic_date_formats": {
                 "id": "System.Collections.Generic.IEnumerable`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
-                "required": true,
                 "type": [
                   "array",
                   "null"
@@ -93,22 +84,19 @@
                 }
               },
               "date_detection": {
-                "required": true,
                 "type": [
                   "boolean",
                   "null"
                 ]
               },
               "numeric_detection": {
-                "required": true,
                 "type": [
                   "boolean",
                   "null"
                 ]
               },
               "transform": {
-                "id": "System.Collections.Generic.IList`1[[Nest.MappingTransform, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-                "required": true,
+                "id": "System.Collections.Generic.IList`1[[Nest.MappingTransform, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
                 "type": [
                   "array",
                   "null"
@@ -121,14 +109,12 @@
                   ],
                   "properties": {
                     "script": {
-                      "required": true,
                       "type": [
                         "string",
                         "null"
                       ]
                     },
                     "params": {
-                      "required": true,
                       "type": [
                         "object",
                         "null"
@@ -141,75 +127,68 @@
                       }
                     },
                     "lang": {
-                      "required": true,
                       "type": [
                         "string",
                         "null"
                       ]
                     }
-                  }
+                  },
+                  "required": [
+                    "script",
+                    "params",
+                    "lang"
+                  ]
                 }
               },
               "_id": {
-                "required": true,
                 "type": "any"
               },
               "_source": {
-                "required": true,
                 "type": "any"
               },
               "_type": {
-                "required": true,
                 "type": "any"
               },
               "_all": {
-                "required": true,
                 "type": "any"
               },
               "_analyzer": {
-                "required": true,
                 "type": "any"
               },
               "_boost": {
-                "required": true,
                 "type": "any"
               },
               "_parent": {
                 "id": "Nest.ParentFieldMapping",
-                "required": true,
                 "type": [
                   "object",
                   "null"
                 ],
                 "properties": {
                   "type": {
-                    "required": true,
                     "type": "any"
                   }
-                }
+                },
+                "required": [
+                  "type"
+                ]
               },
               "_routing": {
-                "required": true,
                 "type": "any"
               },
               "_index": {
-                "required": true,
                 "type": "any"
               },
               "_size": {
-                "required": true,
                 "type": "any"
               },
               "_timestamp": {
-                "required": true,
                 "type": "any"
               },
               "_ttl": {
-                "required": true,
                 "type": "any"
               },
               "_meta": {
-                "required": true,
                 "type": [
                   "object",
                   "null"
@@ -219,7 +198,6 @@
                 }
               },
               "dynamic_templates": {
-                "required": true,
                 "type": [
                   "object",
                   "null"
@@ -232,35 +210,30 @@
                   ],
                   "properties": {
                     "match": {
-                      "required": true,
                       "type": [
                         "string",
                         "null"
                       ]
                     },
                     "unmatch": {
-                      "required": true,
                       "type": [
                         "string",
                         "null"
                       ]
                     },
                     "match_mapping_type": {
-                      "required": true,
                       "type": [
                         "string",
                         "null"
                       ]
                     },
                     "path_match": {
-                      "required": true,
                       "type": [
                         "string",
                         "null"
                       ]
                     },
                     "path_unmatch": {
-                      "required": true,
                       "type": [
                         "string",
                         "null"
@@ -268,7 +241,6 @@
                     },
                     "mapping": {
                       "id": "Nest.IElasticType",
-                      "required": true,
                       "type": [
                         "object",
                         "null"
@@ -276,14 +248,12 @@
                       "properties": {
                         "Name": {
                           "id": "Nest.PropertyNameMarker",
-                          "required": true,
                           "type": [
                             "object",
                             "null"
                           ],
                           "properties": {
                             "Name": {
-                              "required": true,
                               "type": [
                                 "string",
                                 "null"
@@ -291,14 +261,12 @@
                             },
                             "Expression": {
                               "id": "System.Linq.Expressions.Expression",
-                              "required": true,
                               "type": [
                                 "object",
                                 "null"
                               ],
                               "properties": {
                                 "NodeType": {
-                                  "required": true,
                                   "type": "integer",
                                   "enum": [
                                     0,
@@ -389,87 +357,127 @@
                                   ]
                                 },
                                 "Type": {
-                                  "required": true,
                                   "type": [
                                     "string",
                                     "null"
                                   ]
                                 },
                                 "CanReduce": {
-                                  "required": true,
                                   "type": "boolean"
                                 }
-                              }
+                              },
+                              "required": [
+                                "NodeType",
+                                "Type",
+                                "CanReduce"
+                              ]
                             },
                             "Type": {
-                              "required": true,
                               "type": [
                                 "string",
                                 "null"
                               ]
                             },
                             "Boost": {
-                              "required": true,
                               "type": [
                                 "number",
                                 "null"
                               ]
                             }
-                          }
+                          },
+                          "required": [
+                            "Name",
+                            "Expression",
+                            "Type",
+                            "Boost"
+                          ]
                         },
                         "Type": {
-                          "required": true,
                           "type": "any"
                         }
-                      }
+                      },
+                      "required": [
+                        "Name",
+                        "Type"
+                      ]
                     }
-                  }
+                  },
+                  "required": [
+                    "match",
+                    "unmatch",
+                    "match_mapping_type",
+                    "path_match",
+                    "path_unmatch",
+                    "mapping"
+                  ]
                 }
               },
               "similarity": {
-                "required": true,
                 "type": [
                   "string",
                   "null"
                 ]
               },
               "dynamic": {
-                "required": true,
                 "type": "any"
               },
               "enabled": {
-                "required": true,
                 "type": [
                   "boolean",
                   "null"
                 ]
               },
               "include_in_all": {
-                "required": true,
                 "type": [
                   "boolean",
                   "null"
                 ]
               },
               "path": {
-                "required": true,
                 "type": [
                   "string",
                   "null"
                 ]
               },
               "properties": {
-                "required": true,
                 "type": [
                   "object",
                   "null"
                 ]
               }
-            }
+            },
+            "required": [
+              "type",
+              "index_analyzer",
+              "search_analyzer",
+              "dynamic_date_formats",
+              "date_detection",
+              "numeric_detection",
+              "transform",
+              "_id",
+              "_source",
+              "_type",
+              "_all",
+              "_analyzer",
+              "_boost",
+              "_parent",
+              "_routing",
+              "_index",
+              "_size",
+              "_timestamp",
+              "_ttl",
+              "_meta",
+              "dynamic_templates",
+              "similarity",
+              "dynamic",
+              "enabled",
+              "include_in_all",
+              "path",
+              "properties"
+            ]
           }
         },
         "warmers": {
-          "required": true,
           "type": [
             "object",
             "null"
@@ -479,7 +487,6 @@
           }
         },
         "aliases": {
-          "required": true,
           "type": [
             "object",
             "null"
@@ -492,34 +499,48 @@
             ],
             "properties": {
               "filter": {
-                "required": true,
                 "type": "any"
               },
               "routing": {
-                "required": true,
                 "type": [
                   "string",
                   "null"
                 ]
               },
               "index_routing": {
-                "required": true,
                 "type": [
                   "string",
                   "null"
                 ]
               },
               "search_routing": {
-                "required": true,
                 "type": [
                   "string",
                   "null"
                 ]
               }
-            }
+            },
+            "required": [
+              "filter",
+              "routing",
+              "index_routing",
+              "search_routing"
+            ]
           }
         }
-      }
+      },
+      "required": [
+        "template",
+        "order",
+        "settings",
+        "mappings",
+        "warmers",
+        "aliases"
+      ]
     }
-  }
+  },
+  "required": [
+    "Name",
+    "TemplateMapping"
+  ]
 }

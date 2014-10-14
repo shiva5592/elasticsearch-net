@@ -1,5 +1,6 @@
 {
   "id": "Nest.ICatPluginsRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ICatPluginsRequest",
   "type": "object",
   "properties": {}

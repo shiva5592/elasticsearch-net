@@ -1,5 +1,6 @@
 {
   "id": "Nest.ISnapshotStatusRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ISnapshotStatusRequest",
   "type": "object",
   "properties": {}

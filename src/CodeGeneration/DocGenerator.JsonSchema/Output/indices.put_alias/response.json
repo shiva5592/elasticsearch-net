@@ -1,5 +1,6 @@
 {
   "id": "Nest.IPutAliasResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IPutAliasResponse",
   "type": "object",
   "properties": {}

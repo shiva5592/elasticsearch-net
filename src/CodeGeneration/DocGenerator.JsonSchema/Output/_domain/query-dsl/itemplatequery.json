@@ -1,17 +1,16 @@
 {
   "id": "Nest.ITemplateQuery",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ITemplateQuery",
   "type": "object",
   "properties": {
     "query": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "params": {
-      "required": true,
       "type": [
         "object",
         "null"
@@ -25,5 +24,9 @@
         "properties": {}
       }
     }
-  }
+  },
+  "required": [
+    "query",
+    "params"
+  ]
 }

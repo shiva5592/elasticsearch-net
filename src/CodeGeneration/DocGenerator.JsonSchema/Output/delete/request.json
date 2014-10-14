@@ -1,5 +1,6 @@
 {
   "id": "Nest.IDeleteRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IDeleteRequest",
   "type": "object",
   "properties": {}

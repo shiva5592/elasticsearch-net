@@ -1,5 +1,6 @@
 {
   "id": "Nest.INodesShutdownRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "INodesShutdownRequest",
   "type": "object",
   "properties": {}

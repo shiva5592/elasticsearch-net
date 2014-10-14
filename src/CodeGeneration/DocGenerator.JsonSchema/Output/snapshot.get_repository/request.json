@@ -1,5 +1,6 @@
 {
   "id": "Nest.IGetRepositoryRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IGetRepositoryRequest",
   "type": "object",
   "properties": {}

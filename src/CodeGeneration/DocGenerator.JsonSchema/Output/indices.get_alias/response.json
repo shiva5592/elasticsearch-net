@@ -1,16 +1,16 @@
 {
   "id": "Nest.IGetAliasesResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IGetAliasesResponse",
   "type": "object",
   "properties": {
     "Indices": {
-      "required": true,
       "type": [
         "object",
         "null"
       ],
       "additionalProperties": {
-        "id": "System.Collections.Generic.IList`1[[Nest.AliasDefinition, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
+        "id": "System.Collections.Generic.IList`1[[Nest.AliasDefinition, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "type": [
           "array",
           "null"
@@ -23,40 +23,45 @@
           ],
           "properties": {
             "Name": {
-              "required": true,
               "type": [
                 "string",
                 "null"
               ]
             },
             "filter": {
-              "required": true,
               "type": "any"
             },
             "routing": {
-              "required": true,
               "type": [
                 "string",
                 "null"
               ]
             },
             "index_routing": {
-              "required": true,
               "type": [
                 "string",
                 "null"
               ]
             },
             "search_routing": {
-              "required": true,
               "type": [
                 "string",
                 "null"
               ]
             }
-          }
+          },
+          "required": [
+            "Name",
+            "filter",
+            "routing",
+            "index_routing",
+            "search_routing"
+          ]
         }
       }
     }
-  }
+  },
+  "required": [
+    "Indices"
+  ]
 }

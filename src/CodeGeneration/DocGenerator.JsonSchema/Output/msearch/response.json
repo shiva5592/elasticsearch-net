@@ -1,11 +1,14 @@
 {
   "id": "Nest.IMultiSearchResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IMultiSearchResponse",
   "type": "object",
   "properties": {
     "TotalResponses": {
-      "required": true,
       "type": "integer"
     }
-  }
+  },
+  "required": [
+    "TotalResponses"
+  ]
 }

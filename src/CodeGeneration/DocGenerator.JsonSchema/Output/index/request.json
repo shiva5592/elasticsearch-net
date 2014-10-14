@@ -1,5 +1,6 @@
 {
   "id": "Nest.IIndexRequest`1[[System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IIndexRequest`1",
   "type": "object",
   "properties": {}

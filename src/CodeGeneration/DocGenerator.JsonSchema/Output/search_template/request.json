@@ -1,10 +1,10 @@
 {
   "id": "Nest.ISearchTemplateRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ISearchTemplateRequest",
   "type": "object",
   "properties": {
     "params": {
-      "required": true,
       "type": [
         "object",
         "null"
@@ -19,25 +19,28 @@
       }
     },
     "template": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "file": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "id": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     }
-  }
+  },
+  "required": [
+    "params",
+    "template",
+    "file",
+    "id"
+  ]
 }

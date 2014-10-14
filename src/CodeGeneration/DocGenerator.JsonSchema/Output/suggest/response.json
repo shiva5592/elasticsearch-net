@@ -1,31 +1,27 @@
 {
   "id": "Nest.ISuggestResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ISuggestResponse",
   "type": "object",
   "properties": {
     "shards": {
       "id": "Nest.ShardsMetaData",
-      "required": true,
       "type": [
         "object",
         "null"
       ],
       "properties": {
         "Total": {
-          "required": true,
           "type": "integer"
         },
         "Successful": {
-          "required": true,
           "type": "integer"
         },
         "Failed": {
-          "required": true,
           "type": "integer"
         },
         "failures": {
-          "id": "System.Collections.Generic.IEnumerable`1[[Nest.ShardsFailureReason, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-          "required": true,
+          "id": "System.Collections.Generic.IEnumerable`1[[Nest.ShardsFailureReason, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
           "type": [
             "array",
             "null"
@@ -38,34 +34,41 @@
             ],
             "properties": {
               "index": {
-                "required": true,
                 "type": [
                   "string",
                   "null"
                 ]
               },
               "shard": {
-                "required": true,
                 "type": "integer"
               },
               "status": {
-                "required": true,
                 "type": "integer"
               },
               "reason": {
-                "required": true,
                 "type": [
                   "string",
                   "null"
                 ]
               }
-            }
+            },
+            "required": [
+              "index",
+              "shard",
+              "status",
+              "reason"
+            ]
           }
         }
-      }
+      },
+      "required": [
+        "Total",
+        "Successful",
+        "Failed",
+        "failures"
+      ]
     },
     "suggestions": {
-      "required": true,
       "type": [
         "object",
         "null"
@@ -84,23 +87,19 @@
           ],
           "properties": {
             "length": {
-              "required": true,
               "type": "integer"
             },
             "offset": {
-              "required": true,
               "type": "integer"
             },
             "text": {
-              "required": true,
               "type": [
                 "string",
                 "null"
               ]
             },
             "options": {
-              "id": "System.Collections.Generic.IEnumerable`1[[Nest.SuggestOption, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-              "required": true,
+              "id": "System.Collections.Generic.IEnumerable`1[[Nest.SuggestOption, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
               "type": [
                 "array",
                 "null"
@@ -113,18 +112,15 @@
                 ],
                 "properties": {
                   "freq": {
-                    "required": true,
                     "type": [
                       "integer",
                       "null"
                     ]
                   },
                   "score": {
-                    "required": true,
                     "type": "number"
                   },
                   "text": {
-                    "required": true,
                     "type": [
                       "string",
                       "null"
@@ -132,19 +128,34 @@
                   },
                   "payload": {
                     "id": "System.Object",
-                    "required": true,
                     "type": [
                       "object",
                       "null"
                     ],
                     "properties": {}
                   }
-                }
+                },
+                "required": [
+                  "freq",
+                  "score",
+                  "text",
+                  "payload"
+                ]
               }
             }
-          }
+          },
+          "required": [
+            "length",
+            "offset",
+            "text",
+            "options"
+          ]
         }
       }
     }
-  }
+  },
+  "required": [
+    "shards",
+    "suggestions"
+  ]
 }

@@ -1,11 +1,14 @@
 {
   "id": "Nest.ICreateRepositoryRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ICreateRepositoryRequest",
   "type": "object",
   "properties": {
     "repository": {
-      "required": true,
       "type": "any"
     }
-  }
+  },
+  "required": [
+    "repository"
+  ]
 }

@@ -1,5 +1,6 @@
 {
   "id": "Nest.IIndexExistsRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IIndexExistsRequest",
   "type": "object",
   "properties": {}

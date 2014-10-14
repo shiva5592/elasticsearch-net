@@ -1,11 +1,11 @@
 {
   "id": "Nest.IGetSnapshotResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IGetSnapshotResponse",
   "type": "object",
   "properties": {
     "snapshots": {
-      "id": "System.Collections.Generic.IEnumerable`1[[Nest.Snapshot, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-      "required": true,
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.Snapshot, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
       "type": [
         "array",
         "null"
@@ -18,7 +18,6 @@
         ],
         "properties": {
           "snapshot": {
-            "required": true,
             "type": [
               "string",
               "null"
@@ -26,7 +25,6 @@
           },
           "indices": {
             "id": "System.Collections.Generic.IEnumerable`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
-            "required": true,
             "type": [
               "array",
               "null"
@@ -39,30 +37,24 @@
             }
           },
           "state": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "start_time": {
-            "required": true,
             "type": "string"
           },
           "start_time_in_millis": {
-            "required": true,
             "type": "integer"
           },
           "end_time": {
-            "required": true,
             "type": "string"
           },
           "end_time_in_millis": {
-            "required": true,
             "type": "integer"
           },
           "duration_in_millis": {
-            "required": true,
             "type": "integer"
           },
           "failures": {
@@ -70,27 +62,22 @@
           },
           "shards": {
             "id": "Nest.ShardsMetaData",
-            "required": true,
             "type": [
               "object",
               "null"
             ],
             "properties": {
               "Total": {
-                "required": true,
                 "type": "integer"
               },
               "Successful": {
-                "required": true,
                 "type": "integer"
               },
               "Failed": {
-                "required": true,
                 "type": "integer"
               },
               "failures": {
-                "id": "System.Collections.Generic.IEnumerable`1[[Nest.ShardsFailureReason, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-                "required": true,
+                "id": "System.Collections.Generic.IEnumerable`1[[Nest.ShardsFailureReason, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
                 "type": [
                   "array",
                   "null"
@@ -103,34 +90,57 @@
                   ],
                   "properties": {
                     "index": {
-                      "required": true,
                       "type": [
                         "string",
                         "null"
                       ]
                     },
                     "shard": {
-                      "required": true,
                       "type": "integer"
                     },
                     "status": {
-                      "required": true,
                       "type": "integer"
                     },
                     "reason": {
-                      "required": true,
                       "type": [
                         "string",
                         "null"
                       ]
                     }
-                  }
+                  },
+                  "required": [
+                    "index",
+                    "shard",
+                    "status",
+                    "reason"
+                  ]
                 }
               }
-            }
+            },
+            "required": [
+              "Total",
+              "Successful",
+              "Failed",
+              "failures"
+            ]
           }
-        }
+        },
+        "required": [
+          "snapshot",
+          "indices",
+          "state",
+          "start_time",
+          "start_time_in_millis",
+          "end_time",
+          "end_time_in_millis",
+          "duration_in_millis",
+          "failures",
+          "shards"
+        ]
       }
     }
-  }
+  },
+  "required": [
+    "snapshots"
+  ]
 }

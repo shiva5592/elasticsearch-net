@@ -1,11 +1,11 @@
 {
   "id": "Nest.IMultiTermVectorsRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IMultiTermVectorsRequest",
   "type": "object",
   "properties": {
     "docs": {
-      "id": "System.Collections.Generic.IEnumerable`1[[Nest.MultiTermVectorDocument, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-      "required": true,
+      "id": "System.Collections.Generic.IEnumerable`1[[Nest.MultiTermVectorDocument, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
       "type": [
         "array",
         "null"
@@ -18,23 +18,19 @@
         ],
         "properties": {
           "_index": {
-            "required": true,
             "type": "any"
           },
           "_type": {
-            "required": true,
             "type": "any"
           },
           "_id": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "fields": {
-            "id": "System.Collections.Generic.IEnumerable`1[[Nest.PropertyPathMarker, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-            "required": true,
+            "id": "System.Collections.Generic.IEnumerable`1[[Nest.PropertyPathMarker, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
             "type": [
               "array",
               "null"
@@ -47,7 +43,6 @@
               ],
               "properties": {
                 "Name": {
-                  "required": true,
                   "type": [
                     "string",
                     "null"
@@ -55,14 +50,12 @@
                 },
                 "Type": {
                   "id": "System.Linq.Expressions.Expression",
-                  "required": true,
                   "type": [
                     "object",
                     "null"
                   ],
                   "properties": {
                     "NodeType": {
-                      "required": true,
                       "type": "integer",
                       "enum": [
                         0,
@@ -153,65 +146,81 @@
                       ]
                     },
                     "Type": {
-                      "required": true,
                       "type": [
                         "string",
                         "null"
                       ]
                     },
                     "CanReduce": {
-                      "required": true,
                       "type": "boolean"
                     }
-                  }
+                  },
+                  "required": [
+                    "NodeType",
+                    "Type",
+                    "CanReduce"
+                  ]
                 },
                 "Boost": {
-                  "required": true,
                   "type": [
                     "number",
                     "null"
                   ]
                 }
-              }
+              },
+              "required": [
+                "Name",
+                "Type",
+                "Boost"
+              ]
             }
           },
           "offsets": {
-            "required": true,
             "type": [
               "boolean",
               "null"
             ]
           },
           "payloads": {
-            "required": true,
             "type": [
               "boolean",
               "null"
             ]
           },
           "positions": {
-            "required": true,
             "type": [
               "boolean",
               "null"
             ]
           },
           "term_statistics": {
-            "required": true,
             "type": [
               "boolean",
               "null"
             ]
           },
           "field_statistics": {
-            "required": true,
             "type": [
               "boolean",
               "null"
             ]
           }
-        }
+        },
+        "required": [
+          "_index",
+          "_type",
+          "_id",
+          "fields",
+          "offsets",
+          "payloads",
+          "positions",
+          "term_statistics",
+          "field_statistics"
+        ]
       }
     }
-  }
+  },
+  "required": [
+    "docs"
+  ]
 }

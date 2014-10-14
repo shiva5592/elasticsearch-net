@@ -1,57 +1,60 @@
 {
   "id": "Nest.ICommonTermsQuery",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ICommonTermsQuery",
   "type": "object",
   "properties": {
     "query": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "cutoff_frequency": {
-      "required": true,
       "type": [
         "number",
         "null"
       ]
     },
     "low_freq_operator": {
-      "required": true,
       "type": "any"
     },
     "high_freq_operator": {
-      "required": true,
       "type": "any"
     },
     "minimum_should_match": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "boost": {
-      "required": true,
       "type": [
         "number",
         "null"
       ]
     },
     "analyzer": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "disable_coord": {
-      "required": true,
       "type": [
         "boolean",
         "null"
       ]
     }
-  }
+  },
+  "required": [
+    "query",
+    "cutoff_frequency",
+    "low_freq_operator",
+    "high_freq_operator",
+    "minimum_should_match",
+    "boost",
+    "analyzer",
+    "disable_coord"
+  ]
 }

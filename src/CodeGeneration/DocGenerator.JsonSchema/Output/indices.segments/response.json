@@ -1,31 +1,27 @@
 {
   "id": "Nest.ISegmentsResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ISegmentsResponse",
   "type": "object",
   "properties": {
     "_shards": {
       "id": "Nest.ShardsMetaData",
-      "required": true,
       "type": [
         "object",
         "null"
       ],
       "properties": {
         "Total": {
-          "required": true,
           "type": "integer"
         },
         "Successful": {
-          "required": true,
           "type": "integer"
         },
         "Failed": {
-          "required": true,
           "type": "integer"
         },
         "failures": {
-          "id": "System.Collections.Generic.IEnumerable`1[[Nest.ShardsFailureReason, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-          "required": true,
+          "id": "System.Collections.Generic.IEnumerable`1[[Nest.ShardsFailureReason, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
           "type": [
             "array",
             "null"
@@ -38,34 +34,41 @@
             ],
             "properties": {
               "index": {
-                "required": true,
                 "type": [
                   "string",
                   "null"
                 ]
               },
               "shard": {
-                "required": true,
                 "type": "integer"
               },
               "status": {
-                "required": true,
                 "type": "integer"
               },
               "reason": {
-                "required": true,
                 "type": [
                   "string",
                   "null"
                 ]
               }
-            }
+            },
+            "required": [
+              "index",
+              "shard",
+              "status",
+              "reason"
+            ]
           }
         }
-      }
+      },
+      "required": [
+        "Total",
+        "Successful",
+        "Failed",
+        "failures"
+      ]
     },
     "indices": {
-      "required": true,
       "type": [
         "object",
         "null"
@@ -78,7 +81,6 @@
         ],
         "properties": {
           "shards": {
-            "required": true,
             "type": [
               "object",
               "null"
@@ -87,8 +89,15 @@
               "type": "any"
             }
           }
-        }
+        },
+        "required": [
+          "shards"
+        ]
       }
     }
-  }
+  },
+  "required": [
+    "_shards",
+    "indices"
+  ]
 }

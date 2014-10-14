@@ -55,8 +55,9 @@
     <Reference Include="json-schema-validator-2.2.5-lib">
       <HintPath>..\..\..\dep\JsonSchemaValidator\json-schema-validator-2.2.5-lib.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\dep\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\dep\JsonSchemaValidator\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="ShellProgressBar">
       <HintPath>..\..\..\dep\ShellProgressBar.1.0.0.0\lib\NET4\ShellProgressBar.dll</HintPath>

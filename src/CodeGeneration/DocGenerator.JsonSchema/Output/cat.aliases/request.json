@@ -1,5 +1,6 @@
 {
   "id": "Nest.ICatAliasesRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ICatAliasesRequest",
   "type": "object",
   "properties": {}

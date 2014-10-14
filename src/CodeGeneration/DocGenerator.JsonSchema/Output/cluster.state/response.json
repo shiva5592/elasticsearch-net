@@ -1,24 +1,22 @@
 {
   "id": "Nest.IClusterStateResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IClusterStateResponse",
   "type": "object",
   "properties": {
     "cluster_name": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "master_node": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "nodes": {
-      "required": true,
       "type": [
         "object",
         "null"
@@ -31,21 +29,18 @@
         ],
         "properties": {
           "name": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "transport_address": {
-            "required": true,
             "type": [
               "string",
               "null"
             ]
           },
           "attributes": {
-            "required": true,
             "type": [
               "object",
               "null"
@@ -57,19 +52,22 @@
               ]
             }
           }
-        }
+        },
+        "required": [
+          "name",
+          "transport_address",
+          "attributes"
+        ]
       }
     },
     "metadata": {
       "id": "Nest.MetadataState",
-      "required": true,
       "type": [
         "object",
         "null"
       ],
       "properties": {
         "indices": {
-          "required": true,
           "type": [
             "object",
             "null"
@@ -82,14 +80,12 @@
             ],
             "properties": {
               "state": {
-                "required": true,
                 "type": [
                   "string",
                   "null"
                 ]
               },
               "settings": {
-                "required": true,
                 "type": [
                   "object",
                   "null"
@@ -104,7 +100,6 @@
                 }
               },
               "mappings": {
-                "required": true,
                 "type": [
                   "object",
                   "null"
@@ -117,66 +112,74 @@
                   ],
                   "properties": {
                     "type": {
-                      "required": true,
                       "type": "any"
                     },
                     "similarity": {
-                      "required": true,
                       "type": [
                         "string",
                         "null"
                       ]
                     },
                     "dynamic": {
-                      "required": true,
                       "type": "any"
                     },
                     "enabled": {
-                      "required": true,
                       "type": [
                         "boolean",
                         "null"
                       ]
                     },
                     "include_in_all": {
-                      "required": true,
                       "type": [
                         "boolean",
                         "null"
                       ]
                     },
                     "path": {
-                      "required": true,
                       "type": [
                         "string",
                         "null"
                       ]
                     },
                     "properties": {
-                      "required": true,
                       "type": [
                         "object",
                         "null"
                       ]
                     }
-                  }
+                  },
+                  "required": [
+                    "type",
+                    "similarity",
+                    "dynamic",
+                    "enabled",
+                    "include_in_all",
+                    "path",
+                    "properties"
+                  ]
                 }
               }
-            }
+            },
+            "required": [
+              "state",
+              "settings",
+              "mappings"
+            ]
           }
         }
-      }
+      },
+      "required": [
+        "indices"
+      ]
     },
     "routing_table": {
       "id": "Nest.RoutingTableState",
-      "required": true,
       "type": [
         "object",
         "null"
       ],
       "properties": {
         "indices": {
-          "required": true,
           "type": [
             "object",
             "null"
@@ -189,14 +192,12 @@
             ],
             "properties": {
               "shards": {
-                "required": true,
                 "type": [
                   "object",
                   "null"
                 ],
                 "additionalProperties": {
-                  "id": "System.Collections.Generic.List`1[[Nest.RoutingShard, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]",
-                  "required": true,
+                  "id": "System.Collections.Generic.List`1[[Nest.RoutingShard, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
                   "type": [
                     "array",
                     "null"
@@ -209,86 +210,106 @@
                     ],
                     "properties": {
                       "state": {
-                        "required": true,
                         "type": [
                           "string",
                           "null"
                         ]
                       },
                       "primary": {
-                        "required": true,
                         "type": "boolean"
                       },
                       "node": {
-                        "required": true,
                         "type": [
                           "string",
                           "null"
                         ]
                       },
                       "relocating_node": {
-                        "required": true,
                         "type": [
                           "string",
                           "null"
                         ]
                       },
                       "shard": {
-                        "required": true,
                         "type": "integer"
                       },
                       "index": {
-                        "required": true,
                         "type": [
                           "string",
                           "null"
                         ]
                       }
-                    }
+                    },
+                    "required": [
+                      "state",
+                      "primary",
+                      "node",
+                      "relocating_node",
+                      "shard",
+                      "index"
+                    ]
                   }
                 }
               }
-            }
+            },
+            "required": [
+              "shards"
+            ]
           }
         }
-      }
+      },
+      "required": [
+        "indices"
+      ]
     },
     "routing_nodes": {
       "id": "Nest.RoutingNodesState",
-      "required": true,
       "type": [
         "object",
         "null"
       ],
       "properties": {
         "unassigned": {
-          "$ref": "System.Collections.Generic.List`1[[Nest.RoutingShard, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]"
+          "$ref": "System.Collections.Generic.List`1[[Nest.RoutingShard, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
         },
         "nodes": {
-          "required": true,
           "type": [
             "object",
             "null"
           ],
           "additionalProperties": {
-            "$ref": "System.Collections.Generic.List`1[[Nest.RoutingShard, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d]]"
+            "$ref": "System.Collections.Generic.List`1[[Nest.RoutingShard, Nest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"
           }
         }
-      }
+      },
+      "required": [
+        "unassigned",
+        "nodes"
+      ]
     },
     "blocks": {
       "id": "Nest.BlockState",
-      "required": true,
       "type": [
         "object",
         "null"
       ],
       "properties": {
         "read_only": {
-          "required": true,
           "type": "boolean"
         }
-      }
+      },
+      "required": [
+        "read_only"
+      ]
     }
-  }
+  },
+  "required": [
+    "cluster_name",
+    "master_node",
+    "nodes",
+    "metadata",
+    "routing_table",
+    "routing_nodes",
+    "blocks"
+  ]
 }

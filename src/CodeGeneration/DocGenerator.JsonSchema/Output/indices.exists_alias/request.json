@@ -1,5 +1,6 @@
 {
   "id": "Nest.IAliasExistsRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IAliasExistsRequest",
   "type": "object",
   "properties": {}

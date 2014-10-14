@@ -1,28 +1,31 @@
 {
   "id": "Nest.IRegexpQuery",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IRegexpQuery",
   "type": "object",
   "properties": {
     "value": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "flags": {
-      "required": true,
       "type": [
         "string",
         "null"
       ]
     },
     "boost": {
-      "required": true,
       "type": [
         "number",
         "null"
       ]
     }
-  }
+  },
+  "required": [
+    "value",
+    "flags",
+    "boost"
+  ]
 }

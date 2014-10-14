@@ -1,5 +1,6 @@
 {
   "id": "Nest.ICatNodesRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ICatNodesRequest",
   "type": "object",
   "properties": {}

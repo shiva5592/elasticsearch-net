@@ -1,5 +1,6 @@
 {
   "id": "Nest.IGetWarmerRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IGetWarmerRequest",
   "type": "object",
   "properties": {}

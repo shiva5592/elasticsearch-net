@@ -1,5 +1,6 @@
 {
   "id": "Nest.ICatPendingTasksRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ICatPendingTasksRequest",
   "type": "object",
   "properties": {}

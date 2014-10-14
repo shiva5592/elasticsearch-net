@@ -1,5 +1,6 @@
 {
   "id": "Nest.ISegmentsRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ISegmentsRequest",
   "type": "object",
   "properties": {}

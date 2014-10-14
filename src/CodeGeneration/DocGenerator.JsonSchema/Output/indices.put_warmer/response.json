@@ -1,11 +1,14 @@
 {
   "id": "Nest.IIndicesOperationResponse",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IIndicesOperationResponse",
   "type": "object",
   "properties": {
     "acknowledged": {
-      "required": true,
       "type": "boolean"
     }
-  }
+  },
+  "required": [
+    "acknowledged"
+  ]
 }

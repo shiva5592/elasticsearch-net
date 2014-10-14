@@ -1,5 +1,6 @@
 {
   "id": "Nest.IPutTemplateRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IPutTemplateRequest",
   "type": "object",
   "properties": {}

@@ -1,5 +1,6 @@
 {
   "id": "Nest.IOpenIndexRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IOpenIndexRequest",
   "type": "object",
   "properties": {}

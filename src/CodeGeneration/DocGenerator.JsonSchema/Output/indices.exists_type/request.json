@@ -1,5 +1,6 @@
 {
   "id": "Nest.ITypeExistsRequest",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "ITypeExistsRequest",
   "type": "object",
   "properties": {}
