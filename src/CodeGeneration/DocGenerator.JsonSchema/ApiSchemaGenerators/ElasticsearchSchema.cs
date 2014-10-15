@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using com.fasterxml.jackson.databind;
@@ -23,10 +24,10 @@ namespace DocGenerator.JsonSchema
 		{
 			_endpoint = endpoint;
 		}
-		
+
 		public void Request<T>() where T : IRequest { For<T>("request"); }
 		public void Response<T>() where T : IResponse { For<T>("response"); }
-		public void Domain<T>(string subFolder = null) 
+		public void Domain<T>(string subFolder = null)
 		{
 			For<T>((string.IsNullOrEmpty(subFolder) ? "" : subFolder + @"\") + typeof(T).Name.ToLowerInvariant());
 		}
@@ -35,16 +36,16 @@ namespace DocGenerator.JsonSchema
 		{
 			var re = new Regex("^(.+)_example(.+)$");
 			var schemas = Directory.GetFiles(_outputFolder, "*.*", SearchOption.AllDirectories)
-				.Where(f=>re.IsMatch(f))
-				.Select(f=> new { schema = LocalFullPath(re.Replace(f, "$1$2")), example = LocalFullPath(f)})
-				.Select(v=>Validate(v.schema, v.example))
+				.Where(f => re.IsMatch(f))
+				.Select(f => new { schema = LocalFullPath(re.Replace(f, "$1$2")), example = LocalFullPath(f) })
+				.Select(v => Validate(v.schema, v.example))
 				.ToList()
 				;
 
 			return schemas.Any(p => !p.isSuccess());
 		}
 
-		
+
 		private static ProcessingReport Validate(string file, string exampleFile)
 		{
 			var factory = JsonSchemaFactory.byDefault();
@@ -53,16 +54,17 @@ namespace DocGenerator.JsonSchema
 			var jsonSchema = factory.getJsonSchema(schemaNode);
 			var report = jsonSchema.validate(json);
 			return report;
-			
+
 		}
 
 		private static JsonNode GetJavaJsonNode(string exampleFile)
 		{
 			var m = new ObjectMapper();
-			var json = m.readTree((java.io.File) new java.io.File(exampleFile));
+			var json = m.readTree((java.io.File)new java.io.File(exampleFile));
 			return json;
 		}
 
+		
 
 		private void For<T>(string fileName)
 		{
@@ -73,7 +75,7 @@ namespace DocGenerator.JsonSchema
 			schema.Title = type.Name;
 			var file = LocalUri(string.Format("{0}.json", fileName));
 			using (var writer = new StreamWriter(file))
-			using (var jsonTextWriter = new JsonTextWriter(writer) { Formatting = Formatting.Indented})
+			using (var jsonTextWriter = new JsonTextWriter(writer) { Formatting = Formatting.Indented })
 				schema.WriteTo(jsonTextWriter);
 		}
 
