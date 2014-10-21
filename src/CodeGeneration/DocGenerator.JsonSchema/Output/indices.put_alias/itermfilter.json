@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "value": {
+      "type": ["object"],
+    },
+    "boost": {
+      "type": ["number"]
+    }
+  },
+  "required": ["value", "boost"]
+}

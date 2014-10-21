@@ -12,15 +12,15 @@ namespace DocGenerator.JsonSchema
 	{
 		static void Main(string[] args)
 		{
-			var schemas = new ApiSchemaGenerator[]
-			{
-				new EndpointsGenerator(),
-				new FilterDslGenerator(), 
-				new QueryDslGenerator()
-			};
+			//var schemas = new ApiSchemaGenerator[]
+			//{
+			//	new EndpointsGenerator(),
+			//	new FilterDslGenerator(), 
+			//	new QueryDslGenerator()
+			//};
 
-			foreach (var schema in schemas)
-				schema.Generate();
+			//foreach (var schema in schemas)
+			//	schema.Generate();
 
 			ElasticsearchSchema.ValidateAll();
 		}

@@ -1,21 +1,15 @@
 {
-  "id": "Nest.IPutAliasRequest",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "IPutAliasRequest",
   "type": "object",
   "properties": {
     "routing": {
-      "type": [
-        "string",
-        "null"
-      ]
+      "type": ["string"]
     },
     "filter": {
-      "type": "any"
+      "type": "object",
+      "properties": { "$ref": "C:\\Users\\gmarz\\code\\elasticsearch-net\\src\\CodeGeneration\\DocGenerator.JsonSchema\\Output\\indices.put_alias\\itermfilter.json#/properties" }
     }
   },
-  "required": [
-    "routing",
-    "filter"
-  ]
+  "required": ["filter"]
 }

@@ -1,0 +1,6 @@
+{
+  "filter": {
+    "value": ["somevalue"],
+    "boost": [1.0]
+  }
+}
