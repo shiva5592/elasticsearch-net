@@ -11,6 +11,8 @@ using com.github.fge.jsonschema.main;
 using Nest;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Schema;
+using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
 
 namespace DocGenerator.JsonSchema
 {
@@ -42,29 +44,30 @@ namespace DocGenerator.JsonSchema
 				.ToList()
 				;
 
-			return schemas.Any(p => !p.isSuccess());
+			return schemas.All(errors => errors.Count == 0);
 		}
 
-
-		private static ProcessingReport Validate(string file, string exampleFile)
+		private static IList<string> Validate(string file, string exampleFile)
 		{
-			var factory = JsonSchemaFactory.byDefault();
-			var json = GetJavaJsonNode(exampleFile);
-			var schemaNode = GetJavaJsonNode(file);
-			var jsonSchema = factory.getJsonSchema(schemaNode);
-			var report = jsonSchema.validate(json);
-			return report;
+			var schemaJson = ReadJsonFromFile(file);
+			var exampleJson = ReadJsonFromFile(exampleFile);
+			var schemaResolver = new JsonSchemaResolver { ResolveExternals = true };
+			var schema = Newtonsoft.Json.Schema.JsonSchema.Parse(schemaJson, schemaResolver);
 
+			var example = JObject.Parse(exampleJson);
+
+			IList<string> errors = new List<string>();
+			var valid = example.IsValid(schema, out errors);
+			return errors;
 		}
 
-		private static JsonNode GetJavaJsonNode(string exampleFile)
+		private static string ReadJsonFromFile(string file)
 		{
-			var m = new ObjectMapper();
-			var json = m.readTree((java.io.File)new java.io.File(exampleFile));
-			return json;
+			using (StreamReader reader = new StreamReader(file))
+			{
+				return reader.ReadToEnd();
+			}
 		}
-
-		
 
 		private void For<T>(string fileName)
 		{
