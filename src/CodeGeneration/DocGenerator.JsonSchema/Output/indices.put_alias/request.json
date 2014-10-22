@@ -6,10 +6,7 @@
     "routing": {
       "type": ["string"]
     },
-    "filter": {
-      "type": "object",
-      "properties": { "$ref": "itermfilter.json#/properties" }
-    }
+    "filter": { "$ref": "itermfilter.json#/" }
   },
   "required": ["filter"]
 }

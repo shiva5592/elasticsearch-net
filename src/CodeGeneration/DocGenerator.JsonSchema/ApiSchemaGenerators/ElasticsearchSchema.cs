@@ -37,10 +37,11 @@ namespace DocGenerator.JsonSchema
 				.Where(f => re.IsMatch(f))
 				.Select(f => new { schema = LocalFullPath(re.Replace(f, "$1$2")), example = LocalFullPath(f) })
 				.Select(v => Validate(v.schema, v.example))
+				.Where(e=>e.Any())
 				.ToList()
 				;
 
-			return schemas.All(errors => errors.Count == 0);
+			return schemas.Any();
 		}
 
 		private static IList<string> Validate(string file, string exampleFile)
@@ -48,7 +49,8 @@ namespace DocGenerator.JsonSchema
 			var schemaJson = ReadJsonFromFile(file);
 			var exampleJson = ReadJsonFromFile(exampleFile);
 			var schemaResolver = new JsonSchemaResolver { ResolveExternals = true };
-			var schema = Newtonsoft.Json.Schema.JsonSchema.Parse(schemaJson, schemaResolver);
+			var schemaLocation = new Uri(file);
+			var schema = Newtonsoft.Json.Schema.JsonSchema.Parse(schemaJson, schemaResolver, schemaLocation);
 
 			var example = JObject.Parse(exampleJson);
 
@@ -59,10 +61,8 @@ namespace DocGenerator.JsonSchema
 
 		private static string ReadJsonFromFile(string file)
 		{
-			using (StreamReader reader = new StreamReader(file))
-			{
+			using (var reader = new StreamReader(file))
 				return reader.ReadToEnd();
-			}
 		}
 
 		private void For<T>(string fileName)

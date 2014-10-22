@@ -1,0 +1,4 @@
+[submodule "Newtonsoft.Json"]
+	path = Newtonsoft.Json
+	url = git@github.com:Mpdreamz/Newtonsoft.Json.git
+	branch = feature/json-schema-draft-4
