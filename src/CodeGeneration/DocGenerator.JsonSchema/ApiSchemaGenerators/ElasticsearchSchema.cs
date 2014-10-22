@@ -30,18 +30,15 @@ namespace DocGenerator.JsonSchema
 			For<T>((string.IsNullOrEmpty(subFolder) ? "" : subFolder + @"\") + typeof(T).Name.ToLowerInvariant());
 		}
 
-		public static bool ValidateAll()
+		public static Dictionary<string, IList<string>> ValidateAll()
 		{
 			var re = new Regex("^(.+)_example(.+)$");
-			var schemas = Directory.GetFiles(_outputFolder, "*.*", SearchOption.AllDirectories)
+			var results = Directory.GetFiles(_outputFolder, "*.*", SearchOption.AllDirectories)
 				.Where(f => re.IsMatch(f))
 				.Select(f => new { schema = LocalFullPath(re.Replace(f, "$1$2")), example = LocalFullPath(f) })
-				.Select(v => Validate(v.schema, v.example))
-				.Where(e=>e.Any())
-				.ToList()
-				;
+				.ToDictionary(v => v.example, v => Validate(v.schema, v.example));
 
-			return schemas.Any();
+			return results;
 		}
 
 		private static IList<string> Validate(string file, string exampleFile)

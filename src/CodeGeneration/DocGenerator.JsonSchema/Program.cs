@@ -12,17 +12,30 @@ namespace DocGenerator.JsonSchema
 	{
 		static void Main(string[] args)
 		{
-			//var schemas = new ApiSchemaGenerator[]
-			//{
-			//	new EndpointsGenerator(),
-			//	new FilterDslGenerator(), 
-			//	new QueryDslGenerator()
-			//};
+			//GenerateSchemas(new EndpointsGenerator(), new FilterDslGenerator(), new QueryDslGenerator());
+			Validate();
 
-			//foreach (var schema in schemas)
-			//	schema.Generate();
+			Console.ReadLine();
+		}
 
-			ElasticsearchSchema.ValidateAll();
+		private static void GenerateSchemas(params ApiSchemaGenerator[] generators)
+		{
+			foreach (var generator in generators)
+				generator.Generate();
+		}
+
+		private static void Validate()
+		{
+			var results = ElasticsearchSchema.ValidateAll();
+			var invalid = results.Where(r => r.Value.Count > 0).ToList();
+			foreach(var file in invalid)
+				foreach(var error in file.Value)
+					Console.WriteLine("{0}: {1}", file, error);
+
+			Console.WriteLine("\nValidation complete.");
+			Console.WriteLine("Total Files: {0}", results.Count);
+			Console.WriteLine("Invalid: {0}", invalid.Count);
+			Console.WriteLine("Total Errors: {0}", invalid.SelectMany(f => f.Value).Count());
 		}
 	}
 }
