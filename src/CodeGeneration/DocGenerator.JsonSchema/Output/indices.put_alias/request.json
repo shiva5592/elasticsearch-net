@@ -4,9 +4,10 @@
   "type": "object",
   "properties": {
     "routing": {
-      "type": ["string"]
+      "type": "string"
     },
-    "filter": { "$ref": "itermfilter.json#/" }
-  },
-  "required": ["filter"]
+    "filter": { 
+      "$ref": "../_domain/filter-dsl/itermfilter.json" 
+    }
+  }
 }
