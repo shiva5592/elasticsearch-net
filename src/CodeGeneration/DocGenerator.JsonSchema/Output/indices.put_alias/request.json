@@ -8,7 +8,7 @@
     },
     "filter": {
       "type": "object",
-      "properties": { "$ref": "C:\\Users\\gmarz\\code\\elasticsearch-net\\src\\CodeGeneration\\DocGenerator.JsonSchema\\Output\\indices.put_alias\\itermfilter.json#/properties" }
+      "properties": { "$ref": "itermfilter.json#/properties" }
     }
   },
   "required": ["filter"]
