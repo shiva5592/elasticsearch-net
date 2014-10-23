@@ -123,6 +123,8 @@ namespace Elasticsearch.Net.Connection
 
 		IElasticsearchSerializer IConnectionConfigurationValues.Serializer { get; set; }
 
+		private List<IResponseHandler> _responseHandlers;
+
 		public ConnectionConfiguration(IConnectionPool connectionPool)
 		{
 			this._timeout = 60*1000;
@@ -131,6 +133,7 @@ namespace Elasticsearch.Net.Connection
 			this._connectionStatusHandler = this.ConnectionStatusDefaultHandler;
 			this._maximumAsyncConnections = 0;
 			this._connectionPool = connectionPool;
+			this._responseHandlers = new List<IResponseHandler>();
 		}
 
 		public ConnectionConfiguration(Uri uri = null) 
@@ -315,18 +318,26 @@ namespace Elasticsearch.Net.Connection
 		}
 		protected void ConnectionStatusDefaultHandler(IElasticsearchResponse status)
 		{
-			return;
+			foreach (var handler in _responseHandlers)
+				handler.Handle(status);
 		}
 
 		/// <summary>
 		/// Global callback for every response that NEST receives, useful for custom logging.
 		/// </summary>
+		[Obsolete("Please use .AddResponseHandler<THandler>() instead, which allows multiple handlers to be registered")]
         public T SetConnectionStatusHandler(Action<IElasticsearchResponse> handler)
         {
             handler.ThrowIfNull("handler");
-            this._connectionStatusHandler = handler;
+			this.AddResponseHandler(ResponseHandler.From(handler));
             return (T)this;
         }
+
+		public T AddResponseHandler<THandler>(THandler handler) where THandler : IResponseHandler
+		{
+			this._responseHandlers.Add(handler);
+            return (T)this;
+		}
 
 	}
 }

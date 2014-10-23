@@ -11,7 +11,7 @@ namespace Elasticsearch.Net.ConnectionPool
 	{
 		private readonly IDateTimeProvider _dateTimeProvider;
 		
-		protected IDictionary<Uri, EndpointState> UriLookup;
+		public IDictionary<Uri, EndpointState> EndpointStates { get; protected set; }
 		protected IList<Uri> NodeUris;
 		protected int Current = -1;
 		private Random _random;
@@ -32,7 +32,7 @@ namespace Elasticsearch.Net.ConnectionPool
 			NodeUris = uris.Distinct().ToList();
 			if (randomizeOnStartup)
 				NodeUris = NodeUris.OrderBy((item) => rnd.Next()).ToList();
-			UriLookup = NodeUris.ToDictionary(k=>k, v=> new EndpointState());
+			EndpointStates = NodeUris.ToDictionary(k=>k, v=> new EndpointState());
 		}
 
 		public virtual Uri GetNext(int? initialSeed, out int seed, out bool shouldPingHint)
@@ -51,7 +51,7 @@ namespace Elasticsearch.Net.ConnectionPool
 			do
 			{
 				uri = this.NodeUris[i];
-				var state = this.UriLookup[uri];
+				var state = this.EndpointStates[uri];
 				lock (state)
 				{
 					var now = _dateTimeProvider.Now();
@@ -61,6 +61,7 @@ namespace Elasticsearch.Net.ConnectionPool
 							shouldPingHint = true;
 
 						state.Attemps = 0;
+						Interlocked.Increment(ref state.Used);
 						return uri;
 					}
 					Interlocked.Increment(ref Current);
@@ -78,24 +79,26 @@ namespace Elasticsearch.Net.ConnectionPool
 		public virtual void MarkDead(Uri uri, int? deadTimeout, int? maxDeadTimeout)
 		{	
 			EndpointState state = null;
-			if (!this.UriLookup.TryGetValue(uri, out state))
+			if (!this.EndpointStates.TryGetValue(uri, out state))
 				return;
 			lock(state)
 			{
 				state.Date = this._dateTimeProvider.DeadTime(uri, state.Attemps, deadTimeout, maxDeadTimeout);
+				state.IsAlive = false;
 			}
 		}
 
 		public virtual void MarkAlive(Uri uri)
 		{
 			EndpointState state = null;
-			if (!this.UriLookup.TryGetValue(uri, out state))
+			if (!this.EndpointStates.TryGetValue(uri, out state))
 				return;
 			lock (state)
 			{
 				var aliveTime =this._dateTimeProvider.AliveTime(uri, state.Attemps); 
 				state.Date = aliveTime;
 				state.Attemps = 0;
+				state.IsAlive = true;
 			}
 		}
 

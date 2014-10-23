@@ -62,6 +62,7 @@
     <Compile Include="Domain\Response\IElasticsearchResponse.cs" />
     <Compile Include="Domain\IHideObjectMembers.cs" />
     <Compile Include="Domain\RequestParameters\IRequestParameters.cs" />
+    <Compile Include="Domain\Response\IResponseHandler.cs" />
     <Compile Include="Domain\Response\RequestMetrics.cs" />
     <Compile Include="Domain\Response\RequestType.cs" />
     <Compile Include="Domain\Response\VoidResponse.cs" />

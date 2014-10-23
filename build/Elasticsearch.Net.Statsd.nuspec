@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Elasticsearch.Net.StatsD</id>
+    <version>1.2.1</version>
+    <title>Elasticsearch.Net.StatsD - Provides statsd integration for metrics observed on the client</title>
+    <authors>Elasticsearch Inc, Mark van Straten and contributors</authors>
+    <owners>Elasticsearch Inc.</owners>
+    <iconUrl>http://nest.azurewebsites.net/images/elasticsearch-net-nuget-icon.png</iconUrl>
+    <licenseUrl>https://github.com/elasticsearch/elasticsearch-net/blob/master/license.txt</licenseUrl>
+    <projectUrl>https://github.com/elasticsearch/elasticsearch-net</projectUrl>
+    <summary>Provides statsd integration for metrics observed on the client</summary>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Provides statsd integration for metrics observed on the client</description>
+    <dependencies>
+      <dependency id="Elasticsearch.Net" version="1.2.1"/>
+      <dependency id="StatsdCsharpClient" version="1.3.0.0"/>
+    </dependencies>
+    <tags>elasticsearch elastic search lucene thrift nest</tags>
+  </metadata>
+  <files>
+    <file src="output\Elasticsearch.Net.Statsd\Elasticsearch.Net.Statsd.dll" target="lib"/> 
+    <file src="output\Elasticsearch.Net.Statsd\Elasticsearch.Net.Statsd.pdb" target="lib"/> 
+    <file src="output\Elasticsearch.Net.Statsd\Elasticsearch.Net.Statsd.XML" target="lib"/> 
+  </files>
+</package>

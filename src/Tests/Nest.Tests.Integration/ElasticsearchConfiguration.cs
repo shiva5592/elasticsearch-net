@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using Elasticsearch.Net.Connection.Thrift;
 using Elasticsearch.Net;
+using Elasticsearch.Net.Statsd;
 
 namespace Nest.Tests.Integration
 {

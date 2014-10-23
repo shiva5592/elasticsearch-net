@@ -27,7 +27,7 @@ namespace Elasticsearch.Net.ConnectionPool
 			{
 				this._readerWriter.EnterWriteLock();
 				this.NodeUris = newClusterState;
-				this.UriLookup = newClusterState.ToDictionary(k => k, v => new EndpointState()
+				this.EndpointStates = newClusterState.ToDictionary(k => k, v => new EndpointState()
 				{
 					Attemps = v.Equals(sniffNode) ? 1 : 0
 				});

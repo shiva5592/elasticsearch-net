@@ -258,6 +258,10 @@
       <Project>{a69322fd-b874-44ef-abe0-63f4a7b5593e}</Project>
       <Name>Elasticsearch.Net.Connection.HttpClient</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Elasticsearch.Net.Statsd\Elasticsearch.Net.Statsd.csproj">
+      <Project>{bbff7a41-644b-4f30-8bc9-b47d9166336f}</Project>
+      <Name>Elasticsearch.Net.Statsd</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Elasticsearch.Net\Elasticsearch.Net.csproj">
       <Project>{e97ccf40-0ba6-43fe-9f2d-58d454134088}</Project>
       <Name>Elasticsearch.Net</Name>

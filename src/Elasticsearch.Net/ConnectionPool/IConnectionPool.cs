@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using Elasticsearch.Net.Connection;
 
 namespace Elasticsearch.Net.ConnectionPool
@@ -45,5 +46,12 @@ namespace Elasticsearch.Net.ConnectionPool
 		/// <param name="newClusterState"></param>
 		/// <param name="sniffNode">hint that the node we recieved the sniff from should not be pinged</param>
 		void UpdateNodeList(IList<Uri> newClusterState, Uri sniffNode = null);
+
+
+		/// <summary>
+		/// Returns information about the current known elasticsearch nodes. 
+		/// </summary>
+		/// <remarks>This getter is not meant to update the known nodes please use <see cref="UpdateNodeList"/> </remarks>
+		IDictionary<Uri, EndpointState> EndpointStates { get; }
 	}
 }

@@ -181,8 +181,9 @@ Target "Version" (fun _ ->
     match f.ToLowerInvariant() with
     | f when f = "elasticsearch.net" -> "Elasticsearch.Net - oficial low level elasticsearch client"
     | f when f = "nest" -> "NEST - oficial high level elasticsearch client"
-    | f when f = "elasticsearch.net.connection.thrift" -> "Elasticsearc.Net.Connection.Thrift - Add thrift support to elasticsearch."
-    | f when f = "elasticsearch.net.connection.httpclient" -> "Elasticsearc.Net.Connection.HttpClient - IConnection implementation that uses HttpClient (.NET 4.5 only)"
+    | f when f = "elasticsearch.net.connection.thrift" -> "Elasticsearch.Net.Connection.Thrift - Add thrift support to elasticsearch."
+    | f when f = "elasticsearch.net.connection.httpclient" -> "Elasticsearch.Net.Connection.HttpClient - IConnection implementation that uses HttpClient (.NET 4.5 only)"
+    | f when f = "elasticsearch.net.statsd" -> "Elasticsearch.Net.Statsd - Provides statsd integration for metrics observed on the client"
     | _ -> sprintf "%s" name
 
   !! "src/**/AssemblyInfo.cs"
@@ -210,12 +211,14 @@ Target "Release" (fun _ ->
     nugetPack("Elasticsearch.Net.Connection.Thrift")
     nugetPack("Elasticsearch.Net.Connection.HttpClient")
     nugetPack("Elasticsearch.Net.JsonNET")
+    nugetPack("Elasticsearch.Net.Statsd")
     nugetPack("Nest")
    
     validateSignedAssembly("Elasticsearch.Net")
     validateSignedAssembly("Elasticsearch.Net.Connection.Thrift")
     validateSignedAssembly("Elasticsearch.Net.Connection.HttpClient")
     validateSignedAssembly("Elasticsearch.Net.JsonNET")
+    validateSignedAssembly("Elasticsearch.Net.Statsd")
     validateSignedAssembly("Nest")
 )
 
