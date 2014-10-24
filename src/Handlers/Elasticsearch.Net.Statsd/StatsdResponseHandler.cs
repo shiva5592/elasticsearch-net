@@ -24,6 +24,7 @@ namespace Elasticsearch.Net.Statsd
 		{
 			settings.EnableMetrics();
 			settings.AddResponseHandler(new StatsdResponseHandler(statsdEndpoint, prefix));
+			return settings;
 		}
 	}
 

@@ -31,6 +31,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Build", "_Build", "{432D55
 		..\build\Elasticsearch.Net.Connection.Thrift.nuspec = ..\build\Elasticsearch.Net.Connection.Thrift.nuspec
 		..\build\Elasticsearch.Net.JsonNET.nuspec = ..\build\Elasticsearch.Net.JsonNET.nuspec
 		..\build\Elasticsearch.Net.nuspec = ..\build\Elasticsearch.Net.nuspec
+		..\build\Elasticsearch.Net.Statsd.nuspec = ..\build\Elasticsearch.Net.Statsd.nuspec
 		..\build\InheritDoc.fsx = ..\build\InheritDoc.fsx
 		..\build\NEST.nuspec = ..\build\NEST.nuspec
 	EndProjectSection
