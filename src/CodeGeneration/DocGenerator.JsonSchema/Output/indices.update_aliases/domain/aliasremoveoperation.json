@@ -1,0 +1,21 @@
+{
+  "id": "Nest.AliasRemoveOperation",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "AliasRemoveOperation",
+  "type": "object",
+  "properties": {
+    "index": {
+      "type": "any"
+    },
+    "alias": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "index",
+    "alias"
+  ]
+}

@@ -161,6 +161,13 @@ namespace DocGenerator.JsonSchema
 			}
 			using(var schema = new ElasticsearchSchema("indices.update_aliases"))
 			{
+				using (var sub = schema.Related())
+				{
+					sub.Domain<IAliasAddAction>();
+					sub.Domain<AliasAddOperation>();
+					sub.Domain<IAliasRemoveAction>();
+					sub.Domain<AliasRemoveOperation>();
+				}
 				schema.Request<IAliasRequest>();
 				schema.Response<IIndicesOperationResponse>();
 			}

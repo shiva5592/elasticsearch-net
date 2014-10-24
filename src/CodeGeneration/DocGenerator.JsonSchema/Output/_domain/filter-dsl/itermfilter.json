@@ -4,16 +4,23 @@
   "title": "ITermFilter",
   "type": "object",
   "properties": {
-    "boost": {
-      "type": "number"
+    "value": {
+      "id": "System.Object",
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {}
     },
-    "_cache": {
-      "type": "boolean"
+    "boost": {
+      "type": [
+        "number",
+        "null"
+      ]
     }
   },
-  "patternProperties": {
-    "^(?!boost$|_cache$).*": {
-      "type": [ "string", "number", "boolean" ]
-    }
-  }
+  "required": [
+    "value",
+    "boost"
+  ]
 }

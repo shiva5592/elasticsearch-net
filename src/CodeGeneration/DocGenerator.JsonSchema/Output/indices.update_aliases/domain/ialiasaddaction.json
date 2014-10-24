@@ -1,0 +1,58 @@
+{
+  "id": "alias_add_action",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "IAliasAddAction",
+  "type": "object",
+  "properties": {
+    "add": {
+      "id": "Nest.AliasAddOperation",
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "index": {
+          "type": "any"
+        },
+        "alias": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "filter": {
+          "type": "any"
+        },
+        "routing": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "index_routing": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "search_routing": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "index",
+        "alias",
+        "filter",
+        "routing",
+        "index_routing",
+        "search_routing"
+      ]
+    }
+  },
+  "required": [
+    "add"
+  ]
+}

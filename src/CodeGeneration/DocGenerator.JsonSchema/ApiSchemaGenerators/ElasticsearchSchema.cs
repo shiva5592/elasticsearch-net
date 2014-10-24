@@ -22,7 +22,10 @@ namespace DocGenerator.JsonSchema
 		{
 			_endpoint = endpoint;
 		}
-
+		public ElasticsearchSchema Related(string subFolder = "domain")
+		{
+			return new ElasticsearchSchema(_endpoint + @"\" + subFolder);
+		}
 		public void Request<T>() where T : IRequest { For<T>("request"); }
 		public void Response<T>() where T : IResponse { For<T>("response"); }
 		public void Domain<T>(string subFolder = null)
@@ -70,6 +73,9 @@ namespace DocGenerator.JsonSchema
 			var schema = jsonSchemaGenerator.Generate(type);
 			schema.Title = type.Name;
 			var file = LocalUri(string.Format("{0}.json", fileName));
+			var exampleFile = LocalUri(string.Format("{0}_example.json", fileName));
+			//if schema already has an example file skip (asume its been manualy fine tuned)
+			if (File.Exists(exampleFile)) return;
 			using (var writer = new StreamWriter(file))
 			using (var jsonTextWriter = new JsonTextWriter(writer) { Formatting = Formatting.Indented })
 				schema.WriteTo(jsonTextWriter);

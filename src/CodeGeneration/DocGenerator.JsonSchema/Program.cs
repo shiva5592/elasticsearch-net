@@ -12,7 +12,7 @@ namespace DocGenerator.JsonSchema
 	{
 		static void Main(string[] args)
 		{
-			//GenerateSchemas(new EndpointsGenerator(), new FilterDslGenerator(), new QueryDslGenerator());
+			GenerateSchemas(new EndpointsGenerator(), new FilterDslGenerator(), new QueryDslGenerator());
 			Validate();
 
 			Console.ReadLine();
