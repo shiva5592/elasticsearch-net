@@ -198,8 +198,8 @@ namespace Elasticsearch.Net.Connection
 
 			//request.ServicePoint.ConnectionLimit = int.MaxValue;
 
-			//var newValue = Interlocked.Increment(ref _connections);
-			//request.ConnectionGroupName = "NEST-" + (newValue % 100);
+			var newValue = Interlocked.Increment(ref _connections);
+			request.ConnectionGroupName = "NEST-" + (newValue % 100);
 
 			//Debug.WriteLine("open connections: {0} - {1}", request.ServicePoint.CurrentConnections, request.ConnectionGroupName);
 

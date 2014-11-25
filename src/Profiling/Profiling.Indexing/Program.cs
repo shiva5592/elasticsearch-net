@@ -20,6 +20,14 @@ namespace Profiling.Indexing
 			var defaultTester = new HttpTester();
 			var warmup = defaultTester.RunTests(10);
 
+			defaultTester.Client.ClusterSettings(s => s
+				.Transient(t=>t
+					.Add("index.store.throttle.type", "none")
+					.Add("index.refresh_interval", -1)
+					//.Add("threadpool.index.size", 100)
+				)
+			);
+
 			Console.WriteLine("Warmed up caches to start testing, press any key to start tests");
 			Console.ReadLine();
 
@@ -36,6 +44,12 @@ namespace Profiling.Indexing
 				key = Console.ReadKey();
 			} while (key.KeyChar == 'r');
 
+			defaultTester.Client.ClusterSettings(s => s
+				.Transient(t=>t
+					.Add("index.store.throttle.type", "merge")
+					.Add("index.refresh_interval", "1s")
+				)
+			);
 			defaultTester.Client.DeleteIndex(d => d.Index(Tester.INDEX_PREFIX + "*"));
 		}
 
