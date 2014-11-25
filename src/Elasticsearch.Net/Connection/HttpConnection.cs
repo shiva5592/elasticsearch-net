@@ -29,6 +29,7 @@ namespace Elasticsearch.Net.Connection
 			ServicePointManager.UseNagleAlgorithm = false;
 			ServicePointManager.Expect100Continue = false;
 			ServicePointManager.DefaultConnectionLimit = 10000;
+			ServicePointManager.MaxServicePoints = 1000;
 			//ServicePointManager.SetTcpKeepAlive(true, 2000, 2000);
 			
 			//WebException's GetResponse is limitted to 65kb by default.
@@ -184,6 +185,8 @@ namespace Elasticsearch.Net.Connection
 				request.Headers["Authorization"] = "Basic " + Convert.ToBase64String(Encoding.UTF8.GetBytes(userInfo));
 		}
 
+		private long _connections = 0;
+
 		protected virtual HttpWebRequest CreateWebRequest(Uri uri, string method, byte[] data, IRequestConfiguration requestSpecificConfig)
 		{
 			var request = (HttpWebRequest)WebRequest.Create(uri);
@@ -193,8 +196,12 @@ namespace Elasticsearch.Net.Connection
 			request.Pipelined = this.ConnectionSettings.HttpPipeliningEnabled
 				|| (requestSpecificConfig != null && requestSpecificConfig.EnableHttpPipelining);
 
-			request.ServicePoint.ConnectionLimit = int.MaxValue;
-			Debug.WriteLine("open connections: " + request.ServicePoint.CurrentConnections);
+			//request.ServicePoint.ConnectionLimit = int.MaxValue;
+
+			//var newValue = Interlocked.Increment(ref _connections);
+			//request.ConnectionGroupName = "NEST-" + (newValue % 100);
+
+			//Debug.WriteLine("open connections: {0} - {1}", request.ServicePoint.CurrentConnections, request.ConnectionGroupName);
 
 			if (this.ConnectionSettings.EnableCompressedResponses)
 			{
