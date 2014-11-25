@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using Nest;
 
 namespace Profiling.Indexing
@@ -11,12 +12,13 @@ namespace Profiling.Indexing
 		{
 			//yield return new ThriftTester();
 			yield return new HttpTester();
-			yield return new HttpClientTester();
+			//yield return new HttpClientTester();
 		} 
 
 		static void Main(string[] args)
 		{
-			var warmup = new HttpTester().RunTests(10);
+			var defaultTester = new HttpTester();
+			var warmup = defaultTester.RunTests(10);
 
 			Console.WriteLine("Warmed up caches to start testing, press any key to start tests");
 			Console.ReadLine();
@@ -24,6 +26,7 @@ namespace Profiling.Indexing
 			ConsoleKeyInfo key;
 			do
 			{
+				Console.WriteLine("running testers");
 				var results = Testers().Select(t => t.RunTests()).ToList();
 				Console.WriteLine();
 				foreach(var r in results)
@@ -33,8 +36,7 @@ namespace Profiling.Indexing
 				key = Console.ReadKey();
 			} while (key.KeyChar == 'r');
 
-			var client = new ElasticClient();
-			client.DeleteIndex(d => d.Index(Tester.INDEX_PREFIX + "*"));
+			defaultTester.Client.DeleteIndex(d => d.Index(Tester.INDEX_PREFIX + "*"));
 		}
 
 		private static void PrintRunResults(RunResults runResult)
@@ -48,10 +50,9 @@ namespace Profiling.Indexing
 			var maxEsTime = runResult.EsTimings.Max();
 			var meanEsTime = runResult.EsTimings.GetMedian();
 			Console.WriteLine("  max es-time:{0} mean es-time:{1}", maxEsTime, meanEsTime);
-			Console.WriteLine("  memory before:{0} thread count before:{1}", 
-				runResult.Before.MemorySize, runResult.Before.ThreadCount);
-			Console.WriteLine("  memory after:{0} thread count after:{1}", 
-				runResult.After.MemorySize, runResult.After.ThreadCount);
+			Console.WriteLine("  memory before:{0} thread count before:{1}", runResult.Before.MemorySize, runResult.Before.ThreadCount);
+			Console.WriteLine("  memory after:{0} thread count after:{1}", runResult.After.MemorySize, runResult.After.ThreadCount);
+			Console.WriteLine("  no. batches:{0} batch size:{1}", runResult.NumberOfBatches, runResult.BatchSize);
 		}
 
 	}

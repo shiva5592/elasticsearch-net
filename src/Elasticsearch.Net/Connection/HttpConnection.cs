@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
@@ -191,6 +192,9 @@ namespace Elasticsearch.Net.Connection
 			request.MaximumResponseHeadersLength = -1;
 			request.Pipelined = this.ConnectionSettings.HttpPipeliningEnabled
 				|| (requestSpecificConfig != null && requestSpecificConfig.EnableHttpPipelining);
+
+			request.ServicePoint.ConnectionLimit = int.MaxValue;
+			Debug.WriteLine("open connections: " + request.ServicePoint.CurrentConnections);
 
 			if (this.ConnectionSettings.EnableCompressedResponses)
 			{

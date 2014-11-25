@@ -22,6 +22,8 @@ namespace Profiling.Indexing
 
 		public Metrics Before { get; set; }
 		public Metrics After { get; set; }
+		public int NumberOfBatches { get; set; }
+		public int BatchSize { get; set; }
 	}
 
 	public class Metrics
@@ -89,16 +91,20 @@ namespace Profiling.Indexing
 				ElapsedMillisecond =  elapsed,
 				RatePerSecond = rate,
 				IndexedDocuments = numMessages,
-				EsTimings = indexResult.EsTimings
+				EsTimings = indexResult.EsTimings,
+				NumberOfBatches = indexResult.NumberOfSentBatches,
+				BatchSize = indexResult.BatchSize
 			};
 		}
 
-		protected ConnectionSettings CreateSettings(string indexName, int port)
+		public ConnectionSettings CreateSettings(string indexName, int port)
 		{
 			var host = "localhost";
 			if (Process.GetProcessesByName("fiddler").Any())
 				host = "ipv4.fiddler";
-			
+
+			host = "192.168.192.50";
+
 			var uri = new UriBuilder("http", host, port).Uri;
 			return new ConnectionSettings(uri, indexName)
 				.ThrowOnElasticsearchServerExceptions();
@@ -117,6 +123,8 @@ namespace Profiling.Indexing
 		{
 			public double Elapsed { get; set; }
 			public IEnumerable<int> EsTimings { get; set; }
+			public int NumberOfSentBatches { get; set; }
+			public int BatchSize { get; set; }
 		}
 
 		protected IndexResults GenerateAndIndex(int numMessages, int bufferSize)
@@ -169,7 +177,9 @@ namespace Profiling.Indexing
 			return new IndexResults
 			{
 				Elapsed = sw.ElapsedMilliseconds,
-				EsTimings = array.Select(a=>a.Result.Took).ToList()
+				EsTimings = array.Select(a=>a.Result.Took).ToList(),
+				NumberOfSentBatches = array.Count(),
+				BatchSize = bufferSize
 			};
 		}
 
