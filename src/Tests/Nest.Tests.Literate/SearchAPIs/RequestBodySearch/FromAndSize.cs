@@ -19,7 +19,7 @@ namespace SearchApis.RequestBody
 		 * The size parameter allows you to configure the maximum amount of hits to be returned.
 		 */
 
-		public class Usage : EndpointUsageTests<ISearchResponse<object>>
+		public class Usage : EndpointUsageTest<ISearchResponse<object>>
 		{
 			protected override object ExpectedJson { get; } =
 				new {from = 10, size = 12};
@@ -46,7 +46,7 @@ namespace SearchApis.RequestBody
 		}
 		
 		//[ESVM(single=true, nodes=3)]
-		public class ClusterThing : EndpointUsageTests<IHealthResponse>
+		public class ClusterThing : EndpointUsageTest<IHealthResponse>
 		{
 			protected override object ExpectedJson { get; } = new object {};
 

@@ -19,7 +19,7 @@ namespace SearchApis.RequestBody
 		 * The from parameter defines the offset from the first result you want to fetch. 
 		 * The size parameter allows you to configure the maximum amount of hits to be returned.
 		 */
-		public class Usage : GeneralUsageTests<ITermFilter, TermFilterDescriptor, TermFilter>
+		public class Usage : GeneralUsageTest<ITermFilter, TermFilterDescriptor, TermFilter>
 		{
 			protected override object ExpectedJson { get; } =
 				new {field = "field", value = "value"};
@@ -35,7 +35,7 @@ namespace SearchApis.RequestBody
 				term=>term.Field("field").Value("value");
 		}
 		
-		public class UsageInsideFilterDescriptor : GeneralUsageTests<IFilterContainer, FilterDescriptor<object>, FilterContainer>
+		public class UsageInsideFilterDescriptor : GeneralUsageTest<IFilterContainer, FilterDescriptor<object>, FilterContainer>
 		{
 			protected override object ExpectedJson { get; } =
 				new { term = new { field = "field", value = "value"} };

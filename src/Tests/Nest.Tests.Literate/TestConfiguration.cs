@@ -5,7 +5,7 @@ using Elasticsearch.Net.Connection;
 
 namespace Nest.Tests.Literate
 {
-	public static class TestClient
+	public static class TestConfiguration
 	{
 		private static bool _runIntegrationTests = false;
 

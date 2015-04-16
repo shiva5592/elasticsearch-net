@@ -12,7 +12,7 @@ using Xunit.Sdk;
 
 namespace Nest.Tests.Literate
 {
-	public abstract class SerializationTests
+	public abstract class SerializationTest
 	{
 		protected readonly Fixture _fixture = new Fixture();
 		protected static readonly Fixture Fix = new Fixture();
@@ -20,7 +20,7 @@ namespace Nest.Tests.Literate
 		protected abstract object ExpectedJson { get; }
 		private readonly string _json;
 
-		public SerializationTests()
+		public SerializationTest()
 		{
 			var o = this.ExpectedJson;
 			if (o != null)
@@ -44,7 +44,7 @@ namespace Nest.Tests.Literate
 
 		private string Serialize<TObject>(TObject o)
 		{
-			var bytes = TestClient.GetClient().Serializer.Serialize(o);
+			var bytes = TestConfiguration.GetClient().Serializer.Serialize(o);
 			return Encoding.UTF8.GetString(bytes);
 		}
 
